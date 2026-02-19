@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "textual-themes"
+version = "0.1.0"
+description = "Retro color themes for Textual TUI apps — C64, Amiga, Atari ST, IBM Terminal, NeXTSTEP, BeOS"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+authors = [
+    { name = "Michael Blaess" },
+]
+keywords = ["textual", "tui", "themes", "retro", "terminal"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Framework :: Textual",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Terminals",
+    "Typing :: Typed",
+]
+dependencies = [
+    "textual>=0.85",
+]
+
+[project.urls]
+Homepage = "https://github.com/michaelblaess/textual-themes"
+Repository = "https://github.com/michaelblaess/textual-themes"
+Issues = "https://github.com/michaelblaess/textual-themes/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.mypy]
+strict = true
+python_version = "3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
