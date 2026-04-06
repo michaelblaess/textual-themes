@@ -238,17 +238,17 @@ MSDOS_THEME = Theme(
 # ────────────────────────────────────────────────────────────────────────
 PLAN9_THEME = Theme(
     name="plan9",
-    primary="#9EBC9F",
-    secondary="#98BACE",
-    accent="#9EBC9F",
-    foreground="#222222",
+    primary="#228844",
+    secondary="#4488AA",
+    accent="#228844",
+    foreground="#111111",
     background="#FFFFEA",
     surface="#EAFFFF",
-    panel="#EAFFDB",
-    boost="#AACCAA",
-    warning="#CC9933",
-    error="#BB3333",
-    success="#558855",
+    panel="#D5E8D0",
+    boost="#33AA55",
+    warning="#BB8800",
+    error="#CC2222",
+    success="#228844",
     dark=False,
 )
 
