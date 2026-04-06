@@ -13,14 +13,22 @@ from .themes import (
     BEOS_THEME,
     C64_THEME,
     IBM_TERMINAL_THEME,
+    MACOS_THEME,
+    MSDOS_THEME,
     NEXTSTEP_THEME,
+    OPENSUSE_THEME,
+    OS2_WARP_THEME,
+    PLAN9_THEME,
     RETRO_THEME_NAMES,
     RETRO_THEMES,
+    SOLARIS_CDE_THEME,
     THEME_DISPLAY_NAMES,
+    UBUNTU_THEME,
+    WINDOWS_XP_THEME,
     register_all,
 )
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __author__ = "Michael Blaess"
 
 __all__ = [
@@ -30,6 +38,14 @@ __all__ = [
     "IBM_TERMINAL_THEME",
     "NEXTSTEP_THEME",
     "BEOS_THEME",
+    "UBUNTU_THEME",
+    "MACOS_THEME",
+    "WINDOWS_XP_THEME",
+    "MSDOS_THEME",
+    "PLAN9_THEME",
+    "SOLARIS_CDE_THEME",
+    "OS2_WARP_THEME",
+    "OPENSUSE_THEME",
     "RETRO_THEMES",
     "RETRO_THEME_NAMES",
     "THEME_DISPLAY_NAMES",
