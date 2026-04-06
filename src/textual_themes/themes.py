@@ -254,22 +254,22 @@ PLAN9_THEME = Theme(
 
 # ────────────────────────────────────────────────────────────────────────
 # Solaris CDE — Common Desktop Environment (1993)
-# Beige/teal — the corporate Unix workstation look.
+# Slate gray with warm accents — the corporate Unix workstation.
 # ────────────────────────────────────────────────────────────────────────
 SOLARIS_CDE_THEME = Theme(
     name="solaris-cde",
-    primary="#669999",
-    secondary="#996666",
-    accent="#669999",
-    foreground="#1A1A1A",
-    background="#AE8A6D",
-    surface="#BF9B7E",
-    panel="#9D7A5C",
-    boost="#77AAAA",
-    warning="#CC9944",
-    error="#CC4444",
-    success="#449966",
-    dark=False,
+    primary="#CC9966",
+    secondary="#5F7B8A",
+    accent="#CC9966",
+    foreground="#D8D0C8",
+    background="#3A4A5A",
+    surface="#455565",
+    panel="#303F4F",
+    boost="#DDAA77",
+    warning="#CCAA44",
+    error="#CC5544",
+    success="#55AA66",
+    dark=True,
 )
 
 # ────────────────────────────────────────────────────────────────────────
