@@ -13,6 +13,7 @@ from .themes import (
     BEOS_THEME,
     C64_THEME,
     IBM_TERMINAL_THEME,
+    LINUX_MINT_THEME,
     MACOS_THEME,
     MSDOS_THEME,
     NEXTSTEP_THEME,
@@ -28,7 +29,7 @@ from .themes import (
     register_all,
 )
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 __author__ = "Michael Blaess"
 
 __all__ = [
@@ -46,6 +47,7 @@ __all__ = [
     "SOLARIS_CDE_THEME",
     "OS2_WARP_THEME",
     "OPENSUSE_THEME",
+    "LINUX_MINT_THEME",
     "RETRO_THEMES",
     "RETRO_THEME_NAMES",
     "THEME_DISPLAY_NAMES",

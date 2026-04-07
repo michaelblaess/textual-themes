@@ -18,6 +18,7 @@ Themes:
     Solaris CDE  — Sun CDE Desktop: beige/teal corporate Unix
     OS/2 Warp    — IBM OS/2 Warp: dark blue/teal
     openSUSE     — openSUSE: dark green/white
+    Linux Mint   — Cinnamon Desktop: warm mint-green on charcoal
 """
 from __future__ import annotations
 
@@ -313,6 +314,27 @@ OPENSUSE_THEME = Theme(
 )
 
 
+# ────────────────────────────────────────────────────────────────────────
+# Linux Mint — Cinnamon Desktop
+# Warm mint-green on charcoal — the friendly Linux desktop.
+# ────────────────────────────────────────────────────────────────────────
+LINUX_MINT_THEME = Theme(
+    name="linux-mint",
+    primary="#8BB158",
+    secondary="#6DAB76",
+    accent="#8BB158",
+    foreground="#E8E8E8",
+    background="#2B2B2B",
+    surface="#363636",
+    panel="#232323",
+    boost="#9EC46A",
+    warning="#E5A50A",
+    error="#CC3333",
+    success="#8BB158",
+    dark=True,
+)
+
+
 # ── Convenience collections ────────────────────────────────────────────
 
 RETRO_THEMES: list[Theme] = [
@@ -330,6 +352,7 @@ RETRO_THEMES: list[Theme] = [
     SOLARIS_CDE_THEME,
     OS2_WARP_THEME,
     OPENSUSE_THEME,
+    LINUX_MINT_THEME,
 ]
 
 RETRO_THEME_NAMES: list[str] = [t.name for t in RETRO_THEMES]
@@ -349,6 +372,7 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "solaris-cde": "Solaris CDE",
     "os2-warp": "OS/2 Warp",
     "opensuse": "openSUSE",
+    "linux-mint": "Linux Mint",
 }
 
 
