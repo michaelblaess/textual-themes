@@ -2,7 +2,7 @@
 
 Retro color themes for [Textual](https://textual.textualize.io/) TUI applications.
 
-14 carefully crafted themes inspired by classic computers and operating systems.
+15 carefully crafted themes inspired by classic computers and operating systems.
 
 ## Themes
 
@@ -21,6 +21,7 @@ Retro color themes for [Textual](https://textual.textualize.io/) TUI application
 | **OS/2 Warp** | IBM OS/2 Warp (1994) | Dark blue with teal accents |
 | **openSUSE** | openSUSE Linux | Dark green with white |
 | **Solaris CDE** | Sun CDE Desktop (1993) | Slate gray with warm accents |
+| **Linux Mint** | Cinnamon Desktop | Warm mint-green on charcoal |
 
 ### Light Themes
 
@@ -76,7 +77,7 @@ from textual_themes import register_all
 class MyApp(App):
     def __init__(self):
         super().__init__()
-        register_all(self)       # registers all 14 themes
+        register_all(self)       # registers all 15 themes
         self.theme = "amiga"     # pick one
 ```
 
@@ -112,9 +113,10 @@ from textual_themes import (
     SOLARIS_CDE_THEME,
     OS2_WARP_THEME,
     OPENSUSE_THEME,
+    LINUX_MINT_THEME,
 
     # Collections
-    RETRO_THEMES,          # list[Theme] — all 14 themes
+    RETRO_THEMES,          # list[Theme] — all 15 themes
     RETRO_THEME_NAMES,     # list[str]   — ["c64", "amiga", ...]
     THEME_DISPLAY_NAMES,   # dict[str, str] — {"c64": "C64 — Commodore 64", ...}
 
@@ -143,6 +145,7 @@ Use these names with `app.theme = "..."`:
 | `solaris-cde` | Solaris CDE |
 | `os2-warp` | OS/2 Warp |
 | `opensuse` | openSUSE |
+| `linux-mint` | Linux Mint |
 
 ## Requirements
 
