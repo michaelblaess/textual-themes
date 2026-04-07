@@ -19,6 +19,9 @@ Themes:
     OS/2 Warp    — IBM OS/2 Warp: dark blue/teal
     openSUSE     — openSUSE: dark green/white
     Linux Mint   — Cinnamon Desktop: warm mint-green on charcoal
+    Red Hat      — Red Hat Linux: Shadowman red on dark
+    Raspberry Pi — Raspberry Pi OS: raspberry red on dark
+    FreeBSD      — FreeBSD: Beastie red on dark slate
 """
 from __future__ import annotations
 
@@ -335,6 +338,67 @@ LINUX_MINT_THEME = Theme(
 )
 
 
+# ────────────────────────────────────────────────────────────────────────
+# Red Hat Linux
+# The Shadowman's red — enterprise Linux with attitude.
+# ────────────────────────────────────────────────────────────────────────
+RED_HAT_THEME = Theme(
+    name="red-hat",
+    primary="#CC0000",
+    secondary="#A30000",
+    accent="#EE0000",
+    foreground="#E0E0E0",
+    background="#1A0A0A",
+    surface="#2A1515",
+    panel="#140808",
+    boost="#FF2222",
+    warning="#EEA500",
+    error="#FF4444",
+    success="#44AA44",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Raspberry Pi OS
+# Raspberry red on dark — the tiny computer's desktop.
+# ────────────────────────────────────────────────────────────────────────
+RASPBERRY_PI_THEME = Theme(
+    name="raspberry-pi",
+    primary="#C51A4A",
+    secondary="#6CC24A",
+    accent="#C51A4A",
+    foreground="#EEEEEE",
+    background="#1E1E2E",
+    surface="#2A2A3A",
+    panel="#181828",
+    boost="#DD2A5A",
+    warning="#E5A50A",
+    error="#DD3333",
+    success="#6CC24A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# FreeBSD
+# Beastie red on dark slate — the daemon's domain.
+# ────────────────────────────────────────────────────────────────────────
+FREEBSD_THEME = Theme(
+    name="freebsd",
+    primary="#AB2B28",
+    secondary="#5E8AAA",
+    accent="#AB2B28",
+    foreground="#D4D4D4",
+    background="#1C2028",
+    surface="#262A32",
+    panel="#161A20",
+    boost="#CC3533",
+    warning="#CC9933",
+    error="#DD4444",
+    success="#55AA66",
+    dark=True,
+)
+
+
 # ── Convenience collections ────────────────────────────────────────────
 
 RETRO_THEMES: list[Theme] = [
@@ -353,6 +417,9 @@ RETRO_THEMES: list[Theme] = [
     OS2_WARP_THEME,
     OPENSUSE_THEME,
     LINUX_MINT_THEME,
+    RED_HAT_THEME,
+    RASPBERRY_PI_THEME,
+    FREEBSD_THEME,
 ]
 
 RETRO_THEME_NAMES: list[str] = [t.name for t in RETRO_THEMES]
@@ -373,6 +440,9 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "os2-warp": "OS/2 Warp",
     "opensuse": "openSUSE",
     "linux-mint": "Linux Mint",
+    "red-hat": "Red Hat Linux",
+    "raspberry-pi": "Raspberry Pi OS",
+    "freebsd": "FreeBSD",
 }
 
 

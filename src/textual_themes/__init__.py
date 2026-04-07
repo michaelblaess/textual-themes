@@ -12,6 +12,7 @@ from .themes import (
     ATARI_ST_THEME,
     BEOS_THEME,
     C64_THEME,
+    FREEBSD_THEME,
     IBM_TERMINAL_THEME,
     LINUX_MINT_THEME,
     MACOS_THEME,
@@ -20,6 +21,8 @@ from .themes import (
     OPENSUSE_THEME,
     OS2_WARP_THEME,
     PLAN9_THEME,
+    RASPBERRY_PI_THEME,
+    RED_HAT_THEME,
     RETRO_THEME_NAMES,
     RETRO_THEMES,
     SOLARIS_CDE_THEME,
@@ -29,7 +32,7 @@ from .themes import (
     register_all,
 )
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 __author__ = "Michael Blaess"
 
 __all__ = [
@@ -48,6 +51,9 @@ __all__ = [
     "OS2_WARP_THEME",
     "OPENSUSE_THEME",
     "LINUX_MINT_THEME",
+    "RED_HAT_THEME",
+    "RASPBERRY_PI_THEME",
+    "FREEBSD_THEME",
     "RETRO_THEMES",
     "RETRO_THEME_NAMES",
     "THEME_DISPLAY_NAMES",
