@@ -2,7 +2,7 @@
 
 Retro color themes for [Textual](https://textual.textualize.io/) TUI applications.
 
-15 carefully crafted themes inspired by classic computers and operating systems.
+18 carefully crafted themes inspired by classic computers and operating systems.
 
 ## Themes
 
@@ -22,6 +22,9 @@ Retro color themes for [Textual](https://textual.textualize.io/) TUI application
 | **openSUSE** | openSUSE Linux | Dark green with white |
 | **Solaris CDE** | Sun CDE Desktop (1993) | Slate gray with warm accents |
 | **Linux Mint** | Cinnamon Desktop | Warm mint-green on charcoal |
+| **Red Hat** | Red Hat Linux | Shadowman red on dark |
+| **Raspberry Pi** | Raspberry Pi OS | Raspberry red on dark blue-gray |
+| **FreeBSD** | FreeBSD | Beastie red on dark slate |
 
 ### Light Themes
 
@@ -77,7 +80,7 @@ from textual_themes import register_all
 class MyApp(App):
     def __init__(self):
         super().__init__()
-        register_all(self)       # registers all 15 themes
+        register_all(self)       # registers all 18 themes
         self.theme = "amiga"     # pick one
 ```
 
@@ -114,9 +117,12 @@ from textual_themes import (
     OS2_WARP_THEME,
     OPENSUSE_THEME,
     LINUX_MINT_THEME,
+    RED_HAT_THEME,
+    RASPBERRY_PI_THEME,
+    FREEBSD_THEME,
 
     # Collections
-    RETRO_THEMES,          # list[Theme] — all 15 themes
+    RETRO_THEMES,          # list[Theme] — all 18 themes
     RETRO_THEME_NAMES,     # list[str]   — ["c64", "amiga", ...]
     THEME_DISPLAY_NAMES,   # dict[str, str] — {"c64": "C64 — Commodore 64", ...}
 
@@ -146,6 +152,9 @@ Use these names with `app.theme = "..."`:
 | `os2-warp` | OS/2 Warp |
 | `opensuse` | openSUSE |
 | `linux-mint` | Linux Mint |
+| `red-hat` | Red Hat Linux |
+| `raspberry-pi` | Raspberry Pi OS |
+| `freebsd` | FreeBSD |
 
 ## Requirements
 
