@@ -22,6 +22,20 @@ Themes:
     Red Hat      — Red Hat Linux: Shadowman red on dark
     Raspberry Pi — Raspberry Pi OS: raspberry red on dark
     FreeBSD      — FreeBSD: Beastie red on dark slate
+    Tudor        — Tudor Black Bay 58: black dial with aged gold lume + red bezel triangle
+    Bluesy       — Rolex Submariner yellow gold (blue dial): royal blue with rich gold accents
+    Goldfinger   — James Bond (1964): black and 18K gold, the villain's signature
+    Hulk         — Marvel's Incredible Hulk: vivid green rage with steel-gray edges
+    Batman       — DC's Dark Knight: Gotham night sky, black and midnight blue
+    Classic Navy — Deep navy dial with silver sub-dials and muted brick-red accents
+    Synthwave    — 80s retro-futurism: deep purple with neon pink and electric cyan
+    Miami Vice   — Pastel 80s: twilight teal with flamingo pink and sunset coral
+    Gulf Racing  — Gulf Oil / Porsche 917: deep Gulf blue with dominant orange stripe
+    Martini Racing — Martini livery: charcoal with deep blue, cherry red and silver stripes
+    Superman     — DC's Man of Steel: hero blue, cape red and shield yellow
+    Spiderman    — Marvel's web-slinger: Spidey red and suit blue on dark web-black
+    Pan Am       — Pan American World Airways: the globe blue on ivory white (light)
+    Game Boy     — Nintendo Game Boy DMG-01 (1989): olive LCD green (light)
 """
 from __future__ import annotations
 
@@ -399,6 +413,307 @@ FREEBSD_THEME = Theme(
 )
 
 
+# ────────────────────────────────────────────────────────────────────────
+# Tudor — Tudor Black Bay 58
+# Black dial with aged cream/gold lume patina, steel case, and the
+# signature red triangle on the bezel at 12 o'clock.
+# ────────────────────────────────────────────────────────────────────────
+TUDOR_THEME = Theme(
+    name="tudor",
+    primary="#C9A96E",
+    secondary="#6A6A6A",
+    accent="#9E1B25",
+    foreground="#E8C985",
+    background="#100C08",
+    surface="#1E1914",
+    panel="#080605",
+    boost="#D9BC80",
+    warning="#C9A048",
+    error="#B8252E",
+    success="#6A9A5A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Bluesy — Rolex Submariner Yellow Gold (blue dial)
+# Deep royal blue dial with rich yellow-gold indices, hands, and case.
+# ────────────────────────────────────────────────────────────────────────
+BLUESY_THEME = Theme(
+    name="bluesy",
+    primary="#D4AF37",
+    secondary="#1E4FA0",
+    accent="#F0C85A",
+    foreground="#F5D76E",
+    background="#081F54",
+    surface="#0E2E6E",
+    panel="#04133A",
+    boost="#FFD960",
+    warning="#E8A838",
+    error="#DD3344",
+    success="#48B870",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Goldfinger — James Bond (1964)
+# "No, Mr. Bond, I expect you to die." The villain's signature: deep
+# black with 18K yellow gold — Auric Goldfinger's gold-obsessed empire.
+# ────────────────────────────────────────────────────────────────────────
+GOLDFINGER_THEME = Theme(
+    name="goldfinger",
+    primary="#E6B800",
+    secondary="#8A6E20",
+    accent="#FFD740",
+    foreground="#E8DFC0",
+    background="#080705",
+    surface="#18140A",
+    panel="#040302",
+    boost="#FFE066",
+    warning="#E8A838",
+    error="#CC4040",
+    success="#5AAA5A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Hulk — Marvel's Incredible Hulk
+# "HULK SMASH!" Vivid gamma-green rage with steel-gray edges and the
+# warning-red of torn fabric. Bruce Banner's unstoppable alter ego.
+# ────────────────────────────────────────────────────────────────────────
+HULK_THEME = Theme(
+    name="hulk",
+    primary="#2BA841",
+    secondary="#BCC4CA",
+    accent="#4DC962",
+    foreground="#F0F2EE",
+    background="#083C14",
+    surface="#104B1B",
+    panel="#042608",
+    boost="#5FD974",
+    warning="#D4A040",
+    error="#CC2222",
+    success="#4DC962",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Batman — DC's Dark Knight
+# Gotham at midnight: deep black with the blue-black of a moonlit cape.
+# Silver-gray Bat-signal reflections and a touch of utility-belt gold.
+# ────────────────────────────────────────────────────────────────────────
+BATMAN_THEME = Theme(
+    name="batman",
+    primary="#244B85",
+    secondary="#BCC4CA",
+    accent="#3D6FB8",
+    foreground="#F0F2F5",
+    background="#060810",
+    surface="#0E1422",
+    panel="#030509",
+    boost="#5282D0",
+    warning="#D4A040",
+    error="#CC3030",
+    success="#50AA50",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Classic Navy
+# Deep navy background with silver/white highlights and muted brick-red
+# accents. Aviation-inspired without tying to a single watch reference.
+# ────────────────────────────────────────────────────────────────────────
+CLASSIC_NAVY_THEME = Theme(
+    name="classic-navy",
+    primary="#C0C5CC",
+    secondary="#1E4585",
+    accent="#9E3A42",
+    foreground="#EEF0F5",
+    background="#0C2B5C",
+    surface="#143465",
+    panel="#061A3A",
+    boost="#D8DCE2",
+    warning="#D4A040",
+    error="#B04048",
+    success="#50AA50",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Game Boy — Nintendo Game Boy DMG-01 (1989)
+# The iconic console case — warm beige-gray plastic with the purple
+# Nintendo wordmark and magenta A/B buttons. Light theme.
+# ────────────────────────────────────────────────────────────────────────
+GAMEBOY_THEME = Theme(
+    name="gameboy",
+    primary="#8E2A5E",
+    secondary="#5A4858",
+    accent="#D63B68",
+    foreground="#241F28",
+    background="#D4CEBC",
+    surface="#E2DCCA",
+    panel="#B2AC9A",
+    boost="#B83470",
+    warning="#C85820",
+    error="#A0203A",
+    success="#4A7A3A",
+    dark=False,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Pan Am — Pan American World Airways
+# "The world's most experienced airline." The iconic globe-blue logo
+# on ivory livery, with the red accent from vintage ticket stock and
+# route maps. Light theme.
+# ────────────────────────────────────────────────────────────────────────
+PAN_AM_THEME = Theme(
+    name="pan-am",
+    primary="#1A4FA0",
+    secondary="#C61F2C",
+    accent="#D4222F",
+    foreground="#1A1A1A",
+    background="#F6F3E8",
+    surface="#FCFAF0",
+    panel="#EBE6D4",
+    boost="#2A6BC8",
+    warning="#C88A20",
+    error="#C61F2C",
+    success="#2E8B3D",
+    dark=False,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Synthwave — 80s retro-futurism
+# Deep indigo-purple "night sky" background, neon pink as the main
+# signature, electric cyan as the accent, sunset gold for warnings —
+# the Outrun / Miami Vice / Kavinsky aesthetic.
+# ────────────────────────────────────────────────────────────────────────
+SYNTHWAVE_THEME = Theme(
+    name="synthwave",
+    primary="#FF2E93",
+    secondary="#7B2D8E",
+    accent="#05D9E8",
+    foreground="#F5E9FF",
+    background="#1A0B3D",
+    surface="#261553",
+    panel="#0E0524",
+    boost="#FF6EC7",
+    warning="#FFD319",
+    error="#FF3860",
+    success="#39FF14",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Miami Vice — Pastel 80s
+# Twilight teal ocean background with flamingo pink as the signature,
+# sunset coral accents and mint success. The pastel counterpart to
+# Synthwave — more Crockett & Tubbs, less Kavinsky.
+# ────────────────────────────────────────────────────────────────────────
+MIAMI_VICE_THEME = Theme(
+    name="miami-vice",
+    primary="#FF6FAB",
+    secondary="#1FB8BC",
+    accent="#FFA06A",
+    foreground="#FFE8E0",
+    background="#0B2F3F",
+    surface="#124050",
+    panel="#051825",
+    boost="#FF8FC5",
+    warning="#FFD76B",
+    error="#E63970",
+    success="#4ECDA8",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Gulf Racing — Gulf Oil / Porsche 917
+# Deep Gulf blue body with the bold orange centre stripe dominating the
+# UI — Le Mans 1970, Steve McQueen's 917. Orange everywhere the eye
+# would follow the stripe, powder-blue highlights as the livery accent.
+# ────────────────────────────────────────────────────────────────────────
+GULF_RACING_THEME = Theme(
+    name="gulf-racing",
+    primary="#F26A1F",
+    secondary="#7EB8D4",
+    accent="#FF8F3C",
+    foreground="#F0E8DC",
+    background="#1E3F5E",
+    surface="#2A5278",
+    panel="#142940",
+    boost="#FFA040",
+    warning="#FFC040",
+    error="#D83030",
+    success="#4AA85A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Martini Racing — Martini & Rossi livery
+# Charcoal engine-bay background that lets the signature stripes pop:
+# deep Martini blue, cherry red, and pearl silver. Porsche 917, 935,
+# Lancia Delta — the stripes of endurance-racing history.
+# ────────────────────────────────────────────────────────────────────────
+MARTINI_RACING_THEME = Theme(
+    name="martini-racing",
+    primary="#1A5CC8",
+    secondary="#C0C6D0",
+    accent="#E42030",
+    foreground="#EEF0F5",
+    background="#14161E",
+    surface="#1F232E",
+    panel="#080A10",
+    boost="#2E72DC",
+    warning="#E8A838",
+    error="#E42030",
+    success="#3AAA4A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Superman — DC's Man of Steel
+# The hero-blue suit with red cape and the iconic yellow S-shield.
+# Metropolis sunrise — optimism, strength, and that classic red/blue/
+# yellow primary-colour triad straight from the comic panels.
+# ────────────────────────────────────────────────────────────────────────
+SUPERMAN_THEME = Theme(
+    name="superman",
+    primary="#E02030",
+    secondary="#1A5CC8",
+    accent="#FFD53B",
+    foreground="#F0F2F8",
+    background="#0A2A5E",
+    surface="#123876",
+    panel="#051838",
+    boost="#F83040",
+    warning="#FFD53B",
+    error="#C80A18",
+    success="#3AAA4A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Spiderman — Marvel's Web-Slinger
+# The classic red-and-blue suit with black web lines and the big white
+# spider-eyes. Peter Parker swinging through Manhattan at night — red
+# as the hero signal, blue as the suit, white for the lenses.
+# ────────────────────────────────────────────────────────────────────────
+SPIDERMAN_THEME = Theme(
+    name="spiderman",
+    primary="#E02030",
+    secondary="#1E3F8A",
+    accent="#3A5CC8",
+    foreground="#F0F2F8",
+    background="#0D0E18",
+    surface="#18192A",
+    panel="#050610",
+    boost="#F83040",
+    warning="#E8A838",
+    error="#C80A18",
+    success="#4AA85A",
+    dark=True,
+)
+
+
 # ── Convenience collections ────────────────────────────────────────────
 
 RETRO_THEMES: list[Theme] = [
@@ -420,6 +735,20 @@ RETRO_THEMES: list[Theme] = [
     RED_HAT_THEME,
     RASPBERRY_PI_THEME,
     FREEBSD_THEME,
+    TUDOR_THEME,
+    BLUESY_THEME,
+    GOLDFINGER_THEME,
+    HULK_THEME,
+    BATMAN_THEME,
+    CLASSIC_NAVY_THEME,
+    GAMEBOY_THEME,
+    PAN_AM_THEME,
+    SYNTHWAVE_THEME,
+    MIAMI_VICE_THEME,
+    GULF_RACING_THEME,
+    MARTINI_RACING_THEME,
+    SUPERMAN_THEME,
+    SPIDERMAN_THEME,
 ]
 
 RETRO_THEME_NAMES: list[str] = [t.name for t in RETRO_THEMES]
@@ -443,6 +772,20 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "red-hat": "Red Hat Linux",
     "raspberry-pi": "Raspberry Pi OS",
     "freebsd": "FreeBSD",
+    "tudor": "Tudor — Black Bay 58",
+    "bluesy": "Bluesy — Rolex Submariner Gold Blue",
+    "goldfinger": "Goldfinger — James Bond (1964)",
+    "hulk": "Hulk — Marvel's Incredible Hulk",
+    "batman": "Batman — DC's Dark Knight",
+    "classic-navy": "Classic Navy",
+    "gameboy": "Game Boy — Nintendo DMG-01",
+    "pan-am": "Pan Am — Pan American World Airways",
+    "synthwave": "Synthwave — 80s Retro-Futurism",
+    "miami-vice": "Miami Vice — Pastel 80s",
+    "gulf-racing": "Gulf Racing — Porsche 917",
+    "martini-racing": "Martini Racing",
+    "superman": "Superman — DC's Man of Steel",
+    "spiderman": "Spiderman — Marvel's Web-Slinger",
 }
 
 

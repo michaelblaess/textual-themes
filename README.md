@@ -2,7 +2,7 @@
 
 Retro color themes for [Textual](https://textual.textualize.io/) TUI applications.
 
-18 carefully crafted themes inspired by classic computers and operating systems.
+32 carefully crafted themes inspired by classic computers, operating systems, iconic wristwatches, 80s retro-futurism, motorsport liveries, and comic-book heroes.
 
 ## Themes
 
@@ -25,6 +25,18 @@ Retro color themes for [Textual](https://textual.textualize.io/) TUI application
 | **Red Hat** | Red Hat Linux | Shadowman red on dark |
 | **Raspberry Pi** | Raspberry Pi OS | Raspberry red on dark blue-gray |
 | **FreeBSD** | FreeBSD | Beastie red on dark slate |
+| **Tudor** | Tudor Black Bay 58 | Aged gold lume on black with bezel-red accent |
+| **Bluesy** | Rolex Submariner Yellow Gold | Rich yellow gold on deep royal blue |
+| **Goldfinger** | James Bond (1964) | Deep black with 18K gold — the villain's signature |
+| **Hulk** | Marvel's Incredible Hulk | Gamma-green rage with steel-gray edges |
+| **Batman** | DC's Dark Knight | Gotham midnight — black with moonlit blue |
+| **Superman** | DC's Man of Steel | Hero-blue suit with cape red and shield yellow |
+| **Spiderman** | Marvel's Web-Slinger | Spidey red and suit blue on web-black |
+| **Classic Navy** | Aviation-inspired | Deep navy with silver highlights and muted brick-red accents |
+| **Synthwave** | 80s retro-futurism | Deep indigo with neon pink, electric cyan and sunset gold |
+| **Miami Vice** | Pastel 80s TV | Twilight teal with flamingo pink and sunset coral |
+| **Gulf Racing** | Gulf Oil / Porsche 917 | Deep Gulf blue body with dominant orange centre stripe |
+| **Martini Racing** | Martini & Rossi livery | Charcoal with deep blue, cherry red and silver stripes |
 
 ### Light Themes
 
@@ -33,6 +45,8 @@ Retro color themes for [Textual](https://textual.textualize.io/) TUI application
 | **Atari ST** | GEM Desktop (1985) | White/black/green, monochrome feel |
 | **macOS** | macOS (modern) | Clean light gray with blue accents |
 | **Plan 9** | Plan 9 from Bell Labs (1992) | Pale yellow/blue with green accents |
+| **Pan Am** | Pan American World Airways | The iconic globe blue on ivory livery |
+| **Game Boy** | Nintendo Game Boy DMG-01 (1989) | Beige-gray case with purple wordmark and magenta buttons |
 
 ## Installation
 
@@ -80,7 +94,7 @@ from textual_themes import register_all
 class MyApp(App):
     def __init__(self):
         super().__init__()
-        register_all(self)       # registers all 18 themes
+        register_all(self)       # registers all 32 themes
         self.theme = "amiga"     # pick one
 ```
 
@@ -120,9 +134,23 @@ from textual_themes import (
     RED_HAT_THEME,
     RASPBERRY_PI_THEME,
     FREEBSD_THEME,
+    TUDOR_THEME,
+    BLUESY_THEME,
+    GOLDFINGER_THEME,
+    HULK_THEME,
+    BATMAN_THEME,
+    CLASSIC_NAVY_THEME,
+    GAMEBOY_THEME,
+    PAN_AM_THEME,
+    SYNTHWAVE_THEME,
+    MIAMI_VICE_THEME,
+    GULF_RACING_THEME,
+    MARTINI_RACING_THEME,
+    SUPERMAN_THEME,
+    SPIDERMAN_THEME,
 
     # Collections
-    RETRO_THEMES,          # list[Theme] — all 18 themes
+    RETRO_THEMES,          # list[Theme] — all 32 themes
     RETRO_THEME_NAMES,     # list[str]   — ["c64", "amiga", ...]
     THEME_DISPLAY_NAMES,   # dict[str, str] — {"c64": "C64 — Commodore 64", ...}
 
@@ -155,6 +183,20 @@ Use these names with `app.theme = "..."`:
 | `red-hat` | Red Hat Linux |
 | `raspberry-pi` | Raspberry Pi OS |
 | `freebsd` | FreeBSD |
+| `tudor` | Tudor Black Bay 58 |
+| `bluesy` | Rolex Submariner Yellow Gold Blue |
+| `goldfinger` | Goldfinger — James Bond (1964) |
+| `hulk` | Hulk — Marvel's Incredible Hulk |
+| `batman` | Batman — DC's Dark Knight |
+| `superman` | Superman — DC's Man of Steel |
+| `spiderman` | Spiderman — Marvel's Web-Slinger |
+| `classic-navy` | Classic Navy |
+| `gameboy` | Nintendo Game Boy DMG-01 |
+| `pan-am` | Pan American World Airways |
+| `synthwave` | Synthwave — 80s Retro-Futurism |
+| `miami-vice` | Miami Vice — Pastel 80s |
+| `gulf-racing` | Gulf Racing — Porsche 917 |
+| `martini-racing` | Martini Racing |
 
 ## Requirements
 
