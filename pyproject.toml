@@ -33,6 +33,9 @@ Homepage = "https://github.com/michaelblaess/textual-themes"
 Repository = "https://github.com/michaelblaess/textual-themes"
 Issues = "https://github.com/michaelblaess/textual-themes/issues"
 
+[project.scripts]
+textual-themes-demo = "textual_themes.__main__:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
