@@ -34,7 +34,12 @@ from textual.widgets import (
 )
 
 from . import __version__
-from .themes import RETRO_THEME_NAMES, THEME_DISPLAY_NAMES, register_all
+from .themes import (
+    RETRO_THEME_NAMES,
+    RETRO_THEMES,
+    THEME_DISPLAY_NAMES,
+    register_all,
+)
 
 _SAMPLE_MARKDOWN = """\
 # Markdown
@@ -77,7 +82,22 @@ class ThemeDemoApp(App[None]):
     Screen {
         layout: vertical;
     }
+    #main {
+        height: 1fr;
+        layout: horizontal;
+    }
+    #sidebar {
+        width: 36;
+        min-width: 28;
+        background: $panel;
+        border-right: solid $accent;
+    }
+    #theme-tree {
+        height: 1fr;
+        padding: 1;
+    }
     #content {
+        width: 1fr;
         padding: 0 2 1 2;
     }
     .section-title {
@@ -104,7 +124,7 @@ class ThemeDemoApp(App[None]):
         height: 8;
         margin-top: 1;
     }
-    Tree {
+    #tree-demo {
         height: 10;
         margin-top: 1;
     }
@@ -148,61 +168,101 @@ class ThemeDemoApp(App[None]):
 
     def compose(self) -> ComposeResult:
         yield Header(show_clock=False)
-        with VerticalScroll(id="content"):
-            yield Static("Buttons", classes="section-title")
-            with Horizontal(classes="row"):
-                yield Button("Default", id="btn-default")
-                yield Button("Primary", variant="primary", id="btn-primary")
-                yield Button("Warning", variant="warning", id="btn-warning")
-                yield Button("Error", variant="error", id="btn-error")
-            with Horizontal(classes="row"):
-                yield Button("Default", id="btn-default-d", disabled=True)
-                yield Button(
-                    "Primary", variant="primary", id="btn-primary-d", disabled=True
-                )
-                yield Button(
-                    "Warning", variant="warning", id="btn-warning-d", disabled=True
-                )
-                yield Button(
-                    "Error", variant="error", id="btn-error-d", disabled=True
-                )
-
-            yield Static("Inputs", classes="section-title")
-            yield Input(placeholder="Type something here...", id="input-1")
-            yield Input(value="Pre-filled value", id="input-2")
-            yield TextArea(_SAMPLE_CODE, language="python", id="ta-1")
-
-            yield Static("Checkboxes, Radios & Switch", classes="section-title")
-            with Horizontal(classes="row"):
-                yield Checkbox("Enable feature", value=True)
-                yield Checkbox("Beta access")
-                yield Switch(value=True)
-                yield Switch()
-            with RadioSet():
-                yield RadioButton("Amanda", value=True)
-                yield RadioButton("Connor MacLeod")
-                yield RadioButton("Duncan MacLeod")
-
-            yield Static("DataTable", classes="section-title")
-            yield DataTable(id="dt-1", zebra_stripes=True)
-
-            yield Static("ProgressBar", classes="section-title")
-            yield ProgressBar(total=100, show_eta=False, id="pb-1")
-
-            yield Static("Tree", classes="section-title")
-            tree: Tree[str] = Tree("Themes", id="tree-1")
-            tree.root.expand()
-            for name in RETRO_THEME_NAMES:
-                tree.root.add_leaf(THEME_DISPLAY_NAMES.get(name, name))
-            yield tree
-
-            yield Static("RichLog", classes="section-title")
-            yield RichLog(highlight=True, markup=True, id="log-1")
-
-            yield Static("Markdown", classes="section-title")
-            yield Markdown(_SAMPLE_MARKDOWN)
-
+        with Horizontal(id="main"):
+            with VerticalScroll(id="sidebar"):
+                yield self._build_theme_tree()
+            with VerticalScroll(id="content"):
+                yield from self._compose_showcase()
         yield Footer()
+
+    def _compose_showcase(self) -> ComposeResult:
+        yield Static("Buttons", classes="section-title")
+        with Horizontal(classes="row"):
+            yield Button("Default", id="btn-default")
+            yield Button("Primary", variant="primary", id="btn-primary")
+            yield Button("Warning", variant="warning", id="btn-warning")
+            yield Button("Error", variant="error", id="btn-error")
+        with Horizontal(classes="row"):
+            yield Button("Default", id="btn-default-d", disabled=True)
+            yield Button(
+                "Primary", variant="primary", id="btn-primary-d", disabled=True
+            )
+            yield Button(
+                "Warning", variant="warning", id="btn-warning-d", disabled=True
+            )
+            yield Button(
+                "Error", variant="error", id="btn-error-d", disabled=True
+            )
+
+        yield Static("Inputs", classes="section-title")
+        yield Input(placeholder="Type something here...", id="input-1")
+        yield Input(value="Pre-filled value", id="input-2")
+        yield TextArea(_SAMPLE_CODE, language="python", id="ta-1")
+
+        yield Static("Checkboxes, Radios & Switch", classes="section-title")
+        with Horizontal(classes="row"):
+            yield Checkbox("Enable feature", value=True)
+            yield Checkbox("Beta access")
+            yield Switch(value=True)
+            yield Switch()
+        with RadioSet():
+            yield RadioButton("Amanda", value=True)
+            yield RadioButton("Connor MacLeod")
+            yield RadioButton("Duncan MacLeod")
+
+        yield Static("DataTable", classes="section-title")
+        yield DataTable(id="dt-1", zebra_stripes=True)
+
+        yield Static("ProgressBar", classes="section-title")
+        yield ProgressBar(total=100, show_eta=False, id="pb-1")
+
+        yield Static("Tree", classes="section-title")
+        demo_tree: Tree[str] = Tree("My Project", id="tree-demo")
+        demo_tree.root.expand()
+        src_node = demo_tree.root.add("src", expand=True)
+        src_node.add_leaf("app.py")
+        src_node.add_leaf("models.py")
+        src_node.add_leaf("widgets.py")
+        docs_node = demo_tree.root.add("docs")
+        docs_node.add_leaf("README.md")
+        docs_node.add_leaf("CHANGELOG.md")
+        demo_tree.root.add_leaf("pyproject.toml")
+        yield demo_tree
+
+        yield Static("RichLog", classes="section-title")
+        yield RichLog(highlight=True, markup=True, id="log-1")
+
+        yield Static("Markdown", classes="section-title")
+        yield Markdown(_SAMPLE_MARKDOWN)
+
+    def _build_theme_tree(self) -> Tree[str]:
+        """Sidebar tree: themes grouped by Dark / Light."""
+        tree: Tree[str] = Tree("Themes", id="theme-tree")
+        tree.show_root = False
+        tree.guide_depth = 2
+
+        dark_themes = [t for t in RETRO_THEMES if t.dark]
+        light_themes = [t for t in RETRO_THEMES if not t.dark]
+
+        dark_node = tree.root.add(
+            f"Dark  ({len(dark_themes)})", expand=True
+        )
+        for theme in dark_themes:
+            dark_node.add_leaf(
+                THEME_DISPLAY_NAMES.get(theme.name, theme.name),
+                data=theme.name,
+            )
+
+        light_node = tree.root.add(
+            f"Light  ({len(light_themes)})", expand=True
+        )
+        for theme in light_themes:
+            light_node.add_leaf(
+                THEME_DISPLAY_NAMES.get(theme.name, theme.name),
+                data=theme.name,
+            )
+
+        return tree
 
     def on_mount(self) -> None:
         self.theme = self._initial_theme
@@ -222,11 +282,12 @@ class ThemeDemoApp(App[None]):
         log.write("[yellow]WARN[/yellow]  This is a sample warning.")
         log.write("[red]ERROR[/red] Sample error message.")
         log.write(
-            "Press [b]n[/b] / [b]p[/b] to switch themes, [b]Ctrl+P[/b] for picker."
+            "Pick a theme on the left, press [b]n[/b] / [b]p[/b] to cycle, "
+            "or [b]Ctrl+P[/b] for the picker."
         )
 
     def watch_theme(self, theme_name: str) -> None:
-        """Update the header subtitle whenever the theme changes."""
+        """Update header subtitle and sidebar cursor when the theme changes."""
         display = THEME_DISPLAY_NAMES.get(theme_name, theme_name)
         if theme_name in RETRO_THEME_NAMES:
             index = RETRO_THEME_NAMES.index(theme_name) + 1
@@ -234,6 +295,27 @@ class ThemeDemoApp(App[None]):
             self.sub_title = f"{display}  ({index}/{total})"
         else:
             self.sub_title = display
+        self._sync_sidebar_cursor(theme_name)
+
+    def _sync_sidebar_cursor(self, theme_name: str) -> None:
+        try:
+            tree = self.query_one("#theme-tree", Tree)
+        except Exception:
+            return
+        for category in tree.root.children:
+            for leaf in category.children:
+                if leaf.data == theme_name:
+                    tree.select_node(leaf)
+                    tree.scroll_to_node(leaf)
+                    return
+
+    def on_tree_node_selected(self, event: Tree.NodeSelected[str]) -> None:
+        """Sidebar selection changes the active theme."""
+        if event.control.id != "theme-tree":
+            return
+        name = event.node.data
+        if name and name != self.theme and name in RETRO_THEME_NAMES:
+            self.theme = name
 
     def action_next_theme(self) -> None:
         self._cycle_theme(1)
