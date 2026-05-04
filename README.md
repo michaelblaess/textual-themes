@@ -26,6 +26,62 @@ Retro color themes for [Textual](https://textual.textualize.io/) TUI application
 > *inspiration* only. No claim is made on any trademark. If you are a
 > trademark owner and have concerns, please open an issue.
 
+## Gallery
+
+Click any thumbnail to open the full-size SVG. Screenshots are taken from
+the bundled demo app (`python -m textual_themes`).
+
+<table>
+<tr>
+<td align="center"><a href="docs/screenshots/c64.svg"><img src="docs/screenshots/c64.svg" width="240" alt="C64"></a><br><sub><b>C64</b></sub></td>
+<td align="center"><a href="docs/screenshots/amiga.svg"><img src="docs/screenshots/amiga.svg" width="240" alt="Amiga"></a><br><sub><b>Amiga</b></sub></td>
+<td align="center"><a href="docs/screenshots/atari-st.svg"><img src="docs/screenshots/atari-st.svg" width="240" alt="Atari ST"></a><br><sub><b>Atari ST</b></sub></td>
+<td align="center"><a href="docs/screenshots/ibm-terminal.svg"><img src="docs/screenshots/ibm-terminal.svg" width="240" alt="IBM Terminal"></a><br><sub><b>IBM Terminal</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/nextstep.svg"><img src="docs/screenshots/nextstep.svg" width="240" alt="NeXTSTEP"></a><br><sub><b>NeXTSTEP</b></sub></td>
+<td align="center"><a href="docs/screenshots/beos.svg"><img src="docs/screenshots/beos.svg" width="240" alt="BeOS"></a><br><sub><b>BeOS</b></sub></td>
+<td align="center"><a href="docs/screenshots/ubuntu.svg"><img src="docs/screenshots/ubuntu.svg" width="240" alt="Ubuntu"></a><br><sub><b>Ubuntu</b></sub></td>
+<td align="center"><a href="docs/screenshots/macos.svg"><img src="docs/screenshots/macos.svg" width="240" alt="macOS"></a><br><sub><b>macOS</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/windows-xp.svg"><img src="docs/screenshots/windows-xp.svg" width="240" alt="Windows XP"></a><br><sub><b>Windows XP</b></sub></td>
+<td align="center"><a href="docs/screenshots/msdos.svg"><img src="docs/screenshots/msdos.svg" width="240" alt="MS-DOS"></a><br><sub><b>MS-DOS</b></sub></td>
+<td align="center"><a href="docs/screenshots/plan9.svg"><img src="docs/screenshots/plan9.svg" width="240" alt="Plan 9"></a><br><sub><b>Plan 9</b></sub></td>
+<td align="center"><a href="docs/screenshots/solaris-cde.svg"><img src="docs/screenshots/solaris-cde.svg" width="240" alt="Solaris CDE"></a><br><sub><b>Solaris CDE</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/os2-warp.svg"><img src="docs/screenshots/os2-warp.svg" width="240" alt="OS/2 Warp"></a><br><sub><b>OS/2 Warp</b></sub></td>
+<td align="center"><a href="docs/screenshots/opensuse.svg"><img src="docs/screenshots/opensuse.svg" width="240" alt="openSUSE"></a><br><sub><b>openSUSE</b></sub></td>
+<td align="center"><a href="docs/screenshots/linux-mint.svg"><img src="docs/screenshots/linux-mint.svg" width="240" alt="Linux Mint"></a><br><sub><b>Linux Mint</b></sub></td>
+<td align="center"><a href="docs/screenshots/red-hat.svg"><img src="docs/screenshots/red-hat.svg" width="240" alt="Red Hat"></a><br><sub><b>Red Hat</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/raspberry-pi.svg"><img src="docs/screenshots/raspberry-pi.svg" width="240" alt="Raspberry Pi"></a><br><sub><b>Raspberry Pi</b></sub></td>
+<td align="center"><a href="docs/screenshots/freebsd.svg"><img src="docs/screenshots/freebsd.svg" width="240" alt="FreeBSD"></a><br><sub><b>FreeBSD</b></sub></td>
+<td align="center"><a href="docs/screenshots/tudor.svg"><img src="docs/screenshots/tudor.svg" width="240" alt="Tudor"></a><br><sub><b>Tudor</b></sub></td>
+<td align="center"><a href="docs/screenshots/bluesy.svg"><img src="docs/screenshots/bluesy.svg" width="240" alt="Bluesy"></a><br><sub><b>Bluesy</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/goldfinger.svg"><img src="docs/screenshots/goldfinger.svg" width="240" alt="Goldfinger"></a><br><sub><b>Goldfinger</b></sub></td>
+<td align="center"><a href="docs/screenshots/hulk.svg"><img src="docs/screenshots/hulk.svg" width="240" alt="Hulk"></a><br><sub><b>Hulk</b></sub></td>
+<td align="center"><a href="docs/screenshots/batman.svg"><img src="docs/screenshots/batman.svg" width="240" alt="Batman"></a><br><sub><b>Batman</b></sub></td>
+<td align="center"><a href="docs/screenshots/classic-navy.svg"><img src="docs/screenshots/classic-navy.svg" width="240" alt="Classic Navy"></a><br><sub><b>Classic Navy</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/gameboy.svg"><img src="docs/screenshots/gameboy.svg" width="240" alt="Game Boy"></a><br><sub><b>Game Boy</b></sub></td>
+<td align="center"><a href="docs/screenshots/pan-am.svg"><img src="docs/screenshots/pan-am.svg" width="240" alt="Pan Am"></a><br><sub><b>Pan Am</b></sub></td>
+<td align="center"><a href="docs/screenshots/synthwave.svg"><img src="docs/screenshots/synthwave.svg" width="240" alt="Synthwave"></a><br><sub><b>Synthwave</b></sub></td>
+<td align="center"><a href="docs/screenshots/miami-vice.svg"><img src="docs/screenshots/miami-vice.svg" width="240" alt="Miami Vice"></a><br><sub><b>Miami Vice</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/gulf-racing.svg"><img src="docs/screenshots/gulf-racing.svg" width="240" alt="Gulf Racing"></a><br><sub><b>Gulf Racing</b></sub></td>
+<td align="center"><a href="docs/screenshots/martini-racing.svg"><img src="docs/screenshots/martini-racing.svg" width="240" alt="Martini Racing"></a><br><sub><b>Martini Racing</b></sub></td>
+<td align="center"><a href="docs/screenshots/superman.svg"><img src="docs/screenshots/superman.svg" width="240" alt="Superman"></a><br><sub><b>Superman</b></sub></td>
+<td align="center"><a href="docs/screenshots/spiderman.svg"><img src="docs/screenshots/spiderman.svg" width="240" alt="Spiderman"></a><br><sub><b>Spiderman</b></sub></td>
+</tr>
+</table>
+
 ## Themes
 
 ### Dark Themes
