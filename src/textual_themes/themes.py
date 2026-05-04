@@ -13,7 +13,7 @@ Themes:
     Ubuntu       — Ubuntu Desktop: aubergine/purple with orange accents
     macOS        — macOS: clean light gray with blue accents (light)
     Windows XP   — Windows XP Luna: blue taskbar with green start button
-    MS-DOS       — Norton Commander: blue/cyan/yellow
+    Norton Commander — DOS file manager: blue/cyan/yellow
     Plan 9       — Plan 9 from Bell Labs: yellow/blue/green
     Solaris CDE  — Sun CDE Desktop: beige/teal corporate Unix
     OS/2 Warp    — IBM OS/2 Warp: dark blue/teal
@@ -112,19 +112,21 @@ ATARI_ST_THEME = Theme(
 # ────────────────────────────────────────────────────────────────────────
 # IBM Terminal (1970s-80s)
 # Phosphor-green on black — the archetypal terminal.
+# Subtle green-tinted surface / panel give the CRT phosphor glow,
+# so borders are visible without breaking the monochrome feel.
 # ────────────────────────────────────────────────────────────────────────
 IBM_TERMINAL_THEME = Theme(
     name="ibm-terminal",
     primary="#33FF33",
-    secondary="#1A8C1A",
-    accent="#33FF33",
+    secondary="#2A7A2A",
+    accent="#88FF88",
     foreground="#33FF33",
     background="#0A0A0A",
-    surface="#111111",
-    panel="#0D0D0D",
-    boost="#44FF44",
-    warning="#22BB22",
-    error="#FF3333",
+    surface="#162616",
+    panel="#0F1B0F",
+    boost="#88FF88",
+    warning="#FFAA00",
+    error="#FF4444",
     success="#33FF33",
     dark=True,
 )
@@ -175,17 +177,18 @@ BEOS_THEME = Theme(
 # ────────────────────────────────────────────────────────────────────────
 # Ubuntu Desktop
 # Aubergine/purple with orange accents — Canonical's signature look.
+# Toned-down accent + lifted surface so the orange stops shouting.
 # ────────────────────────────────────────────────────────────────────────
 UBUNTU_THEME = Theme(
     name="ubuntu",
-    primary="#E95420",
-    secondary="#4A1942",
-    accent="#E95420",
-    foreground="#EEEEEE",
-    background="#300A24",
-    surface="#3B1530",
-    panel="#280820",
-    boost="#FF6E3A",
+    primary="#DD4814",
+    secondary="#77216F",
+    accent="#E18B5C",
+    foreground="#F2EAEA",
+    background="#2C001E",
+    surface="#4A2540",
+    panel="#1F0014",
+    boost="#E18B5C",
     warning="#F99B11",
     error="#DF382C",
     success="#38B44A",
@@ -233,14 +236,15 @@ WINDOWS_XP_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# MS-DOS / Norton Commander (1986)
-# Blue background, white text, bright cyan/yellow highlights —
-# the classic 16-color VGA file-manager palette.
+# Norton Commander (1986)
+# Blue background, white text. Yellow is the iconic selection / active
+# highlight (like the "Next" button in NC dialogs); cyan is the secondary
+# color for column headers and borders. Classic 16-color VGA palette.
 # ────────────────────────────────────────────────────────────────────────
 MSDOS_THEME = Theme(
     name="msdos",
-    primary="#55FFFF",
-    secondary="#FFFF55",
+    primary="#FFFF55",
+    secondary="#55FFFF",
     accent="#FFFF55",
     foreground="#FFFFFF",
     background="#0000AA",
@@ -766,7 +770,7 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "ubuntu": "Ubuntu",
     "macos": "macOS",
     "windows-xp": "Windows XP — Luna",
-    "msdos": "MS-DOS — Norton Commander",
+    "msdos": "Norton Commander",
     "plan9": "Plan 9 — Bell Labs",
     "solaris-cde": "Solaris CDE",
     "os2-warp": "OS/2 Warp",

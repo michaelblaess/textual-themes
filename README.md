@@ -46,7 +46,7 @@ the bundled demo app (`python -m textual_themes`).
 </tr>
 <tr>
 <td align="center"><a href="docs/screenshots/windows-xp.svg"><img src="docs/screenshots/windows-xp.svg" width="240" alt="Windows XP"></a><br><sub><b>Windows XP</b></sub></td>
-<td align="center"><a href="docs/screenshots/msdos.svg"><img src="docs/screenshots/msdos.svg" width="240" alt="MS-DOS"></a><br><sub><b>MS-DOS</b></sub></td>
+<td align="center"><a href="docs/screenshots/msdos.svg"><img src="docs/screenshots/msdos.svg" width="240" alt="Norton Commander"></a><br><sub><b>Norton Commander</b></sub></td>
 <td align="center"><a href="docs/screenshots/plan9.svg"><img src="docs/screenshots/plan9.svg" width="240" alt="Plan 9"></a><br><sub><b>Plan 9</b></sub></td>
 <td align="center"><a href="docs/screenshots/solaris-cde.svg"><img src="docs/screenshots/solaris-cde.svg" width="240" alt="Solaris CDE"></a><br><sub><b>Solaris CDE</b></sub></td>
 </tr>
@@ -95,7 +95,7 @@ the bundled demo app (`python -m textual_themes`).
 | **BeOS** | BeOS (1995) | Blue-gray with yellow Deskbar accent |
 | **Ubuntu** | Ubuntu Desktop | Aubergine/purple with orange accents |
 | **Windows XP** | Windows XP Luna (2001) | Blue taskbar with green Start button |
-| **MS-DOS** | Norton Commander (1986) | Blue/cyan/yellow file manager |
+| **Norton Commander** | Norton Commander (1986) | Blue/cyan/yellow file manager |
 | **OS/2 Warp** | IBM OS/2 Warp (1994) | Dark blue with teal accents |
 | **openSUSE** | openSUSE Linux | Dark green with white |
 | **Solaris CDE** | Sun CDE Desktop (1993) | Slate gray with warm accents |
@@ -252,7 +252,7 @@ Use these names with `app.theme = "..."`:
 | `ubuntu` | Ubuntu |
 | `macos` | macOS |
 | `windows-xp` | Windows XP Luna |
-| `msdos` | MS-DOS / Norton Commander |
+| `msdos` | Norton Commander |
 | `plan9` | Plan 9 from Bell Labs |
 | `solaris-cde` | Solaris CDE |
 | `os2-warp` | OS/2 Warp |

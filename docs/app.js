@@ -13,7 +13,7 @@
     { slug: "ubuntu",         name: "Ubuntu",                              dark: true  },
     { slug: "macos",          name: "macOS",                               dark: false },
     { slug: "windows-xp",     name: "Windows XP — Luna",              dark: true  },
-    { slug: "msdos",          name: "MS-DOS — Norton Commander",      dark: true  },
+    { slug: "msdos",          name: "Norton Commander",                    dark: true  },
     { slug: "plan9",          name: "Plan 9 — Bell Labs",             dark: false },
     { slug: "solaris-cde",    name: "Solaris CDE",                         dark: true  },
     { slug: "os2-warp",       name: "OS/2 Warp",                           dark: true  },
