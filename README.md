@@ -113,7 +113,6 @@ the bundled demo app (`python -m textual_themes`).
 | **Classic Navy** | Aviation-inspired | Deep navy with silver highlights and muted brick-red accents |
 | **Synthwave** | 80s retro-futurism | Deep indigo with neon pink, electric cyan and sunset gold |
 | **Miami Vice** | Pastel 80s TV | Twilight teal with flamingo pink and sunset coral |
-| **Gulf Racing** | Gulf Oil / Porsche 917 | Deep Gulf blue body with dominant orange centre stripe |
 | **Martini Racing** | Martini & Rossi livery | Charcoal with deep blue, cherry red and silver stripes |
 
 ### Light Themes
@@ -124,6 +123,7 @@ the bundled demo app (`python -m textual_themes`).
 | **macOS** | macOS (modern) | Clean light gray with blue accents |
 | **Plan 9** | Plan 9 from Bell Labs (1992) | Pale yellow/blue with green accents |
 | **Pan Am** | Pan American World Airways | The iconic globe blue on ivory livery |
+| **Gulf Racing** | Gulf Oil / Porsche 917 | Powder-blue body with bold Gulf orange stripe and white panels |
 | **Game Boy** | Nintendo Game Boy DMG-01 (1989) | Beige-gray case with purple wordmark and magenta buttons |
 
 ## Installation

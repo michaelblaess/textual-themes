@@ -32,7 +32,7 @@
     { slug: "pan-am",         name: "Pan Am — Pan American World Airways", dark: false },
     { slug: "synthwave",      name: "Synthwave — 80s Retro-Futurism", dark: true  },
     { slug: "miami-vice",     name: "Miami Vice — Pastel 80s",        dark: true  },
-    { slug: "gulf-racing",    name: "Gulf Racing — Porsche 917",      dark: true  },
+    { slug: "gulf-racing",    name: "Gulf Racing — Porsche 917",      dark: false },
     { slug: "martini-racing", name: "Martini Racing",                      dark: true  },
     { slug: "superman",       name: "Superman — DC's Man of Steel",   dark: true  },
     { slug: "spiderman",      name: "Spiderman — Marvel's Web-Slinger", dark: true },

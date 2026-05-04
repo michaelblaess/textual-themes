@@ -634,24 +634,24 @@ MIAMI_VICE_THEME = Theme(
 
 # ────────────────────────────────────────────────────────────────────────
 # Gulf Racing — Gulf Oil / Porsche 917
-# Deep Gulf blue body with the bold orange centre stripe dominating the
-# UI — Le Mans 1970, Steve McQueen's 917. Orange everywhere the eye
-# would follow the stripe, powder-blue highlights as the livery accent.
+# Le Mans 1970, the Steve McQueen 917 livery: Gulf powder blue is the
+# dominant body color, Gulf orange the centre stripe, white the logo
+# fields. Two strong colors plus white — exactly that.
 # ────────────────────────────────────────────────────────────────────────
 GULF_RACING_THEME = Theme(
     name="gulf-racing",
     primary="#F26A1F",
-    secondary="#7EB8D4",
-    accent="#FF8F3C",
-    foreground="#F0E8DC",
-    background="#1E3F5E",
-    surface="#2A5278",
-    panel="#142940",
-    boost="#FFA040",
-    warning="#FFC040",
-    error="#D83030",
-    success="#4AA85A",
-    dark=True,
+    secondary="#1E5C82",
+    accent="#F26A1F",
+    foreground="#0E2A40",
+    background="#A4D4E8",
+    surface="#FFFFFF",
+    panel="#7FB8D2",
+    boost="#FF8F3C",
+    warning="#E58220",
+    error="#C72020",
+    success="#2D7A3D",
+    dark=False,
 )
 
 # ────────────────────────────────────────────────────────────────────────
