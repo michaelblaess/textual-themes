@@ -30,7 +30,6 @@ Themes:
     Classic Navy — Deep navy dial with silver sub-dials and muted brick-red accents
     Synthwave    — 80s retro-futurism: deep purple with neon pink and electric cyan
     Miami Vice   — Pastel 80s: twilight teal with flamingo pink and sunset coral
-    Gulf Racing  — Gulf Oil / Porsche 917: deep Gulf blue with dominant orange stripe
     Martini Racing — Martini livery: charcoal with deep blue, cherry red and silver stripes
     Superman     — DC's Man of Steel: hero blue, cape red and shield yellow
     Spiderman    — Marvel's web-slinger: Spidey red and suit blue on dark web-black
@@ -633,28 +632,6 @@ MIAMI_VICE_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Gulf Racing — Gulf Oil / Porsche 917
-# Le Mans 1970, the Steve McQueen 917 livery: Gulf powder blue is the
-# dominant body color, Gulf orange the centre stripe, white the logo
-# fields. Two strong colors plus white — exactly that.
-# ────────────────────────────────────────────────────────────────────────
-GULF_RACING_THEME = Theme(
-    name="gulf-racing",
-    primary="#F26A1F",
-    secondary="#1E5C82",
-    accent="#F26A1F",
-    foreground="#0E2A40",
-    background="#A4D4E8",
-    surface="#F8B68A",
-    panel="#7FB8D2",
-    boost="#FF8F3C",
-    warning="#E58220",
-    error="#C72020",
-    success="#2D7A3D",
-    dark=False,
-)
-
-# ────────────────────────────────────────────────────────────────────────
 # Martini Racing — Martini & Rossi livery
 # Charcoal engine-bay background that lets the signature stripes pop:
 # deep Martini blue, cherry red, and pearl silver. Porsche 917, 935,
@@ -752,7 +729,6 @@ RETRO_THEMES: list[Theme] = [
     PAN_AM_THEME,
     SYNTHWAVE_THEME,
     MIAMI_VICE_THEME,
-    GULF_RACING_THEME,
     MARTINI_RACING_THEME,
     SUPERMAN_THEME,
     SPIDERMAN_THEME,
@@ -789,7 +765,6 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "pan-am": "Pan Am — Pan American World Airways",
     "synthwave": "Synthwave — 80s Retro-Futurism",
     "miami-vice": "Miami Vice — Pastel 80s",
-    "gulf-racing": "Gulf Racing — Porsche 917",
     "martini-racing": "Martini Racing",
     "superman": "Superman — DC's Man of Steel",
     "spiderman": "Spiderman — Marvel's Web-Slinger",

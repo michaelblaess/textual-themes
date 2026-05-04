@@ -2,7 +2,7 @@
 
 Retro color themes for [Textual](https://textual.textualize.io/) TUI applications.
 
-32 carefully crafted themes inspired by classic computers, operating systems, iconic wristwatches, 80s retro-futurism, motorsport liveries, and comic-book heroes.
+31 carefully crafted themes inspired by classic computers, operating systems, iconic wristwatches, 80s retro-futurism, motorsport liveries, and comic-book heroes.
 
 > **⚠ Trademark Disclaimer**
 >
@@ -15,8 +15,7 @@ Retro color themes for [Textual](https://textual.textualize.io/) TUI application
 > trademarks are the property of their respective owners, including but not
 > limited to: Rolex SA · Tudor Watch U.S.A., LLC · Marvel Entertainment, LLC ·
 > DC Comics · Warner Bros. Entertainment Inc. · Nintendo Co., Ltd. ·
-> Pan American World Airways, Inc. · Gulf Oil International ·
-> Bacardi Limited (Martini) · Danjaq, LLC / Metro-Goldwyn-Mayer Studios Inc.
+> Pan American World Airways, Inc. · Bacardi Limited (Martini) · Danjaq, LLC / Metro-Goldwyn-Mayer Studios Inc.
 > (James Bond / Goldfinger) · Commodore International · Atari Interactive ·
 > International Business Machines Corporation · Apple Inc. ·
 > Microsoft Corporation · Canonical Ltd. · SUSE LLC · Red Hat, Inc. ·
@@ -75,7 +74,6 @@ the bundled demo app (`python -m textual_themes`).
 <td align="center"><a href="docs/screenshots/miami-vice.svg"><img src="docs/screenshots/miami-vice.svg" width="240" alt="Miami Vice"></a><br><sub><b>Miami Vice</b></sub></td>
 </tr>
 <tr>
-<td align="center"><a href="docs/screenshots/gulf-racing.svg"><img src="docs/screenshots/gulf-racing.svg" width="240" alt="Gulf Racing"></a><br><sub><b>Gulf Racing</b></sub></td>
 <td align="center"><a href="docs/screenshots/martini-racing.svg"><img src="docs/screenshots/martini-racing.svg" width="240" alt="Martini Racing"></a><br><sub><b>Martini Racing</b></sub></td>
 <td align="center"><a href="docs/screenshots/superman.svg"><img src="docs/screenshots/superman.svg" width="240" alt="Superman"></a><br><sub><b>Superman</b></sub></td>
 <td align="center"><a href="docs/screenshots/spiderman.svg"><img src="docs/screenshots/spiderman.svg" width="240" alt="Spiderman"></a><br><sub><b>Spiderman</b></sub></td>
@@ -123,7 +121,6 @@ the bundled demo app (`python -m textual_themes`).
 | **macOS** | macOS (modern) | Clean light gray with blue accents |
 | **Plan 9** | Plan 9 from Bell Labs (1992) | Pale yellow/blue with green accents |
 | **Pan Am** | Pan American World Airways | The iconic globe blue on ivory livery |
-| **Gulf Racing** | Gulf Oil / Porsche 917 | Powder-blue body with bold Gulf orange stripe and white panels |
 | **Game Boy** | Nintendo Game Boy DMG-01 (1989) | Beige-gray case with purple wordmark and magenta buttons |
 
 ## Installation
@@ -172,7 +169,7 @@ from textual_themes import register_all
 class MyApp(App):
     def __init__(self):
         super().__init__()
-        register_all(self)       # registers all 32 themes
+        register_all(self)       # registers all 31 themes
         self.theme = "amiga"     # pick one
 ```
 
@@ -222,13 +219,12 @@ from textual_themes import (
     PAN_AM_THEME,
     SYNTHWAVE_THEME,
     MIAMI_VICE_THEME,
-    GULF_RACING_THEME,
     MARTINI_RACING_THEME,
     SUPERMAN_THEME,
     SPIDERMAN_THEME,
 
     # Collections
-    RETRO_THEMES,          # list[Theme] — all 32 themes
+    RETRO_THEMES,          # list[Theme] — all 31 themes
     RETRO_THEME_NAMES,     # list[str]   — ["c64", "amiga", ...]
     THEME_DISPLAY_NAMES,   # dict[str, str] — {"c64": "C64 — Commodore 64", ...}
 
@@ -273,7 +269,6 @@ Use these names with `app.theme = "..."`:
 | `pan-am` | Pan American World Airways |
 | `synthwave` | Synthwave — 80s Retro-Futurism |
 | `miami-vice` | Miami Vice — Pastel 80s |
-| `gulf-racing` | Gulf Racing — Porsche 917 |
 | `martini-racing` | Martini Racing |
 
 ## Requirements
