@@ -700,21 +700,21 @@ SUPERMAN_THEME = Theme(
 
 # ────────────────────────────────────────────────────────────────────────
 # Spiderman — Marvel's Web-Slinger
-# The classic red-and-blue suit with black web lines and the big white
-# spider-eyes. Peter Parker swinging through Manhattan at night — red
-# as the hero signal, blue as the suit, white for the lenses.
+# Classic Peter Parker suit: Marvel red and bright royal blue, NOT the
+# black symbiote suit. White for the spider-eye lenses, deep night
+# royal-blue as the canvas.
 # ────────────────────────────────────────────────────────────────────────
 SPIDERMAN_THEME = Theme(
     name="spiderman",
-    primary="#E02030",
-    secondary="#1E3F8A",
-    accent="#3A5CC8",
-    foreground="#F0F2F8",
-    background="#0D0E18",
-    surface="#18192A",
-    panel="#050610",
-    boost="#F83040",
-    warning="#E8A838",
+    primary="#D71920",
+    secondary="#1F75FE",
+    accent="#1F75FE",
+    foreground="#FFFFFF",
+    background="#0E1A3A",
+    surface="#1A2C5F",
+    panel="#070D24",
+    boost="#FF3344",
+    warning="#FFA830",
     error="#C80A18",
     success="#4AA85A",
     dark=True,
