@@ -23,7 +23,7 @@ Themes:
     Raspberry Pi — Raspberry Pi OS: raspberry red on dark
     FreeBSD      — FreeBSD: Beastie red on dark slate
     Tudor        — Tudor Black Bay 58: black dial with aged gold lume + red bezel triangle
-    Bluesy       — Rolex Submariner yellow gold (blue dial): royal blue with rich gold accents
+    Bluesy       — Rolex Gold (blue dial): royal blue with rich gold accents
     Goldfinger   — James Bond (1964): black and 18K gold, the villain's signature
     Hulk         — Marvel's Incredible Hulk: vivid green rage with steel-gray edges
     Batman       — DC's Dark Knight: Gotham night sky, black and midnight blue
@@ -50,20 +50,22 @@ if TYPE_CHECKING:
 # ────────────────────────────────────────────────────────────────────────
 # C64 — Commodore 64 (1982)
 # Blue on light-blue, the classic. PETSCII feeling.
+# Pepto-inspired palette: deep blue background, vivid light-blue text,
+# lifted surface so widgets pop, yellow accents for highlights.
 # ────────────────────────────────────────────────────────────────────────
 C64_THEME = Theme(
     name="c64",
-    primary="#6C6CD6",
-    secondary="#352879",
-    accent="#6C6CD6",
-    foreground="#D0D0FF",
-    background="#352879",
-    surface="#423498",
-    panel="#2C2068",
-    boost="#8888FF",
-    warning="#A87832",
-    error="#CC5555",
-    success="#68A941",
+    primary="#7C70DA",
+    secondary="#3A2B8A",
+    accent="#EDF171",
+    foreground="#D0CCFF",
+    background="#3A2B8A",
+    surface="#5446B8",
+    panel="#241870",
+    boost="#FFFFFF",
+    warning="#EDF171",
+    error="#C46C71",
+    success="#A9FF9F",
     dark=True,
 )
 
@@ -232,19 +234,20 @@ WINDOWS_XP_THEME = Theme(
 
 # ────────────────────────────────────────────────────────────────────────
 # MS-DOS / Norton Commander (1986)
-# Blue background, cyan panels, yellow highlights — the file manager.
+# Blue background, white text, bright cyan/yellow highlights —
+# the classic 16-color VGA file-manager palette.
 # ────────────────────────────────────────────────────────────────────────
 MSDOS_THEME = Theme(
     name="msdos",
-    primary="#00AAAA",
-    secondary="#AAAA00",
+    primary="#55FFFF",
+    secondary="#FFFF55",
     accent="#FFFF55",
-    foreground="#AAAAAA",
+    foreground="#FFFFFF",
     background="#0000AA",
-    surface="#0000BB",
-    panel="#000088",
-    boost="#55FFFF",
-    warning="#AAAA00",
+    surface="#1A1ACC",
+    panel="#000077",
+    boost="#FFFF55",
+    warning="#FFAA00",
     error="#FF5555",
     success="#55FF55",
     dark=True,
@@ -435,7 +438,7 @@ TUDOR_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Bluesy — Rolex Submariner Yellow Gold (blue dial)
+# Bluesy — Rolex Gold (blue dial)
 # Deep royal blue dial with rich yellow-gold indices, hands, and case.
 # ────────────────────────────────────────────────────────────────────────
 BLUESY_THEME = Theme(
@@ -773,7 +776,7 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "raspberry-pi": "Raspberry Pi OS",
     "freebsd": "FreeBSD",
     "tudor": "Tudor — Black Bay 58",
-    "bluesy": "Bluesy — Rolex Submariner Gold Blue",
+    "bluesy": "Bluesy — Rolex Gold",
     "goldfinger": "Goldfinger — James Bond (1964)",
     "hulk": "Hulk — Marvel's Incredible Hulk",
     "batman": "Batman — DC's Dark Knight",

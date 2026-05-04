@@ -4,6 +4,28 @@ Retro color themes for [Textual](https://textual.textualize.io/) TUI application
 
 32 carefully crafted themes inspired by classic computers, operating systems, iconic wristwatches, 80s retro-futurism, motorsport liveries, and comic-book heroes.
 
+> **⚠ Trademark Disclaimer**
+>
+> This is an **independent, fan-made, non-commercial** project. The themes are
+> tributes inspired by — but **not affiliated with, endorsed by, sponsored by,
+> or licensed by** — the trademark owners of the products, brands, or
+> characters they reference.
+>
+> All product names, brand names, character names, logos, liveries, and
+> trademarks are the property of their respective owners, including but not
+> limited to: Rolex SA · Tudor Watch U.S.A., LLC · Marvel Entertainment, LLC ·
+> DC Comics · Warner Bros. Entertainment Inc. · Nintendo Co., Ltd. ·
+> Pan American World Airways, Inc. · Gulf Oil International ·
+> Bacardi Limited (Martini) · Danjaq, LLC / Metro-Goldwyn-Mayer Studios Inc.
+> (James Bond / Goldfinger) · Commodore International · Atari Interactive ·
+> International Business Machines Corporation · Apple Inc. ·
+> Microsoft Corporation · Canonical Ltd. · SUSE LLC · Red Hat, Inc. ·
+> Raspberry Pi Ltd. · The FreeBSD Foundation.
+>
+> Theme names that mention these brands are descriptive of the visual
+> *inspiration* only. No claim is made on any trademark. If you are a
+> trademark owner and have concerns, please open an issue.
+
 ## Themes
 
 ### Dark Themes
@@ -26,7 +48,7 @@ Retro color themes for [Textual](https://textual.textualize.io/) TUI application
 | **Raspberry Pi** | Raspberry Pi OS | Raspberry red on dark blue-gray |
 | **FreeBSD** | FreeBSD | Beastie red on dark slate |
 | **Tudor** | Tudor Black Bay 58 | Aged gold lume on black with bezel-red accent |
-| **Bluesy** | Rolex Submariner Yellow Gold | Rich yellow gold on deep royal blue |
+| **Bluesy** | Rolex Gold | Rich yellow gold on deep royal blue |
 | **Goldfinger** | James Bond (1964) | Deep black with 18K gold — the villain's signature |
 | **Hulk** | Marvel's Incredible Hulk | Gamma-green rage with steel-gray edges |
 | **Batman** | DC's Dark Knight | Gotham midnight — black with moonlit blue |
@@ -184,7 +206,7 @@ Use these names with `app.theme = "..."`:
 | `raspberry-pi` | Raspberry Pi OS |
 | `freebsd` | FreeBSD |
 | `tudor` | Tudor Black Bay 58 |
-| `bluesy` | Rolex Submariner Yellow Gold Blue |
+| `bluesy` | Rolex Gold |
 | `goldfinger` | Goldfinger — James Bond (1964) |
 | `hulk` | Hulk — Marvel's Incredible Hulk |
 | `batman` | Batman — DC's Dark Knight |
