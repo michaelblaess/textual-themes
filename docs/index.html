@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="32 retro color themes for Textual TUI applications — C64, Amiga, Atari ST, IBM Terminal and more.">
+<title>textual-themes — retro color themes for Textual</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1>textual-themes</h1>
+    <p class="tagline">32 retro color themes for <a href="https://textual.textualize.io/" target="_blank" rel="noopener">Textual</a> TUI applications.</p>
+    <p class="links">
+      <a href="https://github.com/michaelblaess/textual-themes" class="btn" target="_blank" rel="noopener">★ GitHub</a>
+      <a href="https://github.com/michaelblaess/textual-themes#installation" class="btn btn-ghost" target="_blank" rel="noopener">Install</a>
+    </p>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="filter-bar" aria-label="Filter themes">
+    <span class="filter-label">Filter</span>
+    <button class="chip is-active" data-filter="all" type="button">All <span class="chip-count" data-count="all"></span></button>
+    <button class="chip" data-filter="dark" type="button">Dark <span class="chip-count" data-count="dark"></span></button>
+    <button class="chip" data-filter="light" type="button">Light <span class="chip-count" data-count="light"></span></button>
+  </section>
+
+  <section class="carousel" aria-label="Theme preview carousel">
+    <header class="carousel-meta">
+      <h2 id="theme-name" class="theme-name">&nbsp;</h2>
+      <span id="theme-position" class="theme-position">&nbsp;</span>
+    </header>
+
+    <div class="stage">
+      <button id="btn-prev" class="nav-btn nav-prev" type="button" aria-label="Previous theme">‹</button>
+      <a id="full-link" class="frame" href="#" aria-label="Open full-size SVG">
+        <img id="hero" class="hero" alt="">
+      </a>
+      <button id="btn-next" class="nav-btn nav-next" type="button" aria-label="Next theme">›</button>
+    </div>
+
+    <p class="hint">Use <kbd>←</kbd> / <kbd>→</kbd> to navigate · click a thumbnail · click the screenshot to open full-size SVG</p>
+  </section>
+
+  <section class="thumbs" aria-label="All themes">
+    <ul id="thumb-list" class="thumb-list"></ul>
+  </section>
+
+  <section class="install">
+    <h2>Quick start</h2>
+    <pre><code>pip install git+https://github.com/michaelblaess/textual-themes.git</code></pre>
+    <pre><code>from textual_themes import register_all
+
+class MyApp(App):
+    def __init__(self):
+        super().__init__()
+        register_all(self)
+        self.theme = "c64"</code></pre>
+    <p>Browse all themes interactively in the bundled demo:</p>
+    <pre><code>python -m textual_themes</code></pre>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="disclaimer">
+      <strong>Trademark disclaimer.</strong> This is an independent, fan-made,
+      non-commercial project. Themes are tributes inspired by — but not
+      affiliated with, endorsed by, or licensed by — the trademark owners.
+      All product names, brand names, character names, logos and trademarks
+      (Rolex, Tudor, Marvel, DC, Nintendo, Pan Am, Gulf, Martini,
+      Danjaq/MGM, Commodore, Atari, IBM, Apple, Microsoft, Canonical, SUSE,
+      Red Hat, Raspberry Pi, FreeBSD Foundation and others) are property of
+      their respective owners.
+    </p>
+    <p class="copy">Apache License 2.0 · © Michael Blaess</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
