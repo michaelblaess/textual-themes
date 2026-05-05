@@ -3,38 +3,43 @@
 Each theme is a `textual.theme.Theme` instance that can be registered
 with any Textual `App` via `app.register_theme(theme)`.
 
+This package contains 31 themes inspired by classic computers,
+operating systems, vintage diver watches, comic-book color schemes,
+80s pastel and motorsport liveries. Theme names are descriptive of
+the visual style only; no trademarks are used as product names.
+
 Themes:
-    C64          — Commodore 64 (1982): blue/light-blue
-    Amiga        — Amiga Workbench 1.3 (1987): blue/white/orange
-    Atari ST     — Atari ST GEM Desktop (1985): white/black/green (light)
-    IBM Terminal — IBM 3278 Terminal (1970s-80s): phosphor-green on black
-    NeXTSTEP     — NeXTSTEP (1989): dark gray with purple accents
-    BeOS         — BeOS (1995): blue-gray with yellow Deskbar accent
-    Ubuntu       — Ubuntu Desktop: aubergine/purple with orange accents
-    macOS        — macOS: clean light gray with blue accents (light)
-    Windows XP   — Windows XP Luna: blue taskbar with green start button
-    Norton Commander — DOS file manager: blue/cyan/yellow
-    Plan 9       — Plan 9 from Bell Labs: yellow/blue/green
-    Solaris CDE  — Sun CDE Desktop: beige/teal corporate Unix
-    OS/2 Warp    — IBM OS/2 Warp: dark blue/teal
-    openSUSE     — openSUSE: dark green/white
-    Linux Mint   — Cinnamon Desktop: warm mint-green on charcoal
-    Red Hat      — Red Hat Linux: Shadowman red on dark
-    Raspberry Pi — Raspberry Pi OS: raspberry red on dark
-    FreeBSD      — FreeBSD: Beastie red on dark slate
-    Tudor        — Tudor Black Bay 58: black dial with aged gold lume + red bezel triangle
-    Bluesy       — Rolex Gold (blue dial): royal blue with rich gold accents
-    Goldfinger   — James Bond (1964): black and 18K gold, the villain's signature
-    Hulk         — Marvel's Incredible Hulk: vivid green rage with steel-gray edges
-    Batman       — DC's Dark Knight: Gotham night sky, black and midnight blue
-    Classic Navy — Deep navy dial with silver sub-dials and muted brick-red accents
-    Synthwave    — 80s retro-futurism: deep purple with neon pink and electric cyan
-    Miami Vice   — Pastel 80s: twilight teal with flamingo pink and sunset coral
-    Martini Racing — Martini livery: charcoal with deep blue, cherry red and silver stripes
-    Metropolis   — bold blue, crimson red and sun yellow primary-color triad
-    Spiderman    — Marvel's web-slinger: Spidey red and suit blue on dark web-black
-    Pan Am       — Pan American World Airways: the globe blue on ivory white (light)
-    Game Boy     — Nintendo Game Boy DMG-01 (1989): olive LCD green (light)
+    Brotkasten        — light blue on royal blue (8-bit PETSCII style)
+    Boing             — three-color workbench palette: blue/white/orange
+    Gemstone          — monochrome GEM Desktop look (light)
+    Classic Terminal  — phosphor-green on black (CRT)
+    Next              — slate gray with magenta accents
+    BeBox             — blue-gray with yellow status-bar accent
+    Bunty             — aubergine with warm orange accents
+    Cupertino         — clean light gray with blue accents (light)
+    Luna              — sky-blue task-bar with green start button
+    Commandr          — blue/cyan/yellow file-manager palette
+    Plan 9            — pulpy yellow/blue/green (light)
+    Motif             — beige slate-gray corporate Unix toolkit
+    Warp              — dark blue with teal accents
+    Geeko             — dark green with white
+    Minty             — warm mint-green on charcoal
+    Crimson           — deep red on dark charcoal
+    Razzy             — raspberry red on dark slate
+    Beastie           — daemon red on dark slate
+    Fifty-Eight       — black dial with aged gold lume + bezel red
+    Bluesy            — royal blue with rich yellow-gold accents
+    Goldfinder        — deep black with 18K gold accents
+    Hulkula           — vivid green rage with steel-gray edges
+    Flughund          — midnight black & moonlit blue
+    Classic Navy      — deep navy with silver and muted brick-red
+    Brick             — olive-green handheld LCD (light)
+    Clipper           — globe blue on ivory (light)
+    Synthwave         — deep purple with neon pink and electric cyan
+    Miami             — pastel 80s: twilight teal, flamingo pink, sunset coral
+    Racing            — charcoal with blue, red and silver stripes
+    Metropolis        — bold blue, crimson red and sun yellow primary triad
+    Spiderized        — red & royal-blue hero suit (high-contrast)
 """
 from __future__ import annotations
 
@@ -47,13 +52,13 @@ if TYPE_CHECKING:
 
 
 # ────────────────────────────────────────────────────────────────────────
-# C64 — Commodore 64 (1982)
-# Blue on light-blue, the classic. PETSCII feeling.
+# Brotkasten
+# Light blue on royal blue, the iconic 8-bit color cast (PETSCII style).
 # Pepto-inspired palette: deep blue background, vivid light-blue text,
 # lifted surface so widgets pop, yellow accents for highlights.
 # ────────────────────────────────────────────────────────────────────────
-C64_THEME = Theme(
-    name="c64",
+BROTKASTEN_THEME = Theme(
+    name="brotkasten",
     primary="#7C70DA",
     secondary="#3A2B8A",
     accent="#EDF171",
@@ -69,11 +74,12 @@ C64_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Amiga Workbench 1.3 (1987)
-# Blue/white/orange — the Workbench three-color scheme.
+# Boing
+# Three-color workbench palette — blue background, white foreground,
+# orange accents. The bouncing-ball-demo aesthetic.
 # ────────────────────────────────────────────────────────────────────────
-AMIGA_THEME = Theme(
-    name="amiga",
+BOING_THEME = Theme(
+    name="boing",
     primary="#FF8800",
     secondary="#0055AA",
     accent="#FF8800",
@@ -89,11 +95,11 @@ AMIGA_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Atari ST GEM Desktop (1985)
-# White/black/green — the monochrome GEM Desktop look.
+# Gemstone
+# White / black / green — the monochrome GEM Desktop look (light).
 # ────────────────────────────────────────────────────────────────────────
-ATARI_ST_THEME = Theme(
-    name="atari-st",
+GEMSTONE_THEME = Theme(
+    name="gemstone",
     primary="#007700",
     secondary="#555555",
     accent="#009900",
@@ -109,13 +115,13 @@ ATARI_ST_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# IBM Terminal (1970s-80s)
-# Phosphor-green on black — the archetypal terminal.
-# Subtle green-tinted surface / panel give the CRT phosphor glow,
+# Classic Terminal
+# Phosphor-green on black — the archetypal CRT terminal look.
+# Subtle green-tinted surface / panel give the phosphor glow,
 # so borders are visible without breaking the monochrome feel.
 # ────────────────────────────────────────────────────────────────────────
-IBM_TERMINAL_THEME = Theme(
-    name="ibm-terminal",
+CLASSIC_TERMINAL_THEME = Theme(
+    name="classic-terminal",
     primary="#33FF33",
     secondary="#2A7A2A",
     accent="#88FF88",
@@ -131,12 +137,12 @@ IBM_TERMINAL_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# NeXTSTEP (1989)
-# Dark gray with subtle purple accents — Steve Jobs' "other" company.
-# Elegant dark interface with 3D effects.
+# Next
+# Dark gray with subtle magenta accents — workstation-era 3D bevels,
+# elegant dark interface.
 # ────────────────────────────────────────────────────────────────────────
-NEXTSTEP_THEME = Theme(
-    name="nextstep",
+NEXT_THEME = Theme(
+    name="next",
     primary="#9966CC",
     secondary="#555555",
     accent="#9966CC",
@@ -152,12 +158,11 @@ NEXTSTEP_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# BeOS (1995)
-# Gray with yellow accent — the Deskbar sends its regards.
-# Fast, elegant, ahead of its time.
+# BeBox
+# Gray with yellow status-bar accent — fast, elegant, ahead of its time.
 # ────────────────────────────────────────────────────────────────────────
-BEOS_THEME = Theme(
-    name="beos",
+BEBOX_THEME = Theme(
+    name="bebox",
     primary="#FFD800",
     secondary="#5F5F5F",
     accent="#FFD800",
@@ -172,14 +177,13 @@ BEOS_THEME = Theme(
     dark=True,
 )
 
-
 # ────────────────────────────────────────────────────────────────────────
-# Ubuntu Desktop
-# Aubergine/purple with orange accents — Canonical's signature look.
+# Bunty
+# Aubergine / purple with warm orange accents — a soft signature look.
 # Toned-down accent + lifted surface so the orange stops shouting.
 # ────────────────────────────────────────────────────────────────────────
-UBUNTU_THEME = Theme(
-    name="ubuntu",
+BUNTY_THEME = Theme(
+    name="bunty",
     primary="#DD4814",
     secondary="#77216F",
     accent="#E18B5C",
@@ -195,11 +199,11 @@ UBUNTU_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# macOS (modern)
-# Clean light gray with blue accents — Cupertino minimalism.
+# Cupertino
+# Clean light gray with blue accents — minimalism (light).
 # ────────────────────────────────────────────────────────────────────────
-MACOS_THEME = Theme(
-    name="macos",
+CUPERTINO_THEME = Theme(
+    name="cupertino",
     primary="#007AFF",
     secondary="#5856D6",
     accent="#007AFF",
@@ -215,11 +219,11 @@ MACOS_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Windows XP — Luna (2001)
-# Blue taskbar, green Start button — the most popular Windows ever.
+# Luna
+# Blue task-bar with green start button — early-2000s sky-blue UI.
 # ────────────────────────────────────────────────────────────────────────
-WINDOWS_XP_THEME = Theme(
-    name="windows-xp",
+LUNA_THEME = Theme(
+    name="luna",
     primary="#0054E3",
     secondary="#21A121",
     accent="#0054E3",
@@ -235,13 +239,14 @@ WINDOWS_XP_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Norton Commander (1986)
-# Blue background, white text. Yellow is the iconic selection / active
-# highlight (like the "Next" button in NC dialogs); cyan is the secondary
-# color for column headers and borders. Classic 16-color VGA palette.
+# Commandr
+# Blue background, white text, bright cyan / yellow highlights — the
+# classic 16-color VGA file-manager palette. Yellow is the iconic
+# selection / active highlight; cyan the secondary color for column
+# headers and borders.
 # ────────────────────────────────────────────────────────────────────────
-MSDOS_THEME = Theme(
-    name="msdos",
+COMMANDR_THEME = Theme(
+    name="commandr",
     primary="#FFFF55",
     secondary="#55FFFF",
     accent="#FFFF55",
@@ -257,8 +262,8 @@ MSDOS_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Plan 9 from Bell Labs (1992)
-# Yellow/blue/green — the most distinctive OS palette ever designed.
+# Plan 9
+# Pulpy yellow / blue / green palette — bold, distinctive (light).
 # ────────────────────────────────────────────────────────────────────────
 PLAN9_THEME = Theme(
     name="plan9",
@@ -277,11 +282,11 @@ PLAN9_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Solaris CDE — Common Desktop Environment (1993)
-# Slate gray with warm accents — the corporate Unix workstation.
+# Motif
+# Beige / slate-gray corporate Unix toolkit — warm accents on cool gray.
 # ────────────────────────────────────────────────────────────────────────
-SOLARIS_CDE_THEME = Theme(
-    name="solaris-cde",
+MOTIF_THEME = Theme(
+    name="motif",
     primary="#CC9966",
     secondary="#5F7B8A",
     accent="#CC9966",
@@ -297,11 +302,11 @@ SOLARIS_CDE_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# OS/2 Warp (1994)
-# Dark blue with teal accents — IBM's alternative to Windows.
+# Warp
+# Dark blue with teal accents.
 # ────────────────────────────────────────────────────────────────────────
-OS2_WARP_THEME = Theme(
-    name="os2-warp",
+WARP_THEME = Theme(
+    name="warp",
     primary="#00BBBB",
     secondary="#3333AA",
     accent="#00BBBB",
@@ -317,11 +322,11 @@ OS2_WARP_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# openSUSE
-# Dark green with white — the Chameleon's desktop.
+# Geeko
+# Dark green with white — chameleon-mascot palette.
 # ────────────────────────────────────────────────────────────────────────
-OPENSUSE_THEME = Theme(
-    name="opensuse",
+GEEKO_THEME = Theme(
+    name="geeko",
     primary="#73BA25",
     secondary="#35B9AB",
     accent="#73BA25",
@@ -336,13 +341,12 @@ OPENSUSE_THEME = Theme(
     dark=True,
 )
 
-
 # ────────────────────────────────────────────────────────────────────────
-# Linux Mint — Cinnamon Desktop
-# Warm mint-green on charcoal — the friendly Linux desktop.
+# Minty
+# Warm mint-green on charcoal — Cinnamon-style desktop palette.
 # ────────────────────────────────────────────────────────────────────────
-LINUX_MINT_THEME = Theme(
-    name="linux-mint",
+MINTY_THEME = Theme(
+    name="minty",
     primary="#8BB158",
     secondary="#6DAB76",
     accent="#8BB158",
@@ -357,13 +361,12 @@ LINUX_MINT_THEME = Theme(
     dark=True,
 )
 
-
 # ────────────────────────────────────────────────────────────────────────
-# Red Hat Linux
-# The Shadowman's red — enterprise Linux with attitude.
+# Crimson
+# Deep red on dark charcoal — bold and corporate.
 # ────────────────────────────────────────────────────────────────────────
-RED_HAT_THEME = Theme(
-    name="red-hat",
+CRIMSON_THEME = Theme(
+    name="crimson",
     primary="#CC0000",
     secondary="#A30000",
     accent="#EE0000",
@@ -379,11 +382,11 @@ RED_HAT_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Raspberry Pi OS
-# Raspberry red on dark — the tiny computer's desktop.
+# Razzy
+# Raspberry red on dark slate — playful but high-contrast.
 # ────────────────────────────────────────────────────────────────────────
-RASPBERRY_PI_THEME = Theme(
-    name="raspberry-pi",
+RAZZY_THEME = Theme(
+    name="razzy",
     primary="#C51A4A",
     secondary="#6CC24A",
     accent="#C51A4A",
@@ -399,11 +402,11 @@ RASPBERRY_PI_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# FreeBSD
-# Beastie red on dark slate — the daemon's domain.
+# Beastie
+# Daemon red on dark slate — Unix demon mascot palette.
 # ────────────────────────────────────────────────────────────────────────
-FREEBSD_THEME = Theme(
-    name="freebsd",
+BEASTIE_THEME = Theme(
+    name="beastie",
     primary="#AB2B28",
     secondary="#5E8AAA",
     accent="#AB2B28",
@@ -418,14 +421,13 @@ FREEBSD_THEME = Theme(
     dark=True,
 )
 
-
 # ────────────────────────────────────────────────────────────────────────
-# Tudor — Tudor Black Bay 58
-# Black dial with aged cream/gold lume patina, steel case, and the
-# signature red triangle on the bezel at 12 o'clock.
+# Fifty-Eight
+# Black dial with aged gold lume + bezel red — vintage diver style
+# (the iconic 1958 dive-watch look).
 # ────────────────────────────────────────────────────────────────────────
-TUDOR_THEME = Theme(
-    name="tudor",
+FIFTY_EIGHT_THEME = Theme(
+    name="fifty-eight",
     primary="#C9A96E",
     secondary="#6A6A6A",
     accent="#9E1B25",
@@ -441,8 +443,9 @@ TUDOR_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Bluesy — Rolex Gold (blue dial)
+# Bluesy
 # Deep royal blue dial with rich yellow-gold indices, hands, and case.
+# (Bluesy is a watch-collector nickname for the iconic gold/blue diver.)
 # ────────────────────────────────────────────────────────────────────────
 BLUESY_THEME = Theme(
     name="bluesy",
@@ -461,12 +464,11 @@ BLUESY_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Goldfinger — James Bond (1964)
-# "No, Mr. Bond, I expect you to die." The villain's signature: deep
-# black with 18K yellow gold — Auric Goldfinger's gold-obsessed empire.
+# Goldfinder
+# Deep black with 18K gold accents — villain-glamour palette.
 # ────────────────────────────────────────────────────────────────────────
-GOLDFINGER_THEME = Theme(
-    name="goldfinger",
+GOLDFINDER_THEME = Theme(
+    name="goldfinder",
     primary="#E6B800",
     secondary="#8A6E20",
     accent="#FFD740",
@@ -482,12 +484,12 @@ GOLDFINGER_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Hulk — Marvel's Incredible Hulk
-# "HULK SMASH!" Vivid gamma-green rage with steel-gray edges and the
-# warning-red of torn fabric. Bruce Banner's unstoppable alter ego.
+# Hulkula
+# Vivid green rage with steel-gray edges — gamma-strong contrast,
+# secondary cool steel keeps the boldness from going neon.
 # ────────────────────────────────────────────────────────────────────────
-HULK_THEME = Theme(
-    name="hulk",
+HULKULA_THEME = Theme(
+    name="hulkula",
     primary="#2BA841",
     secondary="#BCC4CA",
     accent="#4DC962",
@@ -503,12 +505,11 @@ HULK_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Batman — DC's Dark Knight
-# Gotham at midnight: deep black with the blue-black of a moonlit cape.
-# Silver-gray Bat-signal reflections and a touch of utility-belt gold.
+# Flughund
+# Midnight black & moonlit blue — urban-night palette.
 # ────────────────────────────────────────────────────────────────────────
-BATMAN_THEME = Theme(
-    name="batman",
+FLUGHUND_THEME = Theme(
+    name="flughund",
     primary="#244B85",
     secondary="#BCC4CA",
     accent="#3D6FB8",
@@ -525,8 +526,8 @@ BATMAN_THEME = Theme(
 
 # ────────────────────────────────────────────────────────────────────────
 # Classic Navy
-# Deep navy background with silver/white highlights and muted brick-red
-# accents. Aviation-inspired without tying to a single watch reference.
+# Deep navy dial with silver sub-dials and muted brick-red accents —
+# aviation-inspired three-register chronograph feel.
 # ────────────────────────────────────────────────────────────────────────
 CLASSIC_NAVY_THEME = Theme(
     name="classic-navy",
@@ -545,12 +546,13 @@ CLASSIC_NAVY_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Game Boy — Nintendo Game Boy DMG-01 (1989)
-# The iconic console case — warm beige-gray plastic with the purple
-# Nintendo wordmark and magenta A/B buttons. Light theme.
+# Brick
+# Olive-green LCD handheld — beige-gray case with magenta accents (light).
+# ("Brick" is the affectionate community nickname for the original
+# DMG-01 form-factor handheld.)
 # ────────────────────────────────────────────────────────────────────────
-GAMEBOY_THEME = Theme(
-    name="gameboy",
+BRICK_THEME = Theme(
+    name="brick",
     primary="#8E2A5E",
     secondary="#5A4858",
     accent="#D63B68",
@@ -566,13 +568,11 @@ GAMEBOY_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Pan Am — Pan American World Airways
-# "The world's most experienced airline." The iconic globe-blue logo
-# on ivory livery, with the red accent from vintage ticket stock and
-# route maps. Light theme.
+# Clipper
+# Globe blue on ivory — jet-age livery palette (light).
 # ────────────────────────────────────────────────────────────────────────
-PAN_AM_THEME = Theme(
-    name="pan-am",
+CLIPPER_THEME = Theme(
+    name="clipper",
     primary="#1A4FA0",
     secondary="#C61F2C",
     accent="#D4222F",
@@ -588,10 +588,9 @@ PAN_AM_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Synthwave — 80s retro-futurism
-# Deep indigo-purple "night sky" background, neon pink as the main
-# signature, electric cyan as the accent, sunset gold for warnings —
-# the Outrun / Miami Vice / Kavinsky aesthetic.
+# Synthwave
+# 80s retro-futurism — deep purple with neon pink and electric cyan,
+# a sunset-on-a-Lamborghini aesthetic.
 # ────────────────────────────────────────────────────────────────────────
 SYNTHWAVE_THEME = Theme(
     name="synthwave",
@@ -610,13 +609,11 @@ SYNTHWAVE_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Miami Vice — Pastel 80s
-# Twilight teal ocean background with flamingo pink as the signature,
-# sunset coral accents and mint success. The pastel counterpart to
-# Synthwave — more Crockett & Tubbs, less Kavinsky.
+# Miami
+# Pastel 80s — twilight teal with flamingo pink and sunset coral.
 # ────────────────────────────────────────────────────────────────────────
-MIAMI_VICE_THEME = Theme(
-    name="miami-vice",
+MIAMI_THEME = Theme(
+    name="miami",
     primary="#FF6FAB",
     secondary="#1FB8BC",
     accent="#FFA06A",
@@ -632,13 +629,12 @@ MIAMI_VICE_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Martini Racing — Martini & Rossi livery
-# Charcoal engine-bay background that lets the signature stripes pop:
-# deep Martini blue, cherry red, and pearl silver. Porsche 917, 935,
-# Lancia Delta — the stripes of endurance-racing history.
+# Racing
+# Charcoal engine-bay background that lets the signature motorsport
+# stripes pop: deep blue, cherry red, silver.
 # ────────────────────────────────────────────────────────────────────────
-MARTINI_RACING_THEME = Theme(
-    name="martini-racing",
+RACING_THEME = Theme(
+    name="racing",
     primary="#1A5CC8",
     secondary="#C0C6D0",
     accent="#E42030",
@@ -676,13 +672,12 @@ METROPOLIS_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Spiderman — Marvel's Web-Slinger
-# Classic Peter Parker suit: Marvel red and bright royal blue, NOT the
-# black symbiote suit. White for the spider-eye lenses, deep night
-# royal-blue as the canvas.
+# Spiderized
+# Red & royal-blue hero suit — high-contrast wallcrawler palette,
+# white for the spider-eye lenses, deep night royal-blue as the canvas.
 # ────────────────────────────────────────────────────────────────────────
-SPIDERMAN_THEME = Theme(
-    name="spiderman",
+SPIDERIZED_THEME = Theme(
+    name="spiderized",
     primary="#D71920",
     secondary="#1F75FE",
     accent="#1F75FE",
@@ -701,73 +696,73 @@ SPIDERMAN_THEME = Theme(
 # ── Convenience collections ────────────────────────────────────────────
 
 RETRO_THEMES: list[Theme] = [
-    C64_THEME,
-    AMIGA_THEME,
-    ATARI_ST_THEME,
-    IBM_TERMINAL_THEME,
-    NEXTSTEP_THEME,
-    BEOS_THEME,
-    UBUNTU_THEME,
-    MACOS_THEME,
-    WINDOWS_XP_THEME,
-    MSDOS_THEME,
+    BROTKASTEN_THEME,
+    BOING_THEME,
+    GEMSTONE_THEME,
+    CLASSIC_TERMINAL_THEME,
+    NEXT_THEME,
+    BEBOX_THEME,
+    BUNTY_THEME,
+    CUPERTINO_THEME,
+    LUNA_THEME,
+    COMMANDR_THEME,
     PLAN9_THEME,
-    SOLARIS_CDE_THEME,
-    OS2_WARP_THEME,
-    OPENSUSE_THEME,
-    LINUX_MINT_THEME,
-    RED_HAT_THEME,
-    RASPBERRY_PI_THEME,
-    FREEBSD_THEME,
-    TUDOR_THEME,
+    MOTIF_THEME,
+    WARP_THEME,
+    GEEKO_THEME,
+    MINTY_THEME,
+    CRIMSON_THEME,
+    RAZZY_THEME,
+    BEASTIE_THEME,
+    FIFTY_EIGHT_THEME,
     BLUESY_THEME,
-    GOLDFINGER_THEME,
-    HULK_THEME,
-    BATMAN_THEME,
+    GOLDFINDER_THEME,
+    HULKULA_THEME,
+    FLUGHUND_THEME,
     CLASSIC_NAVY_THEME,
-    GAMEBOY_THEME,
-    PAN_AM_THEME,
+    BRICK_THEME,
+    CLIPPER_THEME,
     SYNTHWAVE_THEME,
-    MIAMI_VICE_THEME,
-    MARTINI_RACING_THEME,
+    MIAMI_THEME,
+    RACING_THEME,
     METROPOLIS_THEME,
-    SPIDERMAN_THEME,
+    SPIDERIZED_THEME,
 ]
 
 RETRO_THEME_NAMES: list[str] = [t.name for t in RETRO_THEMES]
 
 THEME_DISPLAY_NAMES: dict[str, str] = {
-    "c64": "C64 — Commodore 64",
-    "amiga": "Amiga Workbench 1.3",
-    "atari-st": "Atari ST GEM Desktop",
-    "ibm-terminal": "IBM Terminal — Phosphor Green",
-    "nextstep": "NeXTSTEP",
-    "beos": "BeOS",
-    "ubuntu": "Ubuntu",
-    "macos": "macOS",
-    "windows-xp": "Windows XP — Luna",
-    "msdos": "Norton Commander",
-    "plan9": "Plan 9 — Bell Labs",
-    "solaris-cde": "Solaris CDE",
-    "os2-warp": "OS/2 Warp",
-    "opensuse": "openSUSE",
-    "linux-mint": "Linux Mint",
-    "red-hat": "Red Hat Linux",
-    "raspberry-pi": "Raspberry Pi OS",
-    "freebsd": "FreeBSD",
-    "tudor": "Tudor — Black Bay 58",
-    "bluesy": "Bluesy — Rolex Gold",
-    "goldfinger": "Goldfinger — James Bond (1964)",
-    "hulk": "Hulk — Marvel's Incredible Hulk",
-    "batman": "Batman — DC's Dark Knight",
+    "brotkasten": "Brotkasten — Light Blue on Royal Blue",
+    "boing": "Boing — Blue/White/Orange Workbench",
+    "gemstone": "Gemstone — Monochrome GEM Desktop",
+    "classic-terminal": "Classic Terminal — Phosphor Green on Black",
+    "next": "Next — Slate Gray with Magenta Accents",
+    "bebox": "BeBox — Blue-Gray with Yellow Accent",
+    "bunty": "Bunty — Aubergine with Warm Orange Accents",
+    "cupertino": "Cupertino — Clean Light Gray with Blue Accents",
+    "luna": "Luna — Sky Blue with Green Start Accent",
+    "commandr": "Commandr — Blue/Cyan/Yellow File Manager",
+    "plan9": "Plan 9 — Pulpy Yellow/Blue/Green",
+    "motif": "Motif — Beige Corporate Unix Toolkit",
+    "warp": "Warp — Dark Blue with Teal Accents",
+    "geeko": "Geeko — Dark Green with White",
+    "minty": "Minty — Warm Mint-Green on Charcoal",
+    "crimson": "Crimson — Deep Red on Dark Charcoal",
+    "razzy": "Razzy — Raspberry Red on Dark Slate",
+    "beastie": "Beastie — Daemon Red on Dark Slate",
+    "fifty-eight": "Fifty-Eight — Black Dial, Aged Gold Lume & Bezel Red",
+    "bluesy": "Bluesy — Royal Blue & Gold",
+    "goldfinder": "Goldfinder — Deep Black with 18K Gold Accents",
+    "hulkula": "Hulkula — Verdant Green with Steel Edges",
+    "flughund": "Flughund — Midnight Black & Moonlit Blue",
     "classic-navy": "Classic Navy",
-    "gameboy": "Game Boy — Nintendo DMG-01",
-    "pan-am": "Pan Am — Pan American World Airways",
+    "brick": "Brick — Olive-Green Handheld LCD",
+    "clipper": "Clipper — Globe Blue on Ivory",
     "synthwave": "Synthwave — 80s Retro-Futurism",
-    "miami-vice": "Miami Vice — Pastel 80s",
-    "martini-racing": "Martini Racing",
+    "miami": "Miami — Twilight Teal, Flamingo Pink & Sunset Coral",
+    "racing": "Racing — Charcoal with Blue, Red & Silver Stripes",
     "metropolis": "Metropolis — Bold Blue, Crimson & Sun Yellow",
-    "spiderman": "Spiderman — Marvel's Web-Slinger",
+    "spiderized": "Spiderized — Red & Royal-Blue Hero Suit",
 }
 
 
@@ -781,7 +776,7 @@ def register_all(app: App[object]) -> None:
             def __init__(self):
                 super().__init__()
                 register_all(self)
-                self.theme = "c64"
+                self.theme = "brotkasten"
     """
     for theme in RETRO_THEMES:
         app.register_theme(theme)

@@ -2,28 +2,16 @@
 
 Retro color themes for [Textual](https://textual.textualize.io/) TUI applications.
 
-31 carefully crafted themes inspired by classic computers, operating systems, iconic wristwatches, 80s retro-futurism, motorsport liveries, and comic-book heroes.
+31 carefully crafted themes inspired by classic computers, operating systems, vintage diver watches, comic-book color schemes, 80s pastel and motorsport liveries.
 
 > **⚠ Trademark Disclaimer**
 >
-> This is an **independent, fan-made, non-commercial** project. The themes are
-> tributes inspired by — but **not affiliated with, endorsed by, sponsored by,
-> or licensed by** — the trademark owners of the products, brands, or
-> characters they reference.
->
-> All product names, brand names, character names, logos, liveries, and
-> trademarks are the property of their respective owners, including but not
-> limited to: Rolex SA · Tudor Watch U.S.A., LLC · Marvel Entertainment, LLC ·
-> DC Comics · Warner Bros. Entertainment Inc. · Nintendo Co., Ltd. ·
-> Pan American World Airways, Inc. · Bacardi Limited (Martini) · Danjaq, LLC / Metro-Goldwyn-Mayer Studios Inc.
-> (James Bond / Goldfinger) · Commodore International · Atari Interactive ·
-> International Business Machines Corporation · Apple Inc. ·
-> Microsoft Corporation · Canonical Ltd. · SUSE LLC · Red Hat, Inc. ·
-> Raspberry Pi Ltd. · The FreeBSD Foundation.
->
-> Theme names that mention these brands are descriptive of the visual
-> *inspiration* only. No claim is made on any trademark. If you are a
-> trademark owner and have concerns, please open an issue.
+> This is an **independent, fan-made, non-commercial** project. Theme names
+> are descriptive of the visual style only — no third-party trademarks are
+> used as theme names. Any remaining brand reference in descriptive text
+> (e.g. "PETSCII style", "GEM Desktop", "Cinnamon-style") is purely
+> descriptive and not affiliated with, endorsed by, sponsored by, or
+> licensed by the respective trademark owners.
 
 ## Gallery
 
@@ -32,51 +20,51 @@ the bundled demo app (`python -m textual_themes`).
 
 <table>
 <tr>
-<td align="center"><a href="docs/screenshots/c64.svg"><img src="docs/screenshots/c64.svg" width="240" alt="C64"></a><br><sub><b>C64</b></sub></td>
-<td align="center"><a href="docs/screenshots/amiga.svg"><img src="docs/screenshots/amiga.svg" width="240" alt="Amiga"></a><br><sub><b>Amiga</b></sub></td>
-<td align="center"><a href="docs/screenshots/atari-st.svg"><img src="docs/screenshots/atari-st.svg" width="240" alt="Atari ST"></a><br><sub><b>Atari ST</b></sub></td>
-<td align="center"><a href="docs/screenshots/ibm-terminal.svg"><img src="docs/screenshots/ibm-terminal.svg" width="240" alt="IBM Terminal"></a><br><sub><b>IBM Terminal</b></sub></td>
+<td align="center"><a href="docs/screenshots/brotkasten.svg"><img src="docs/screenshots/brotkasten.svg" width="240" alt="Brotkasten"></a><br><sub><b>Brotkasten</b></sub></td>
+<td align="center"><a href="docs/screenshots/boing.svg"><img src="docs/screenshots/boing.svg" width="240" alt="Boing"></a><br><sub><b>Boing</b></sub></td>
+<td align="center"><a href="docs/screenshots/gemstone.svg"><img src="docs/screenshots/gemstone.svg" width="240" alt="Gemstone"></a><br><sub><b>Gemstone</b></sub></td>
+<td align="center"><a href="docs/screenshots/classic-terminal.svg"><img src="docs/screenshots/classic-terminal.svg" width="240" alt="Classic Terminal"></a><br><sub><b>Classic Terminal</b></sub></td>
 </tr>
 <tr>
-<td align="center"><a href="docs/screenshots/nextstep.svg"><img src="docs/screenshots/nextstep.svg" width="240" alt="NeXTSTEP"></a><br><sub><b>NeXTSTEP</b></sub></td>
-<td align="center"><a href="docs/screenshots/beos.svg"><img src="docs/screenshots/beos.svg" width="240" alt="BeOS"></a><br><sub><b>BeOS</b></sub></td>
-<td align="center"><a href="docs/screenshots/ubuntu.svg"><img src="docs/screenshots/ubuntu.svg" width="240" alt="Ubuntu"></a><br><sub><b>Ubuntu</b></sub></td>
-<td align="center"><a href="docs/screenshots/macos.svg"><img src="docs/screenshots/macos.svg" width="240" alt="macOS"></a><br><sub><b>macOS</b></sub></td>
+<td align="center"><a href="docs/screenshots/next.svg"><img src="docs/screenshots/next.svg" width="240" alt="Next"></a><br><sub><b>Next</b></sub></td>
+<td align="center"><a href="docs/screenshots/bebox.svg"><img src="docs/screenshots/bebox.svg" width="240" alt="BeBox"></a><br><sub><b>BeBox</b></sub></td>
+<td align="center"><a href="docs/screenshots/bunty.svg"><img src="docs/screenshots/bunty.svg" width="240" alt="Bunty"></a><br><sub><b>Bunty</b></sub></td>
+<td align="center"><a href="docs/screenshots/cupertino.svg"><img src="docs/screenshots/cupertino.svg" width="240" alt="Cupertino"></a><br><sub><b>Cupertino</b></sub></td>
 </tr>
 <tr>
-<td align="center"><a href="docs/screenshots/windows-xp.svg"><img src="docs/screenshots/windows-xp.svg" width="240" alt="Windows XP"></a><br><sub><b>Windows XP</b></sub></td>
-<td align="center"><a href="docs/screenshots/msdos.svg"><img src="docs/screenshots/msdos.svg" width="240" alt="Norton Commander"></a><br><sub><b>Norton Commander</b></sub></td>
+<td align="center"><a href="docs/screenshots/luna.svg"><img src="docs/screenshots/luna.svg" width="240" alt="Luna"></a><br><sub><b>Luna</b></sub></td>
+<td align="center"><a href="docs/screenshots/commandr.svg"><img src="docs/screenshots/commandr.svg" width="240" alt="Commandr"></a><br><sub><b>Commandr</b></sub></td>
 <td align="center"><a href="docs/screenshots/plan9.svg"><img src="docs/screenshots/plan9.svg" width="240" alt="Plan 9"></a><br><sub><b>Plan 9</b></sub></td>
-<td align="center"><a href="docs/screenshots/solaris-cde.svg"><img src="docs/screenshots/solaris-cde.svg" width="240" alt="Solaris CDE"></a><br><sub><b>Solaris CDE</b></sub></td>
+<td align="center"><a href="docs/screenshots/motif.svg"><img src="docs/screenshots/motif.svg" width="240" alt="Motif"></a><br><sub><b>Motif</b></sub></td>
 </tr>
 <tr>
-<td align="center"><a href="docs/screenshots/os2-warp.svg"><img src="docs/screenshots/os2-warp.svg" width="240" alt="OS/2 Warp"></a><br><sub><b>OS/2 Warp</b></sub></td>
-<td align="center"><a href="docs/screenshots/opensuse.svg"><img src="docs/screenshots/opensuse.svg" width="240" alt="openSUSE"></a><br><sub><b>openSUSE</b></sub></td>
-<td align="center"><a href="docs/screenshots/linux-mint.svg"><img src="docs/screenshots/linux-mint.svg" width="240" alt="Linux Mint"></a><br><sub><b>Linux Mint</b></sub></td>
-<td align="center"><a href="docs/screenshots/red-hat.svg"><img src="docs/screenshots/red-hat.svg" width="240" alt="Red Hat"></a><br><sub><b>Red Hat</b></sub></td>
+<td align="center"><a href="docs/screenshots/warp.svg"><img src="docs/screenshots/warp.svg" width="240" alt="Warp"></a><br><sub><b>Warp</b></sub></td>
+<td align="center"><a href="docs/screenshots/geeko.svg"><img src="docs/screenshots/geeko.svg" width="240" alt="Geeko"></a><br><sub><b>Geeko</b></sub></td>
+<td align="center"><a href="docs/screenshots/minty.svg"><img src="docs/screenshots/minty.svg" width="240" alt="Minty"></a><br><sub><b>Minty</b></sub></td>
+<td align="center"><a href="docs/screenshots/crimson.svg"><img src="docs/screenshots/crimson.svg" width="240" alt="Crimson"></a><br><sub><b>Crimson</b></sub></td>
 </tr>
 <tr>
-<td align="center"><a href="docs/screenshots/raspberry-pi.svg"><img src="docs/screenshots/raspberry-pi.svg" width="240" alt="Raspberry Pi"></a><br><sub><b>Raspberry Pi</b></sub></td>
-<td align="center"><a href="docs/screenshots/freebsd.svg"><img src="docs/screenshots/freebsd.svg" width="240" alt="FreeBSD"></a><br><sub><b>FreeBSD</b></sub></td>
-<td align="center"><a href="docs/screenshots/tudor.svg"><img src="docs/screenshots/tudor.svg" width="240" alt="Tudor"></a><br><sub><b>Tudor</b></sub></td>
+<td align="center"><a href="docs/screenshots/razzy.svg"><img src="docs/screenshots/razzy.svg" width="240" alt="Razzy"></a><br><sub><b>Razzy</b></sub></td>
+<td align="center"><a href="docs/screenshots/beastie.svg"><img src="docs/screenshots/beastie.svg" width="240" alt="Beastie"></a><br><sub><b>Beastie</b></sub></td>
+<td align="center"><a href="docs/screenshots/fifty-eight.svg"><img src="docs/screenshots/fifty-eight.svg" width="240" alt="Fifty-Eight"></a><br><sub><b>Fifty-Eight</b></sub></td>
 <td align="center"><a href="docs/screenshots/bluesy.svg"><img src="docs/screenshots/bluesy.svg" width="240" alt="Bluesy"></a><br><sub><b>Bluesy</b></sub></td>
 </tr>
 <tr>
-<td align="center"><a href="docs/screenshots/goldfinger.svg"><img src="docs/screenshots/goldfinger.svg" width="240" alt="Goldfinger"></a><br><sub><b>Goldfinger</b></sub></td>
-<td align="center"><a href="docs/screenshots/hulk.svg"><img src="docs/screenshots/hulk.svg" width="240" alt="Hulk"></a><br><sub><b>Hulk</b></sub></td>
-<td align="center"><a href="docs/screenshots/batman.svg"><img src="docs/screenshots/batman.svg" width="240" alt="Batman"></a><br><sub><b>Batman</b></sub></td>
+<td align="center"><a href="docs/screenshots/goldfinder.svg"><img src="docs/screenshots/goldfinder.svg" width="240" alt="Goldfinder"></a><br><sub><b>Goldfinder</b></sub></td>
+<td align="center"><a href="docs/screenshots/hulkula.svg"><img src="docs/screenshots/hulkula.svg" width="240" alt="Hulkula"></a><br><sub><b>Hulkula</b></sub></td>
+<td align="center"><a href="docs/screenshots/flughund.svg"><img src="docs/screenshots/flughund.svg" width="240" alt="Flughund"></a><br><sub><b>Flughund</b></sub></td>
 <td align="center"><a href="docs/screenshots/classic-navy.svg"><img src="docs/screenshots/classic-navy.svg" width="240" alt="Classic Navy"></a><br><sub><b>Classic Navy</b></sub></td>
 </tr>
 <tr>
-<td align="center"><a href="docs/screenshots/gameboy.svg"><img src="docs/screenshots/gameboy.svg" width="240" alt="Game Boy"></a><br><sub><b>Game Boy</b></sub></td>
-<td align="center"><a href="docs/screenshots/pan-am.svg"><img src="docs/screenshots/pan-am.svg" width="240" alt="Pan Am"></a><br><sub><b>Pan Am</b></sub></td>
+<td align="center"><a href="docs/screenshots/brick.svg"><img src="docs/screenshots/brick.svg" width="240" alt="Brick"></a><br><sub><b>Brick</b></sub></td>
+<td align="center"><a href="docs/screenshots/clipper.svg"><img src="docs/screenshots/clipper.svg" width="240" alt="Clipper"></a><br><sub><b>Clipper</b></sub></td>
 <td align="center"><a href="docs/screenshots/synthwave.svg"><img src="docs/screenshots/synthwave.svg" width="240" alt="Synthwave"></a><br><sub><b>Synthwave</b></sub></td>
-<td align="center"><a href="docs/screenshots/miami-vice.svg"><img src="docs/screenshots/miami-vice.svg" width="240" alt="Miami Vice"></a><br><sub><b>Miami Vice</b></sub></td>
+<td align="center"><a href="docs/screenshots/miami.svg"><img src="docs/screenshots/miami.svg" width="240" alt="Miami"></a><br><sub><b>Miami</b></sub></td>
 </tr>
 <tr>
-<td align="center"><a href="docs/screenshots/martini-racing.svg"><img src="docs/screenshots/martini-racing.svg" width="240" alt="Martini Racing"></a><br><sub><b>Martini Racing</b></sub></td>
+<td align="center"><a href="docs/screenshots/racing.svg"><img src="docs/screenshots/racing.svg" width="240" alt="Racing"></a><br><sub><b>Racing</b></sub></td>
 <td align="center"><a href="docs/screenshots/metropolis.svg"><img src="docs/screenshots/metropolis.svg" width="240" alt="Metropolis"></a><br><sub><b>Metropolis</b></sub></td>
-<td align="center"><a href="docs/screenshots/spiderman.svg"><img src="docs/screenshots/spiderman.svg" width="240" alt="Spiderman"></a><br><sub><b>Spiderman</b></sub></td>
+<td align="center"><a href="docs/screenshots/spiderized.svg"><img src="docs/screenshots/spiderized.svg" width="240" alt="Spiderized"></a><br><sub><b>Spiderized</b></sub></td>
 </tr>
 </table>
 
@@ -84,44 +72,44 @@ the bundled demo app (`python -m textual_themes`).
 
 ### Dark Themes
 
-| Theme | Inspiration | Style |
-|-------|-------------|-------|
-| **C64** | Commodore 64 (1982) | Blue on light-blue, the PETSCII classic |
-| **Amiga** | Workbench 1.3 (1987) | Blue/white/orange three-color scheme |
-| **IBM Terminal** | IBM 3278 (1970s) | Phosphor-green on black |
-| **NeXTSTEP** | NeXTSTEP (1989) | Dark gray with purple accents |
-| **BeOS** | BeOS (1995) | Blue-gray with yellow Deskbar accent |
-| **Ubuntu** | Ubuntu Desktop | Aubergine/purple with orange accents |
-| **Windows XP** | Windows XP Luna (2001) | Blue taskbar with green Start button |
-| **Norton Commander** | Norton Commander (1986) | Blue/cyan/yellow file manager |
-| **OS/2 Warp** | IBM OS/2 Warp (1994) | Dark blue with teal accents |
-| **openSUSE** | openSUSE Linux | Dark green with white |
-| **Solaris CDE** | Sun CDE Desktop (1993) | Slate gray with warm accents |
-| **Linux Mint** | Cinnamon Desktop | Warm mint-green on charcoal |
-| **Red Hat** | Red Hat Linux | Shadowman red on dark |
-| **Raspberry Pi** | Raspberry Pi OS | Raspberry red on dark blue-gray |
-| **FreeBSD** | FreeBSD | Beastie red on dark slate |
-| **Tudor** | Tudor Black Bay 58 | Aged gold lume on black with bezel-red accent |
-| **Bluesy** | Rolex Gold | Rich yellow gold on deep royal blue |
-| **Goldfinger** | James Bond (1964) | Deep black with 18K gold — the villain's signature |
-| **Hulk** | Marvel's Incredible Hulk | Gamma-green rage with steel-gray edges |
-| **Batman** | DC's Dark Knight | Gotham midnight — black with moonlit blue |
-| **Metropolis** | Comic-pulp primary triad | Bold blue, crimson red and sun yellow |
-| **Spiderman** | Marvel's Web-Slinger | Spidey red and suit blue on web-black |
-| **Classic Navy** | Aviation-inspired | Deep navy with silver highlights and muted brick-red accents |
-| **Synthwave** | 80s retro-futurism | Deep indigo with neon pink, electric cyan and sunset gold |
-| **Miami Vice** | Pastel 80s TV | Twilight teal with flamingo pink and sunset coral |
-| **Martini Racing** | Martini & Rossi livery | Charcoal with deep blue, cherry red and silver stripes |
+| Theme | Style |
+|-------|-------|
+| **Brotkasten** | Light blue on royal blue, the iconic 8-bit color cast (PETSCII) |
+| **Boing** | Three-color workbench palette: blue/white/orange |
+| **Classic Terminal** | Phosphor-green on black (CRT) |
+| **Next** | Dark gray with magenta accents — workstation-era 3D bevels |
+| **BeBox** | Blue-gray with yellow status-bar accent |
+| **Bunty** | Aubergine with warm orange accents |
+| **Luna** | Sky-blue task-bar with green start button |
+| **Commandr** | Blue/cyan/yellow file-manager palette |
+| **Motif** | Beige slate-gray corporate Unix toolkit |
+| **Warp** | Dark blue with teal accents |
+| **Geeko** | Dark green with white |
+| **Minty** | Warm mint-green on charcoal |
+| **Crimson** | Deep red on dark charcoal |
+| **Razzy** | Raspberry red on dark slate |
+| **Beastie** | Daemon red on dark slate |
+| **Fifty-Eight** | Black dial with aged gold lume + bezel red (vintage diver) |
+| **Bluesy** | Royal blue with rich yellow-gold accents |
+| **Goldfinder** | Deep black with 18K gold accents — villain glamour |
+| **Hulkula** | Vivid green rage with steel-gray edges |
+| **Flughund** | Midnight black & moonlit blue |
+| **Classic Navy** | Deep navy with silver and muted brick-red |
+| **Synthwave** | Deep purple with neon pink and electric cyan |
+| **Miami** | Pastel 80s — twilight teal, flamingo pink, sunset coral |
+| **Racing** | Charcoal with deep blue, cherry red and silver stripes |
+| **Metropolis** | Bold blue, crimson red and sun yellow primary triad |
+| **Spiderized** | Red & royal-blue hero suit (high-contrast) |
 
 ### Light Themes
 
-| Theme | Inspiration | Style |
-|-------|-------------|-------|
-| **Atari ST** | GEM Desktop (1985) | White/black/green, monochrome feel |
-| **macOS** | macOS (modern) | Clean light gray with blue accents |
-| **Plan 9** | Plan 9 from Bell Labs (1992) | Pale yellow/blue with green accents |
-| **Pan Am** | Pan American World Airways | The iconic globe blue on ivory livery |
-| **Game Boy** | Nintendo Game Boy DMG-01 (1989) | Beige-gray case with purple wordmark and magenta buttons |
+| Theme | Style |
+|-------|-------|
+| **Gemstone** | Monochrome GEM Desktop look |
+| **Cupertino** | Clean light gray with blue accents |
+| **Plan 9** | Pulpy yellow/blue/green |
+| **Brick** | Olive-green handheld LCD on beige-gray case |
+| **Clipper** | Globe blue on ivory — jet-age livery |
 
 ## Installation
 
@@ -143,7 +131,7 @@ class MyApp(App):
     def __init__(self):
         super().__init__()
         register_all(self)
-        self.theme = "c64"
+        self.theme = "brotkasten"
 
     def compose(self) -> ComposeResult:
         yield Header()
@@ -170,20 +158,20 @@ class MyApp(App):
     def __init__(self):
         super().__init__()
         register_all(self)       # registers all 31 themes
-        self.theme = "amiga"     # pick one
+        self.theme = "boing"     # pick one
 ```
 
 ### Register individual themes
 
 ```python
-from textual_themes import C64_THEME, IBM_TERMINAL_THEME
+from textual_themes import BROTKASTEN_THEME, CLASSIC_TERMINAL_THEME
 
 class MyApp(App):
     def __init__(self):
         super().__init__()
-        self.register_theme(C64_THEME)
-        self.register_theme(IBM_TERMINAL_THEME)
-        self.theme = "ibm-terminal"
+        self.register_theme(BROTKASTEN_THEME)
+        self.register_theme(CLASSIC_TERMINAL_THEME)
+        self.theme = "classic-terminal"
 ```
 
 ### Available constants
@@ -191,42 +179,42 @@ class MyApp(App):
 ```python
 from textual_themes import (
     # Individual Theme objects
-    C64_THEME,
-    AMIGA_THEME,
-    ATARI_ST_THEME,
-    IBM_TERMINAL_THEME,
-    NEXTSTEP_THEME,
-    BEOS_THEME,
-    UBUNTU_THEME,
-    MACOS_THEME,
-    WINDOWS_XP_THEME,
-    MSDOS_THEME,
+    BROTKASTEN_THEME,
+    BOING_THEME,
+    GEMSTONE_THEME,
+    CLASSIC_TERMINAL_THEME,
+    NEXT_THEME,
+    BEBOX_THEME,
+    BUNTY_THEME,
+    CUPERTINO_THEME,
+    LUNA_THEME,
+    COMMANDR_THEME,
     PLAN9_THEME,
-    SOLARIS_CDE_THEME,
-    OS2_WARP_THEME,
-    OPENSUSE_THEME,
-    LINUX_MINT_THEME,
-    RED_HAT_THEME,
-    RASPBERRY_PI_THEME,
-    FREEBSD_THEME,
-    TUDOR_THEME,
+    MOTIF_THEME,
+    WARP_THEME,
+    GEEKO_THEME,
+    MINTY_THEME,
+    CRIMSON_THEME,
+    RAZZY_THEME,
+    BEASTIE_THEME,
+    FIFTY_EIGHT_THEME,
     BLUESY_THEME,
-    GOLDFINGER_THEME,
-    HULK_THEME,
-    BATMAN_THEME,
+    GOLDFINDER_THEME,
+    HULKULA_THEME,
+    FLUGHUND_THEME,
     CLASSIC_NAVY_THEME,
-    GAMEBOY_THEME,
-    PAN_AM_THEME,
+    BRICK_THEME,
+    CLIPPER_THEME,
     SYNTHWAVE_THEME,
-    MIAMI_VICE_THEME,
-    MARTINI_RACING_THEME,
+    MIAMI_THEME,
+    RACING_THEME,
     METROPOLIS_THEME,
-    SPIDERMAN_THEME,
+    SPIDERIZED_THEME,
 
     # Collections
     RETRO_THEMES,          # list[Theme] — all 31 themes
-    RETRO_THEME_NAMES,     # list[str]   — ["c64", "amiga", ...]
-    THEME_DISPLAY_NAMES,   # dict[str, str] — {"c64": "C64 — Commodore 64", ...}
+    RETRO_THEME_NAMES,     # list[str]   — ["brotkasten", "boing", ...]
+    THEME_DISPLAY_NAMES,   # dict[str, str]
 
     # Helper
     register_all,          # register_all(app) — registers all themes
@@ -235,41 +223,41 @@ from textual_themes import (
 
 ### Theme names
 
-Use these names with `app.theme = "..."`:
+Use these slugs with `app.theme = "..."`:
 
-| Name | Theme |
-|------|-------|
-| `c64` | Commodore 64 |
-| `amiga` | Amiga Workbench 1.3 |
-| `atari-st` | Atari ST GEM Desktop |
-| `ibm-terminal` | IBM Terminal |
-| `nextstep` | NeXTSTEP |
-| `beos` | BeOS |
-| `ubuntu` | Ubuntu |
-| `macos` | macOS |
-| `windows-xp` | Windows XP Luna |
-| `msdos` | Norton Commander |
-| `plan9` | Plan 9 from Bell Labs |
-| `solaris-cde` | Solaris CDE |
-| `os2-warp` | OS/2 Warp |
-| `opensuse` | openSUSE |
-| `linux-mint` | Linux Mint |
-| `red-hat` | Red Hat Linux |
-| `raspberry-pi` | Raspberry Pi OS |
-| `freebsd` | FreeBSD |
-| `tudor` | Tudor Black Bay 58 |
-| `bluesy` | Rolex Gold |
-| `goldfinger` | Goldfinger — James Bond (1964) |
-| `hulk` | Hulk — Marvel's Incredible Hulk |
-| `batman` | Batman — DC's Dark Knight |
-| `metropolis` | Metropolis — Bold Blue, Crimson & Sun Yellow |
-| `spiderman` | Spiderman — Marvel's Web-Slinger |
+| Slug | Display |
+|------|---------|
+| `brotkasten` | Brotkasten — Light Blue on Royal Blue |
+| `boing` | Boing — Blue/White/Orange Workbench |
+| `gemstone` | Gemstone — Monochrome GEM Desktop |
+| `classic-terminal` | Classic Terminal — Phosphor Green on Black |
+| `next` | Next — Slate Gray with Magenta Accents |
+| `bebox` | BeBox — Blue-Gray with Yellow Accent |
+| `bunty` | Bunty — Aubergine with Warm Orange Accents |
+| `cupertino` | Cupertino — Clean Light Gray with Blue Accents |
+| `luna` | Luna — Sky Blue with Green Start Accent |
+| `commandr` | Commandr — Blue/Cyan/Yellow File Manager |
+| `plan9` | Plan 9 — Pulpy Yellow/Blue/Green |
+| `motif` | Motif — Beige Corporate Unix Toolkit |
+| `warp` | Warp — Dark Blue with Teal Accents |
+| `geeko` | Geeko — Dark Green with White |
+| `minty` | Minty — Warm Mint-Green on Charcoal |
+| `crimson` | Crimson — Deep Red on Dark Charcoal |
+| `razzy` | Razzy — Raspberry Red on Dark Slate |
+| `beastie` | Beastie — Daemon Red on Dark Slate |
+| `fifty-eight` | Fifty-Eight — Black Dial, Aged Gold Lume & Bezel Red |
+| `bluesy` | Bluesy — Royal Blue & Gold |
+| `goldfinder` | Goldfinder — Deep Black with 18K Gold Accents |
+| `hulkula` | Hulkula — Verdant Green with Steel Edges |
+| `flughund` | Flughund — Midnight Black & Moonlit Blue |
 | `classic-navy` | Classic Navy |
-| `gameboy` | Nintendo Game Boy DMG-01 |
-| `pan-am` | Pan American World Airways |
+| `brick` | Brick — Olive-Green Handheld LCD |
+| `clipper` | Clipper — Globe Blue on Ivory |
 | `synthwave` | Synthwave — 80s Retro-Futurism |
-| `miami-vice` | Miami Vice — Pastel 80s |
-| `martini-racing` | Martini Racing |
+| `miami` | Miami — Twilight Teal, Flamingo Pink & Sunset Coral |
+| `racing` | Racing — Charcoal with Blue, Red & Silver Stripes |
+| `metropolis` | Metropolis — Bold Blue, Crimson & Sun Yellow |
+| `spiderized` | Spiderized — Red & Royal-Blue Hero Suit |
 
 ## Requirements
 
