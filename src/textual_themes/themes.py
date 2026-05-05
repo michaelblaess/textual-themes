@@ -31,7 +31,7 @@ Themes:
     Synthwave    — 80s retro-futurism: deep purple with neon pink and electric cyan
     Miami Vice   — Pastel 80s: twilight teal with flamingo pink and sunset coral
     Martini Racing — Martini livery: charcoal with deep blue, cherry red and silver stripes
-    Superman     — DC's Man of Steel: hero blue, cape red and shield yellow
+    Metropolis   — bold blue, crimson red and sun yellow primary-color triad
     Spiderman    — Marvel's web-slinger: Spidey red and suit blue on dark web-black
     Pan Am       — Pan American World Airways: the globe blue on ivory white (light)
     Game Boy     — Nintendo Game Boy DMG-01 (1989): olive LCD green (light)
@@ -654,13 +654,13 @@ MARTINI_RACING_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Superman — DC's Man of Steel
-# The hero-blue suit with red cape and the iconic yellow S-shield.
-# Metropolis sunrise — optimism, strength, and that classic red/blue/
-# yellow primary-colour triad straight from the comic panels.
+# Metropolis
+# Bold primary-color triad: deep blue, crimson red, sun yellow.
+# Optimistic city-at-sunrise palette built around the three-color
+# combination that classic comic panels and 60s pulp covers loved.
 # ────────────────────────────────────────────────────────────────────────
-SUPERMAN_THEME = Theme(
-    name="superman",
+METROPOLIS_THEME = Theme(
+    name="metropolis",
     primary="#E02030",
     secondary="#1A5CC8",
     accent="#FFD53B",
@@ -730,7 +730,7 @@ RETRO_THEMES: list[Theme] = [
     SYNTHWAVE_THEME,
     MIAMI_VICE_THEME,
     MARTINI_RACING_THEME,
-    SUPERMAN_THEME,
+    METROPOLIS_THEME,
     SPIDERMAN_THEME,
 ]
 
@@ -766,7 +766,7 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "synthwave": "Synthwave — 80s Retro-Futurism",
     "miami-vice": "Miami Vice — Pastel 80s",
     "martini-racing": "Martini Racing",
-    "superman": "Superman — DC's Man of Steel",
+    "metropolis": "Metropolis — Bold Blue, Crimson & Sun Yellow",
     "spiderman": "Spiderman — Marvel's Web-Slinger",
 }
 

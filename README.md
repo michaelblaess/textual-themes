@@ -75,7 +75,7 @@ the bundled demo app (`python -m textual_themes`).
 </tr>
 <tr>
 <td align="center"><a href="docs/screenshots/martini-racing.svg"><img src="docs/screenshots/martini-racing.svg" width="240" alt="Martini Racing"></a><br><sub><b>Martini Racing</b></sub></td>
-<td align="center"><a href="docs/screenshots/superman.svg"><img src="docs/screenshots/superman.svg" width="240" alt="Superman"></a><br><sub><b>Superman</b></sub></td>
+<td align="center"><a href="docs/screenshots/metropolis.svg"><img src="docs/screenshots/metropolis.svg" width="240" alt="Metropolis"></a><br><sub><b>Metropolis</b></sub></td>
 <td align="center"><a href="docs/screenshots/spiderman.svg"><img src="docs/screenshots/spiderman.svg" width="240" alt="Spiderman"></a><br><sub><b>Spiderman</b></sub></td>
 </tr>
 </table>
@@ -106,7 +106,7 @@ the bundled demo app (`python -m textual_themes`).
 | **Goldfinger** | James Bond (1964) | Deep black with 18K gold — the villain's signature |
 | **Hulk** | Marvel's Incredible Hulk | Gamma-green rage with steel-gray edges |
 | **Batman** | DC's Dark Knight | Gotham midnight — black with moonlit blue |
-| **Superman** | DC's Man of Steel | Hero-blue suit with cape red and shield yellow |
+| **Metropolis** | Comic-pulp primary triad | Bold blue, crimson red and sun yellow |
 | **Spiderman** | Marvel's Web-Slinger | Spidey red and suit blue on web-black |
 | **Classic Navy** | Aviation-inspired | Deep navy with silver highlights and muted brick-red accents |
 | **Synthwave** | 80s retro-futurism | Deep indigo with neon pink, electric cyan and sunset gold |
@@ -220,7 +220,7 @@ from textual_themes import (
     SYNTHWAVE_THEME,
     MIAMI_VICE_THEME,
     MARTINI_RACING_THEME,
-    SUPERMAN_THEME,
+    METROPOLIS_THEME,
     SPIDERMAN_THEME,
 
     # Collections
@@ -262,7 +262,7 @@ Use these names with `app.theme = "..."`:
 | `goldfinger` | Goldfinger — James Bond (1964) |
 | `hulk` | Hulk — Marvel's Incredible Hulk |
 | `batman` | Batman — DC's Dark Knight |
-| `superman` | Superman — DC's Man of Steel |
+| `metropolis` | Metropolis — Bold Blue, Crimson & Sun Yellow |
 | `spiderman` | Spiderman — Marvel's Web-Slinger |
 | `classic-navy` | Classic Navy |
 | `gameboy` | Nintendo Game Boy DMG-01 |

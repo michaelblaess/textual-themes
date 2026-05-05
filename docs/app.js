@@ -33,7 +33,7 @@
     { slug: "synthwave",      name: "Synthwave — 80s Retro-Futurism", dark: true  },
     { slug: "miami-vice",     name: "Miami Vice — Pastel 80s",        dark: true  },
     { slug: "martini-racing", name: "Martini Racing",                      dark: true  },
-    { slug: "superman",       name: "Superman — DC's Man of Steel",   dark: true  },
+    { slug: "metropolis",     name: "Metropolis — Bold Blue, Crimson & Sun Yellow", dark: true },
     { slug: "spiderman",      name: "Spiderman — Marvel's Web-Slinger", dark: true },
   ];
 
