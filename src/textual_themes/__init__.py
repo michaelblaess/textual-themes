@@ -13,8 +13,10 @@ from .themes import (
     BLUESY_THEME,
     BOING_THEME,
     BRICK_THEME,
+    BRITISH_GREEN_THEME,
     BROTKASTEN_THEME,
     BUNTY_THEME,
+    CHRISTMAS_THEME,
     CLASSIC_NAVY_THEME,
     CLASSIC_TERMINAL_THEME,
     CLIPPER_THEME,
@@ -28,6 +30,7 @@ from .themes import (
     GOLDFINDER_THEME,
     HULKULA_THEME,
     LUNA_THEME,
+    MARLEY_THEME,
     METROPOLIS_THEME,
     MIAMI_THEME,
     MINTY_THEME,
@@ -41,11 +44,12 @@ from .themes import (
     SPIDERIZED_THEME,
     SYNTHWAVE_THEME,
     THEME_DISPLAY_NAMES,
+    TVISION_THEME,
     WARP_THEME,
     register_all,
 )
 
-__version__ = "0.5.0"
+__version__ = "0.6.0"
 __author__ = "Michael Blaess"
 
 __all__ = [
@@ -80,6 +84,10 @@ __all__ = [
     "RACING_THEME",
     "METROPOLIS_THEME",
     "SPIDERIZED_THEME",
+    "CHRISTMAS_THEME",
+    "BRITISH_GREEN_THEME",
+    "TVISION_THEME",
+    "MARLEY_THEME",
     "RETRO_THEMES",
     "RETRO_THEME_NAMES",
     "THEME_DISPLAY_NAMES",

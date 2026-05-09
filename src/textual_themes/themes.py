@@ -3,10 +3,11 @@
 Each theme is a `textual.theme.Theme` instance that can be registered
 with any Textual `App` via `app.register_theme(theme)`.
 
-This package contains 31 themes inspired by classic computers,
+This package contains 35 themes inspired by classic computers,
 operating systems, vintage diver watches, comic-book color schemes,
-80s pastel and motorsport liveries. Theme names are descriptive of
-the visual style only; no trademarks are used as product names.
+80s pastel, motorsport liveries, holiday palettes and reggae roots.
+Theme names are descriptive of the visual style only; no trademarks
+are used as product names.
 
 Themes:
     Brotkasten        — light blue on royal blue (8-bit PETSCII style)
@@ -40,6 +41,10 @@ Themes:
     Racing            — charcoal with blue, red and silver stripes
     Metropolis        — bold blue, crimson red and sun yellow primary triad
     Spiderized        — red & royal-blue hero suit (high-contrast)
+    Christmas         — deep fir-green with crimson red, gold and cream
+    British Green     — racing green with signal yellow and silver
+    TVision           — DOS IDE editor blue with yellow keywords and red hotkeys
+    Marley            — reggae roots palette: black, green, gold, red
 """
 from __future__ import annotations
 
@@ -693,6 +698,100 @@ SPIDERIZED_THEME = Theme(
 )
 
 
+# ────────────────────────────────────────────────────────────────────────
+# Christmas
+# Deep fir-green background with crimson red, antique gold and warm
+# cream — the classic Christmas-tree-and-presents palette. Cream
+# foreground (instead of pure white) keeps the cosy candle-light feel.
+# ────────────────────────────────────────────────────────────────────────
+CHRISTMAS_THEME = Theme(
+    name="christmas",
+    primary="#C41E3A",
+    secondary="#C9A95E",
+    accent="#E8C04B",
+    foreground="#F5EBD2",
+    background="#1A3D2A",
+    surface="#234D34",
+    panel="#102818",
+    boost="#FFD580",
+    warning="#E8C04B",
+    error="#B01828",
+    success="#2A8245",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# British Green
+# Deep British Racing Green with a signal-yellow accent and silver
+# secondary — Le-Mans-era roadster livery (think Aston-style BRG with
+# yellow nose stripe and white roundels). White foreground keeps the
+# race-number contrast crisp.
+# ────────────────────────────────────────────────────────────────────────
+BRITISH_GREEN_THEME = Theme(
+    name="british-green",
+    primary="#F2C200",
+    secondary="#C0C5CC",
+    accent="#F2C200",
+    foreground="#FFFFFF",
+    background="#173E2D",
+    surface="#1F4E3A",
+    panel="#0E2C1E",
+    boost="#FFD835",
+    warning="#F2C200",
+    error="#C81E2A",
+    success="#2E7D52",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# TVision
+# Late-80s text-mode IDE editor look (Turbo Vision framework aesthetic):
+# blue editor background with white code text and yellow accents,
+# red hotkey letters. The original used a two-zone palette — blue for
+# the editor body and grey for menus/dialogs. Apps can opt into the
+# authentic grey menu/modal style with the `.tvision-classic` CSS
+# helper class (see the demo's AboutModalScreen for a reference).
+# ────────────────────────────────────────────────────────────────────────
+TVISION_THEME = Theme(
+    name="tvision",
+    primary="#FFFF55",
+    secondary="#00AAAA",
+    accent="#FFFF55",
+    foreground="#FFFFFF",
+    background="#0000AA",
+    surface="#1818CC",
+    panel="#000080",
+    boost="#FFFF99",
+    warning="#FFAA00",
+    error="#AA0000",
+    success="#00AA00",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Marley
+# Reggae roots palette: black canvas with the green / gold / red
+# tricolour. Green is the primary (lion-of-Judah dominance), gold the
+# accent (highlights and warnings), red the alert color. Warm cream
+# foreground keeps the vibe sun-drenched rather than sterile.
+# ────────────────────────────────────────────────────────────────────────
+MARLEY_THEME = Theme(
+    name="marley",
+    primary="#078930",
+    secondary="#DA121A",
+    accent="#FCDD09",
+    foreground="#F5EFD8",
+    background="#0A0A0A",
+    surface="#181818",
+    panel="#050505",
+    boost="#0AA63D",
+    warning="#FCDD09",
+    error="#DA121A",
+    success="#078930",
+    dark=True,
+)
+
+
 # ── Convenience collections ────────────────────────────────────────────
 
 RETRO_THEMES: list[Theme] = [
@@ -727,6 +826,10 @@ RETRO_THEMES: list[Theme] = [
     RACING_THEME,
     METROPOLIS_THEME,
     SPIDERIZED_THEME,
+    CHRISTMAS_THEME,
+    BRITISH_GREEN_THEME,
+    TVISION_THEME,
+    MARLEY_THEME,
 ]
 
 RETRO_THEME_NAMES: list[str] = [t.name for t in RETRO_THEMES]
@@ -763,6 +866,10 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "racing": "Racing — Charcoal with Blue, Red & Silver Stripes",
     "metropolis": "Metropolis — Bold Blue, Crimson & Sun Yellow",
     "spiderized": "Spiderized — Red & Royal-Blue Hero Suit",
+    "christmas": "Christmas — Fir Green with Crimson, Gold & Cream",
+    "british-green": "British Green — Racing Green with Signal Yellow",
+    "tvision": "TVision — DOS IDE Editor Blue with Yellow Keywords",
+    "marley": "Marley — Reggae Black, Green, Gold & Red",
 }
 
 

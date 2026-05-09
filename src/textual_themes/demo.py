@@ -2,7 +2,8 @@
 
 A storybook-style theme browser. Every retro theme is registered, the
 current theme name is shown in the header, and `n` / `p` cycle through
-the list. `Ctrl+S` saves an SVG screenshot of the current theme.
+the list. `a` opens an About modal so you can inspect how a typical
+dialog renders in the active theme. `Ctrl+S` saves an SVG screenshot.
 
 Run:
     python -m textual_themes
@@ -12,9 +13,11 @@ from __future__ import annotations
 from datetime import datetime
 from pathlib import Path
 
+from rich.text import Text
 from textual.app import App, ComposeResult
 from textual.binding import Binding
 from textual.containers import Horizontal, VerticalScroll
+from textual.screen import ModalScreen
 from textual.widgets import (
     Button,
     Checkbox,
@@ -51,7 +54,8 @@ This **textual-themes** demo registers all retro themes. Each defines:
 - `surface`, `panel`, `boost`
 - `warning`, `error`, `success`
 
-> Tip: press **Ctrl+P** for the theme picker, or **n** / **p** to step.
+> Tip: press **Ctrl+P** for the theme picker, **n** / **p** to step,
+> or **a** to open a sample About modal in the current theme.
 
 ```python
 from textual_themes import register_all
@@ -71,6 +75,125 @@ def fibonacci(n: int) -> int:
         return n
     return fibonacci(n - 1) + fibonacci(n - 2)
 '''
+
+
+class AboutModalScreen(ModalScreen[None]):
+    """Showcases how a typical About / dialog looks in the current theme.
+
+    Renders title bar, body text, and a button row so that surface,
+    accent, border and button variants can be inspected together.
+
+    For the `tvision` theme the modal opts into the classic Turbo
+    Vision two-zone look: the editor background stays blue (theme
+    default) but the modal switches to the authentic grey menu /
+    dialog palette with black text and red hotkey accents. This is
+    triggered by adding the `.tvision-classic` CSS class on the
+    modal — apps can do the same for their own dialogs.
+    """
+
+    DEFAULT_CSS = """
+    AboutModalScreen {
+        align: center middle;
+    }
+    AboutModalScreen > VerticalScroll {
+        width: auto;
+        height: auto;
+        min-width: 50;
+        max-width: 80;
+        max-height: 90%;
+        background: $surface;
+        border: thick $accent;
+        padding: 1 2;
+    }
+    AboutModalScreen #modal-title {
+        height: 3;
+        content-align: center middle;
+        text-style: bold;
+        background: $accent;
+        color: auto;
+        margin-bottom: 1;
+    }
+    AboutModalScreen #modal-content {
+        height: auto;
+        padding: 1 2;
+    }
+    AboutModalScreen .button-row {
+        height: auto;
+        margin-top: 1;
+        align: center middle;
+    }
+    AboutModalScreen Button {
+        margin: 0 1;
+    }
+    AboutModalScreen #modal-footer {
+        height: 1;
+        content-align: center middle;
+        color: $text-muted;
+        margin-top: 1;
+    }
+
+    /* TVision authentic menu/modal palette: grey surface + black text,
+       red border for the hotkey-letter accent vibe. Applied only when
+       the modal is opened while the tvision theme is active. */
+    AboutModalScreen.tvision-classic > VerticalScroll {
+        background: #C0C0C0;
+        border: thick #AA0000;
+    }
+    AboutModalScreen.tvision-classic #modal-title {
+        background: #C0C0C0;
+        color: #000000;
+        border-bottom: heavy #AA0000;
+    }
+    AboutModalScreen.tvision-classic #modal-content {
+        background: #C0C0C0;
+        color: #000000;
+    }
+    AboutModalScreen.tvision-classic #modal-footer {
+        background: #C0C0C0;
+        color: #555555;
+    }
+    """
+
+    BINDINGS = [
+        Binding("escape", "close", "Close"),
+        Binding("a,A", "close", "Close", key_display="a"),
+    ]
+
+    def __init__(self, theme_display: str, theme_name: str = "") -> None:
+        super().__init__()
+        self._theme_display = theme_display
+        if theme_name == "tvision":
+            self.add_class("tvision-classic")
+
+    def compose(self) -> ComposeResult:
+        with VerticalScroll():
+            yield Static("About textual-themes", id="modal-title")
+            yield Static(self._build_content(), id="modal-content")
+            with Horizontal(classes="button-row"):
+                yield Button("OK", variant="primary", id="btn-modal-ok")
+                yield Button("Cancel", id="btn-modal-cancel")
+            yield Static("ESC or A to close", id="modal-footer")
+
+    def _build_content(self) -> Text:
+        text = Text()
+        text.append(f"v{__version__}", style="bold")
+        text.append(" by Michael Blaess\n\n")
+        text.append("35 retro color themes for Textual TUI applications.\n\n")
+        text.append("Active theme:\n", style="dim")
+        text.append(f"    {self._theme_display}\n\n", style="bold")
+        text.append(
+            "This dialog renders in the current theme, so you can\n"
+            "inspect how surface, accent border, primary button and\n"
+            "default button variants combine.\n",
+        )
+        return text
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        if event.button.id in ("btn-modal-ok", "btn-modal-cancel"):
+            self.dismiss(None)
+
+    def action_close(self) -> None:
+        self.dismiss(None)
 
 
 class ThemeDemoApp(App[None]):
@@ -154,6 +277,7 @@ class ThemeDemoApp(App[None]):
     BINDINGS = [
         Binding("n,N", "next_theme", "Next Theme", key_display="n"),
         Binding("p,P", "prev_theme", "Prev Theme", key_display="p"),
+        Binding("a,A", "show_modal", "About / Modal", key_display="a"),
         Binding("ctrl+s", "screenshot", "Screenshot"),
         Binding("q,Q", "quit", "Quit", key_display="q"),
     ]
@@ -316,6 +440,13 @@ class ThemeDemoApp(App[None]):
         name = event.node.data
         if name and name != self.theme and name in RETRO_THEME_NAMES:
             self.theme = name
+
+    def action_show_modal(self) -> None:
+        theme_name = self.theme or ""
+        display = THEME_DISPLAY_NAMES.get(theme_name, theme_name)
+        self.push_screen(
+            AboutModalScreen(theme_display=display, theme_name=theme_name),
+        )
 
     def action_next_theme(self) -> None:
         self._cycle_theme(1)
