@@ -83,11 +83,11 @@ class AboutModalScreen(ModalScreen[None]):
     Renders title bar, body text, and a button row so that surface,
     accent, border and button variants can be inspected together.
 
-    For the `tvision` theme the modal opts into the classic Turbo
+    For the `vision` theme the modal opts into the classic Turbo
     Vision two-zone look: the editor background stays blue (theme
     default) but the modal switches to the authentic grey menu /
     dialog palette with black text and red hotkey accents. This is
-    triggered by adding the `.tvision-classic` CSS class on the
+    triggered by adding the `.vision-classic` CSS class on the
     modal — apps can do the same for their own dialogs.
     """
 
@@ -134,21 +134,21 @@ class AboutModalScreen(ModalScreen[None]):
 
     /* TVision authentic menu/modal palette: grey surface + black text,
        red border for the hotkey-letter accent vibe. Applied only when
-       the modal is opened while the tvision theme is active. */
-    AboutModalScreen.tvision-classic > VerticalScroll {
+       the modal is opened while the vision theme is active. */
+    AboutModalScreen.vision-classic > VerticalScroll {
         background: #C0C0C0;
         border: thick #AA0000;
     }
-    AboutModalScreen.tvision-classic #modal-title {
+    AboutModalScreen.vision-classic #modal-title {
         background: #C0C0C0;
         color: #000000;
         border-bottom: heavy #AA0000;
     }
-    AboutModalScreen.tvision-classic #modal-content {
+    AboutModalScreen.vision-classic #modal-content {
         background: #C0C0C0;
         color: #000000;
     }
-    AboutModalScreen.tvision-classic #modal-footer {
+    AboutModalScreen.vision-classic #modal-footer {
         background: #C0C0C0;
         color: #555555;
     }
@@ -162,8 +162,8 @@ class AboutModalScreen(ModalScreen[None]):
     def __init__(self, theme_display: str, theme_name: str = "") -> None:
         super().__init__()
         self._theme_display = theme_display
-        if theme_name == "tvision":
-            self.add_class("tvision-classic")
+        if theme_name == "vision":
+            self.add_class("vision-classic")
 
     def compose(self) -> ComposeResult:
         with VerticalScroll():

@@ -3,11 +3,11 @@
 Each theme is a `textual.theme.Theme` instance that can be registered
 with any Textual `App` via `app.register_theme(theme)`.
 
-This package contains 35 themes inspired by classic computers,
+This package contains 37 themes inspired by classic computers,
 operating systems, vintage diver watches, comic-book color schemes,
-80s pastel, motorsport liveries, holiday palettes and reggae roots.
-Theme names are descriptive of the visual style only; no trademarks
-are used as product names.
+80s pastel, motorsport liveries, holiday palettes, reggae roots and
+psychedelic skateboard graphics. Theme names are descriptive of the
+visual style only; no trademarks are used as product names.
 
 Themes:
     Brotkasten        — light blue on royal blue (8-bit PETSCII style)
@@ -43,7 +43,9 @@ Themes:
     Spiderized        — red & royal-blue hero suit (high-contrast)
     Christmas         — deep fir-green with crimson red, gold and cream
     British Green     — racing green with signal yellow and silver
-    TVision           — DOS IDE editor blue with yellow keywords and red hotkeys
+    Vision            — DOS IDE editor blue with yellow keywords and red hotkeys
+    Hippie Dark       — psychedelic skateboard graphic: hot pink, violet & lime on violet-black
+    Hippie Light      — same psychedelic palette on a clean white canvas (light)
     Marley            — reggae roots palette: black, green, gold, red
 """
 from __future__ import annotations
@@ -744,16 +746,17 @@ BRITISH_GREEN_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# TVision
-# Late-80s text-mode IDE editor look (Turbo Vision framework aesthetic):
-# blue editor background with white code text and yellow accents,
-# red hotkey letters. The original used a two-zone palette — blue for
-# the editor body and grey for menus/dialogs. Apps can opt into the
-# authentic grey menu/modal style with the `.tvision-classic` CSS
-# helper class (see the demo's AboutModalScreen for a reference).
+# Vision
+# Late-80s text-mode IDE editor look (Turbo-Vision framework aesthetic
+# and a sly nod to the Vision Skateboards era): blue editor background
+# with white code text and yellow accents, red hotkey letters. The
+# original used a two-zone palette — blue for the editor body and grey
+# for menus/dialogs. Apps can opt into the authentic grey menu/modal
+# style with the `.vision-classic` CSS helper class (see the demo's
+# AboutModalScreen for a reference).
 # ────────────────────────────────────────────────────────────────────────
-TVISION_THEME = Theme(
-    name="tvision",
+VISION_THEME = Theme(
+    name="vision",
     primary="#FFFF55",
     secondary="#00AAAA",
     accent="#FFFF55",
@@ -766,6 +769,53 @@ TVISION_THEME = Theme(
     error="#AA0000",
     success="#00AA00",
     dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Hippie Dark
+# Psychedelic skateboard-deck graphic on a deep violet-black canvas:
+# hot pink and vivid violet pebbles glow against the dark, with a
+# complementary lime-green accent for that 70s tie-dye eye-popping
+# contrast. Cream foreground keeps the vintage-print feel rather
+# than sterile white.
+# ────────────────────────────────────────────────────────────────────────
+HIPPIE_DARK_THEME = Theme(
+    name="hippie-dark",
+    primary="#FF2E93",
+    secondary="#9B3FBC",
+    accent="#6BE051",
+    foreground="#F5EAEC",
+    background="#0F0518",
+    surface="#25104A",
+    panel="#07020E",
+    boost="#FF66CC",
+    warning="#FFB838",
+    error="#FF3A6C",
+    success="#6BE051",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Hippie Light
+# Same psychedelic skateboard-deck spirit on a clean white canvas:
+# hot pink and vivid violet pop against the white, with a tamed
+# lime-green accent for the 70s tie-dye eye-popping contrast. Deep
+# aubergine foreground grounds the text without going pure black.
+# ────────────────────────────────────────────────────────────────────────
+HIPPIE_LIGHT_THEME = Theme(
+    name="hippie-light",
+    primary="#E91E80",
+    secondary="#8B30B8",
+    accent="#5BC940",
+    foreground="#1F0A2E",
+    background="#FFFFFF",
+    surface="#FAF5FF",
+    panel="#F0E5F8",
+    boost="#FF66CC",
+    warning="#E89020",
+    error="#D43062",
+    success="#5BC940",
+    dark=False,
 )
 
 # ────────────────────────────────────────────────────────────────────────
@@ -828,7 +878,9 @@ RETRO_THEMES: list[Theme] = [
     SPIDERIZED_THEME,
     CHRISTMAS_THEME,
     BRITISH_GREEN_THEME,
-    TVISION_THEME,
+    VISION_THEME,
+    HIPPIE_DARK_THEME,
+    HIPPIE_LIGHT_THEME,
     MARLEY_THEME,
 ]
 
@@ -868,7 +920,9 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "spiderized": "Spiderized — Red & Royal-Blue Hero Suit",
     "christmas": "Christmas — Fir Green with Crimson, Gold & Cream",
     "british-green": "British Green — Racing Green with Signal Yellow",
-    "tvision": "TVision — DOS IDE Editor Blue with Yellow Keywords",
+    "vision": "Vision — DOS IDE Editor Blue with Yellow Keywords",
+    "hippie-dark": "Hippie Dark — Psychedelic Pink, Violet & Lime",
+    "hippie-light": "Hippie Light — Psychedelic Pink, Violet & Lime on White",
     "marley": "Marley — Reggae Black, Green, Gold & Red",
 }
 
