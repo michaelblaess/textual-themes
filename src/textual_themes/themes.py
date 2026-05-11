@@ -3,11 +3,11 @@
 Each theme is a `textual.theme.Theme` instance that can be registered
 with any Textual `App` via `app.register_theme(theme)`.
 
-This package contains 37 themes inspired by classic computers,
+This package contains 36 themes inspired by classic computers,
 operating systems, vintage diver watches, comic-book color schemes,
-80s pastel, motorsport liveries, holiday palettes, reggae roots and
-psychedelic skateboard graphics. Theme names are descriptive of the
-visual style only; no trademarks are used as product names.
+80s pastel and Spielberg-era cinema, motorsport liveries and reggae
+roots. Theme names are descriptive of the visual style only; no
+trademarks are used as product names.
 
 Themes:
     Brotkasten        — light blue on royal blue (8-bit PETSCII style)
@@ -41,12 +41,11 @@ Themes:
     Racing            — charcoal with blue, red and silver stripes
     Metropolis        — bold blue, crimson red and sun yellow primary triad
     Spiderized        — red & royal-blue hero suit (high-contrast)
-    Christmas         — deep fir-green with crimson red, gold and cream
-    British Green     — racing green with signal yellow and silver
+    Ascot             — Le-Mans racing green with signal yellow, silver and beige text
     Vision            — DOS IDE editor blue with yellow keywords and red hotkeys
-    Hippie Dark       — psychedelic skateboard graphic: hot pink, violet & lime on violet-black
-    Hippie Light      — same psychedelic palette on a clean white canvas (light)
+    Joker             — Comic Gotham villain: royal purple suit, acid-green hair & yellow vest
     Marley            — reggae roots palette: black, green, gold, red
+    Lenseflare        — 80s Spielberg orange-teal bichromatic on twilight blue
 """
 from __future__ import annotations
 
@@ -701,40 +700,18 @@ SPIDERIZED_THEME = Theme(
 
 
 # ────────────────────────────────────────────────────────────────────────
-# Christmas
-# Deep fir-green background with crimson red, antique gold and warm
-# cream — the classic Christmas-tree-and-presents palette. Cream
-# foreground (instead of pure white) keeps the cosy candle-light feel.
+# Ascot
+# Royal-meeting meets Le-Mans paddock: deep British Racing Green with
+# a signal-yellow accent and silver secondary, plus a warm beige
+# foreground (instead of pure white) that's much easier on the eyes
+# during long sessions — the colour of weathered race-card paper.
 # ────────────────────────────────────────────────────────────────────────
-CHRISTMAS_THEME = Theme(
-    name="christmas",
-    primary="#C41E3A",
-    secondary="#C9A95E",
-    accent="#E8C04B",
-    foreground="#F5EBD2",
-    background="#1A3D2A",
-    surface="#234D34",
-    panel="#102818",
-    boost="#FFD580",
-    warning="#E8C04B",
-    error="#B01828",
-    success="#2A8245",
-    dark=True,
-)
-
-# ────────────────────────────────────────────────────────────────────────
-# British Green
-# Deep British Racing Green with a signal-yellow accent and silver
-# secondary — Le-Mans-era roadster livery (think Aston-style BRG with
-# yellow nose stripe and white roundels). White foreground keeps the
-# race-number contrast crisp.
-# ────────────────────────────────────────────────────────────────────────
-BRITISH_GREEN_THEME = Theme(
-    name="british-green",
+ASCOT_THEME = Theme(
+    name="ascot",
     primary="#F2C200",
     secondary="#C0C5CC",
     accent="#F2C200",
-    foreground="#FFFFFF",
+    foreground="#F5EBD2",
     background="#173E2D",
     surface="#1F4E3A",
     panel="#0E2C1E",
@@ -757,14 +734,14 @@ BRITISH_GREEN_THEME = Theme(
 # ────────────────────────────────────────────────────────────────────────
 VISION_THEME = Theme(
     name="vision",
-    primary="#FFFF55",
+    primary="#00AA00",
     secondary="#00AAAA",
-    accent="#FFFF55",
+    accent="#FFFFFF",
     foreground="#FFFFFF",
     background="#0000AA",
     surface="#1818CC",
     panel="#000080",
-    boost="#FFFF99",
+    boost="#FFFF55",
     warning="#FFAA00",
     error="#AA0000",
     success="#00AA00",
@@ -772,50 +749,30 @@ VISION_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Hippie Dark
-# Psychedelic skateboard-deck graphic on a deep violet-black canvas:
-# hot pink and vivid violet pebbles glow against the dark, with a
-# complementary lime-green accent for that 70s tie-dye eye-popping
-# contrast. Cream foreground keeps the vintage-print feel rather
-# than sterile white.
+# Joker
+# Comic-book Joker palette modelled after the Bronze-Age look —
+# royal-purple suit drives the primary buttons, acid-green hair
+# (and bowtie) drives the secondary, golden-yellow vest is the
+# accent for modal title bars and key highlights. Cream face-
+# powder foreground on a dark Gotham-night background; sidebar
+# uses a subtler dark purple than the suit so it grounds the
+# layout instead of shouting. No red in the title bars — only
+# in semantic errors.
 # ────────────────────────────────────────────────────────────────────────
-HIPPIE_DARK_THEME = Theme(
-    name="hippie-dark",
-    primary="#FF2E93",
-    secondary="#9B3FBC",
-    accent="#6BE051",
-    foreground="#F5EAEC",
-    background="#0F0518",
-    surface="#25104A",
-    panel="#07020E",
-    boost="#FF66CC",
-    warning="#FFB838",
-    error="#FF3A6C",
-    success="#6BE051",
+JOKER_THEME = Theme(
+    name="joker",
+    primary="#7B3FB2",
+    secondary="#2FCC2F",
+    accent="#FFC72C",
+    foreground="#F5F0E5",
+    background="#0E0824",
+    surface="#1F0F3F",
+    panel="#2D1758",
+    boost="#9555D4",
+    warning="#FFC72C",
+    error="#DC4040",
+    success="#2FCC2F",
     dark=True,
-)
-
-# ────────────────────────────────────────────────────────────────────────
-# Hippie Light
-# Same psychedelic skateboard-deck spirit on a clean white canvas:
-# hot pink and vivid violet pop against the white, with a tamed
-# lime-green accent for the 70s tie-dye eye-popping contrast. Deep
-# aubergine foreground grounds the text without going pure black.
-# ────────────────────────────────────────────────────────────────────────
-HIPPIE_LIGHT_THEME = Theme(
-    name="hippie-light",
-    primary="#E91E80",
-    secondary="#8B30B8",
-    accent="#5BC940",
-    foreground="#1F0A2E",
-    background="#FFFFFF",
-    surface="#FAF5FF",
-    panel="#F0E5F8",
-    boost="#FF66CC",
-    warning="#E89020",
-    error="#D43062",
-    success="#5BC940",
-    dark=False,
 )
 
 # ────────────────────────────────────────────────────────────────────────
@@ -843,6 +800,33 @@ MARLEY_THEME = Theme(
 
 
 # ── Convenience collections ────────────────────────────────────────────
+
+# ────────────────────────────────────────────────────────────────────────
+# Lenseflare
+# 80s Spielberg / Stranger-Things / Poltergeist atmospheric night —
+# the iconic orange-teal lens-flare bichromatic on a deep twilight
+# blue sky, with a Stranger-Things red accent for dramatic title
+# bars. Warm amber drives the buttons (warm lens-flare side); cool
+# teal handles success and secondary states (the cold counter-glow).
+# Cream foreground keeps that tungsten-light glow on the suburban
+# 80s night palette.
+# ────────────────────────────────────────────────────────────────────────
+LENSEFLARE_THEME = Theme(
+    name="lenseflare",
+    primary="#FF8C42",
+    secondary="#2BD0E0",
+    accent="#E5283A",
+    foreground="#F0E5D2",
+    background="#0A1226",
+    surface="#14213D",
+    panel="#060B18",
+    boost="#FFA85C",
+    warning="#FFB838",
+    error="#E5283A",
+    success="#2BD0E0",
+    dark=True,
+)
+
 
 RETRO_THEMES: list[Theme] = [
     BROTKASTEN_THEME,
@@ -876,12 +860,11 @@ RETRO_THEMES: list[Theme] = [
     RACING_THEME,
     METROPOLIS_THEME,
     SPIDERIZED_THEME,
-    CHRISTMAS_THEME,
-    BRITISH_GREEN_THEME,
+    ASCOT_THEME,
     VISION_THEME,
-    HIPPIE_DARK_THEME,
-    HIPPIE_LIGHT_THEME,
+    JOKER_THEME,
     MARLEY_THEME,
+    LENSEFLARE_THEME,
 ]
 
 RETRO_THEME_NAMES: list[str] = [t.name for t in RETRO_THEMES]
@@ -918,12 +901,11 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "racing": "Racing — Charcoal with Blue, Red & Silver Stripes",
     "metropolis": "Metropolis — Bold Blue, Crimson & Sun Yellow",
     "spiderized": "Spiderized — Red & Royal-Blue Hero Suit",
-    "christmas": "Christmas — Fir Green with Crimson, Gold & Cream",
-    "british-green": "British Green — Racing Green with Signal Yellow",
+    "ascot": "Ascot — Racing Green with Yellow, Silver & Beige Text",
     "vision": "Vision — DOS IDE Editor Blue with Yellow Keywords",
-    "hippie-dark": "Hippie Dark — Psychedelic Pink, Violet & Lime",
-    "hippie-light": "Hippie Light — Psychedelic Pink, Violet & Lime on White",
+    "joker": "Joker — Royal Purple Suit, Acid Green Hair & Yellow Vest",
     "marley": "Marley — Reggae Black, Green, Gold & Red",
+    "lenseflare": "Lenseflare — 80s Orange-Teal on Twilight Blue",
 }
 
 
