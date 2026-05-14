@@ -1,14 +1,14 @@
 # textual-themes
 
-[![Stars](https://img.shields.io/github/stars/michaelblaess/textual-themes?style=for-the-badge&logo=github&color=yellow)](https://github.com/michaelblaess/textual-themes/stargazers)
-[![Forks](https://img.shields.io/github/forks/michaelblaess/textual-themes?style=for-the-badge&logo=github&color=brightgreen)](https://github.com/michaelblaess/textual-themes/network/members)
-[![Issues](https://img.shields.io/github/issues/michaelblaess/textual-themes?style=for-the-badge&logo=github&color=red)](https://github.com/michaelblaess/textual-themes/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/michaelblaess/textual-themes?style=for-the-badge&logo=github&color=blueviolet)](https://github.com/michaelblaess/textual-themes/pulls)
+[![Stars](https://img.shields.io/github/stars/michaelblaess/textual-themes?style=for-the-badge&logo=github&logoColor=white&labelColor=1e2228&color=fbbf24)](https://github.com/michaelblaess/textual-themes/stargazers)
+[![Forks](https://img.shields.io/github/forks/michaelblaess/textual-themes?style=for-the-badge&logo=github&logoColor=white&labelColor=1e2228&color=34d399)](https://github.com/michaelblaess/textual-themes/network/members)
+[![Issues](https://img.shields.io/github/issues/michaelblaess/textual-themes?style=for-the-badge&logo=github&logoColor=white&labelColor=1e2228&color=f87171)](https://github.com/michaelblaess/textual-themes/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/michaelblaess/textual-themes?style=for-the-badge&logo=github&logoColor=white&labelColor=1e2228&color=a78bfa)](https://github.com/michaelblaess/textual-themes/pulls)
 
-[![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/textual-themes?style=for-the-badge&logo=git&color=blue)](https://github.com/michaelblaess/textual-themes/commits/main)
-[![License](https://img.shields.io/badge/license-Apache_2.0-blue?style=for-the-badge)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.12+-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Themes](https://img.shields.io/badge/themes-31-orange?style=for-the-badge)](#gallery)
+[![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/textual-themes?style=for-the-badge&logo=git&logoColor=white&labelColor=1e2228&color=3b82f6)](https://github.com/michaelblaess/textual-themes/commits/main)
+[![License](https://img.shields.io/badge/license-Apache_2.0-3b82f6?style=for-the-badge&labelColor=1e2228)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.12+-3b82f6?style=for-the-badge&logo=python&logoColor=white&labelColor=1e2228)](https://www.python.org/)
+[![Themes](https://img.shields.io/badge/themes-31-fbbf24?style=for-the-badge&labelColor=1e2228)](#gallery)
 
 Retro color themes for [Textual](https://textual.textualize.io/) TUI applications.
 
