@@ -6,6 +6,7 @@ Launches the storybook demo app. Optionally pre-selects a theme.
 from __future__ import annotations
 
 import argparse
+import contextlib
 import sys
 
 from . import __version__
@@ -14,10 +15,8 @@ from .themes import RETRO_THEME_NAMES, THEME_DISPLAY_NAMES
 
 
 def main() -> None:
-    try:
+    with contextlib.suppress(Exception):
         sys.stdout.reconfigure(encoding="utf-8")  # type: ignore[attr-defined]
-    except Exception:
-        pass
     parser = argparse.ArgumentParser(
         prog="python -m textual_themes",
         description=f"textual-themes v{__version__} demo — browse all retro themes.",
