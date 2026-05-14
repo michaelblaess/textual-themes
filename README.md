@@ -1,5 +1,15 @@
 # textual-themes
 
+[![Stars](https://img.shields.io/github/stars/michaelblaess/textual-themes?style=for-the-badge&logo=github&color=yellow)](https://github.com/michaelblaess/textual-themes/stargazers)
+[![Forks](https://img.shields.io/github/forks/michaelblaess/textual-themes?style=for-the-badge&logo=github&color=brightgreen)](https://github.com/michaelblaess/textual-themes/network/members)
+[![Issues](https://img.shields.io/github/issues/michaelblaess/textual-themes?style=for-the-badge&logo=github&color=red)](https://github.com/michaelblaess/textual-themes/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/michaelblaess/textual-themes?style=for-the-badge&logo=github&color=blueviolet)](https://github.com/michaelblaess/textual-themes/pulls)
+
+[![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/textual-themes?style=for-the-badge&logo=git&color=blue)](https://github.com/michaelblaess/textual-themes/commits/main)
+[![License](https://img.shields.io/badge/license-Apache_2.0-blue?style=for-the-badge)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.12+-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Themes](https://img.shields.io/badge/themes-31-orange?style=for-the-badge)](#gallery)
+
 Retro color themes for [Textual](https://textual.textualize.io/) TUI applications.
 
 31 carefully crafted themes inspired by classic computers, operating systems, vintage diver watches, comic-book color schemes, 80s pastel and motorsport liveries.
