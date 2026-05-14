@@ -13,6 +13,7 @@ on startup as a third "Saved" sidebar group.
 Run:
     python -m textual_themes
 """
+
 from __future__ import annotations
 
 from datetime import datetime
@@ -62,10 +63,7 @@ class BorderedVerticalSplitter(VerticalSplitter):
         handle_n = min(_HANDLE_SIZE, h)
         pad_top = (h - handle_n) // 2
         line_char = _V_LINE if self.has_class("with-border") else " "
-        return "\n".join(
-            _V_HANDLE if pad_top <= i < pad_top + handle_n else line_char
-            for i in range(h)
-        )
+        return "\n".join(_V_HANDLE if pad_top <= i < pad_top + handle_n else line_char for i in range(h))
 
 
 class BorderedHorizontalSplitter(HorizontalSplitter):
@@ -78,11 +76,8 @@ class BorderedHorizontalSplitter(HorizontalSplitter):
         pad_left = (w - handle_n) // 2
         pad_right = w - handle_n - pad_left
         line_char = _H_LINE if self.has_class("with-border") else " "
-        return (
-            line_char * pad_left
-            + _H_HANDLE * handle_n
-            + line_char * pad_right
-        )
+        return line_char * pad_left + _H_HANDLE * handle_n + line_char * pad_right
+
 
 from . import __version__
 from .generator import (
@@ -316,7 +311,8 @@ class ThemeOpenScreen(ModalScreen[Path | None]):
                 yield Button("Cancel", id="btn-open-cancel")
 
     def on_directory_tree_file_selected(
-        self, event: DirectoryTree.FileSelected,
+        self,
+        event: DirectoryTree.FileSelected,
     ) -> None:
         if event.path.suffix.lower() == ".json":
             self.dismiss(event.path)
@@ -466,9 +462,7 @@ class ThemeDemoApp(App[None]):
         for theme in self._saved_themes:
             self.register_theme(theme)
         # Build a full list of theme names that the app knows
-        self._all_theme_names: list[str] = list(RETRO_THEME_NAMES) + [
-            t.name for t in self._saved_themes
-        ]
+        self._all_theme_names: list[str] = list(RETRO_THEME_NAMES) + [t.name for t in self._saved_themes]
         if initial_theme and initial_theme in self._all_theme_names:
             self._initial_theme = initial_theme
         else:
@@ -484,27 +478,23 @@ class ThemeDemoApp(App[None]):
             with VerticalScroll(id="sidebar"):
                 yield self._build_theme_tree()
             yield BorderedVerticalSplitter(
-                target_id="sidebar", min_size=20, id="vsplitter",
+                target_id="sidebar",
+                min_size=20,
+                id="vsplitter",
             )
             with TabbedContent(id="content", initial="tab-overview"):
-                with TabPane("Overview", id="tab-overview"):
-                    with VerticalScroll():
-                        yield from self._compose_overview_tab()
-                with TabPane("Buttons", id="tab-buttons"):
-                    with VerticalScroll():
-                        yield from self._compose_buttons_tab()
-                with TabPane("Inputs", id="tab-inputs"):
-                    with VerticalScroll():
-                        yield from self._compose_inputs_tab()
-                with TabPane("Forms", id="tab-forms"):
-                    with VerticalScroll():
-                        yield from self._compose_forms_tab()
-                with TabPane("Data", id="tab-data"):
-                    with VerticalScroll():
-                        yield from self._compose_data_tab()
-                with TabPane("Text", id="tab-text"):
-                    with VerticalScroll():
-                        yield from self._compose_text_tab()
+                with TabPane("Overview", id="tab-overview"), VerticalScroll():
+                    yield from self._compose_overview_tab()
+                with TabPane("Buttons", id="tab-buttons"), VerticalScroll():
+                    yield from self._compose_buttons_tab()
+                with TabPane("Inputs", id="tab-inputs"), VerticalScroll():
+                    yield from self._compose_inputs_tab()
+                with TabPane("Forms", id="tab-forms"), VerticalScroll():
+                    yield from self._compose_forms_tab()
+                with TabPane("Data", id="tab-data"), VerticalScroll():
+                    yield from self._compose_data_tab()
+                with TabPane("Text", id="tab-text"), VerticalScroll():
+                    yield from self._compose_text_tab()
         yield BorderedHorizontalSplitter(
             target_id="main",
             min_size=10,
@@ -529,15 +519,9 @@ class ThemeDemoApp(App[None]):
             yield Button("Error", variant="error", id="btn-error-o")
         with Horizontal(classes="row"):
             yield Button("Default", id="btn-default-od", disabled=True)
-            yield Button(
-                "Primary", variant="primary", id="btn-primary-od", disabled=True
-            )
-            yield Button(
-                "Warning", variant="warning", id="btn-warning-od", disabled=True
-            )
-            yield Button(
-                "Error", variant="error", id="btn-error-od", disabled=True
-            )
+            yield Button("Primary", variant="primary", id="btn-primary-od", disabled=True)
+            yield Button("Warning", variant="warning", id="btn-warning-od", disabled=True)
+            yield Button("Error", variant="error", id="btn-error-od", disabled=True)
 
         yield Static("Inputs", classes="section-title")
         yield Input(placeholder="Type something here...", id="input-1o")
@@ -586,15 +570,9 @@ class ThemeDemoApp(App[None]):
         yield Static("Disabled", classes="section-title")
         with Horizontal(classes="row"):
             yield Button("Default", id="btn-default-d", disabled=True)
-            yield Button(
-                "Primary", variant="primary", id="btn-primary-d", disabled=True
-            )
-            yield Button(
-                "Warning", variant="warning", id="btn-warning-d", disabled=True
-            )
-            yield Button(
-                "Error", variant="error", id="btn-error-d", disabled=True
-            )
+            yield Button("Primary", variant="primary", id="btn-primary-d", disabled=True)
+            yield Button("Warning", variant="warning", id="btn-warning-d", disabled=True)
+            yield Button("Error", variant="error", id="btn-error-d", disabled=True)
 
     def _compose_inputs_tab(self) -> ComposeResult:
         yield Static("Input", classes="section-title")
@@ -650,18 +628,14 @@ class ThemeDemoApp(App[None]):
         dark_themes = [t for t in RETRO_THEMES if t.dark]
         light_themes = [t for t in RETRO_THEMES if not t.dark]
 
-        dark_node = tree.root.add(
-            f"Dark  ({len(dark_themes)})", expand=True
-        )
+        dark_node = tree.root.add(f"Dark  ({len(dark_themes)})", expand=True)
         for theme in dark_themes:
             dark_node.add_leaf(
                 THEME_DISPLAY_NAMES.get(theme.name, theme.name),
                 data=theme.name,
             )
 
-        light_node = tree.root.add(
-            f"Light  ({len(light_themes)})", expand=True
-        )
+        light_node = tree.root.add(f"Light  ({len(light_themes)})", expand=True)
         for theme in light_themes:
             light_node.add_leaf(
                 THEME_DISPLAY_NAMES.get(theme.name, theme.name),
@@ -669,9 +643,7 @@ class ThemeDemoApp(App[None]):
             )
 
         if self._saved_themes:
-            saved_node = tree.root.add(
-                f"Saved  ({len(self._saved_themes)})", expand=True
-            )
+            saved_node = tree.root.add(f"Saved  ({len(self._saved_themes)})", expand=True)
             for theme in self._saved_themes:
                 saved_node.add_leaf(theme.name, data=theme.name)
 
@@ -699,9 +671,7 @@ class ThemeDemoApp(App[None]):
                 data=theme.name,
             )
         if self._saved_themes:
-            saved_node = tree.root.add(
-                f"Saved  ({len(self._saved_themes)})", expand=True
-            )
+            saved_node = tree.root.add(f"Saved  ({len(self._saved_themes)})", expand=True)
             for theme in self._saved_themes:
                 saved_node.add_leaf(theme.name, data=theme.name)
 
@@ -747,18 +717,12 @@ class ThemeDemoApp(App[None]):
         log.write("[green]INFO[/green]  Demo app started.")
         log.write("[yellow]WARN[/yellow]  This is a sample warning.")
         log.write("[red]ERROR[/red] Sample error message.")
-        log.write(
-            "Pick a theme on the left, press [b]n[/b] / [b]p[/b] to cycle, "
-            "or [b]Ctrl+P[/b] for the picker."
-        )
+        log.write("Pick a theme on the left, press [b]n[/b] / [b]p[/b] to cycle, or [b]Ctrl+P[/b] for the picker.")
 
         # Seed the toggleable log panel
         self._log(f"[dim]textual-themes demo v{__version__} ready.[/dim]")
         if self._saved_themes:
-            self._log(
-                f"[green]Loaded {len(self._saved_themes)} saved theme(s) "
-                f"from disk.[/green]"
-            )
+            self._log(f"[green]Loaded {len(self._saved_themes)} saved theme(s) from disk.[/green]")
 
     def watch_theme(self, theme_name: str) -> None:
         """Update header subtitle and sidebar cursor when the theme changes."""
@@ -809,9 +773,7 @@ class ThemeDemoApp(App[None]):
             self.theme = self._all_theme_names[0]
             return
         idx = self._all_theme_names.index(self.theme)
-        self.theme = self._all_theme_names[
-            (idx + step) % len(self._all_theme_names)
-        ]
+        self.theme = self._all_theme_names[(idx + step) % len(self._all_theme_names)]
 
     def action_random_theme(self) -> None:
         """Generate a random theme matching current dark/light mode."""
@@ -837,7 +799,9 @@ class ThemeDemoApp(App[None]):
             f"primary={new_theme.primary} accent={new_theme.accent}"
         )
         self.notify(
-            f"Generated {new_theme.name}", title="Random theme", timeout=2,
+            f"Generated {new_theme.name}",
+            title="Random theme",
+            timeout=2,
         )
 
     def action_save_theme(self) -> None:
@@ -913,12 +877,10 @@ class ThemeDemoApp(App[None]):
             return
         text = "\n".join(self._log_history)
         self.copy_to_clipboard(text)
-        self._log(
-            f"[cyan]COPY[/cyan]  copied {len(self._log_history)} log lines "
-            f"({len(text)} chars) to clipboard"
-        )
+        self._log(f"[cyan]COPY[/cyan]  copied {len(self._log_history)} log lines ({len(text)} chars) to clipboard")
         self.notify(
-            f"Copied {len(self._log_history)} lines to clipboard", timeout=2,
+            f"Copied {len(self._log_history)} lines to clipboard",
+            timeout=2,
         )
 
     def action_reload_themes(self) -> None:
@@ -946,6 +908,7 @@ class ThemeDemoApp(App[None]):
     def action_open_theme(self) -> None:
         """Open a file-picker modal to import a theme JSON from anywhere."""
         from .generator import SAVED_DIR
+
         start_dir = SAVED_DIR if SAVED_DIR.is_dir() else Path.home()
         self.push_screen(
             ThemeOpenScreen(start_dir=start_dir),
@@ -955,30 +918,24 @@ class ThemeDemoApp(App[None]):
     def _on_theme_file_picked(self, path: Path | None) -> None:
         if path is None:
             return
-        from .generator import theme_from_dict
         import json
+
+        from .generator import theme_from_dict
+
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
             theme_obj = theme_from_dict(data)
         except Exception as exc:
-            self._log(
-                f"[red]ERR[/red]   failed to import {path}: {exc}"
-            )
+            self._log(f"[red]ERR[/red]   failed to import {path}: {exc}")
             self.notify(f"Import failed: {exc}", severity="error")
             return
         if theme_obj.name in self._registered_themes:
-            self._log(
-                f"[yellow]WARN[/yellow]  theme '{theme_obj.name}' "
-                "already registered, switching to it"
-            )
+            self._log(f"[yellow]WARN[/yellow]  theme '{theme_obj.name}' already registered, switching to it")
         else:
             self.register_theme(theme_obj)
             self._saved_themes.append(theme_obj)
             self._all_theme_names.append(theme_obj.name)
             self._refresh_theme_tree()
-            self._log(
-                f"[green]LOAD[/green]  imported {theme_obj.name} "
-                f"from {path}"
-            )
+            self._log(f"[green]LOAD[/green]  imported {theme_obj.name} from {path}")
         self.theme = theme_obj.name
         self.notify(f"Loaded {theme_obj.name}", timeout=2)

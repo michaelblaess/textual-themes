@@ -29,6 +29,17 @@ dependencies = [
     "textual-widgets @ git+https://github.com/michaelblaess/textual-widgets.git",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "pytest-cov>=4.0",
+    "pytest-xdist>=3.5",
+    "mypy>=1.8",
+    "poethepoet>=0.29",
+    "ruff>=0.3",
+]
+
 [project.urls]
 Homepage = "https://github.com/michaelblaess/textual-themes"
 Repository = "https://github.com/michaelblaess/textual-themes"
@@ -36,6 +47,16 @@ Issues = "https://github.com/michaelblaess/textual-themes/issues"
 
 [project.scripts]
 textual-themes-demo = "textual_themes.__main__:main"
+
+[tool.poe.tasks]
+demo = { cmd = "python -m textual_themes", help = "Startet die Theme-Demo" }
+test = { cmd = "pytest", help = "Tests sequentiell (schnell bei Unit-Tests)" }
+test-parallel = { cmd = "pytest -n auto", help = "Tests parallel (fuer langsame Test-Suiten)" }
+cov = { cmd = "pytest --cov=textual_themes --cov-report=term-missing", help = "Tests + Coverage" }
+typecheck = { cmd = "mypy src", help = "mypy strict ueber src/" }
+lint = { cmd = "ruff check .", help = "Ruff Linting" }
+fmt = { cmd = "ruff format .", help = "Ruff Formatting" }
+fix = { cmd = "ruff check --fix .", help = "Ruff Auto-Fix" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -46,3 +67,11 @@ python_version = "3.12"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM", "ASYNC"]
+ignore = ["E501"]

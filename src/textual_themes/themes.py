@@ -47,6 +47,7 @@ Themes:
     Marley            — reggae roots palette: black, green, gold, red
     Lenseflare        — 80s Spielberg orange-teal bichromatic on twilight blue
 """
+
 from __future__ import annotations
 
 from typing import TYPE_CHECKING

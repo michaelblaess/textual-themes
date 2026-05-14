@@ -5,6 +5,7 @@ Usage:
     app.register_theme(BROTKASTEN_THEME)
     app.theme = "brotkasten"
 """
+
 from __future__ import annotations
 
 from .themes import (

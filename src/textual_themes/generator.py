@@ -10,6 +10,7 @@ keep readability sane.
 
 Saved themes round-trip via JSON to ``~/.textual-themes/saved/``.
 """
+
 from __future__ import annotations
 
 import colorsys
@@ -18,7 +19,6 @@ import random
 from pathlib import Path
 
 from textual.theme import Theme
-
 
 SAVED_DIR = Path.home() / ".textual-themes" / "saved"
 
@@ -38,8 +38,10 @@ def _relative_luminance(hex_color: str) -> float:
     r = int(hex_color[1:3], 16) / 255
     g = int(hex_color[3:5], 16) / 255
     b = int(hex_color[5:7], 16) / 255
+
     def channel(c: float) -> float:
         return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+
     return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b)
 
 
