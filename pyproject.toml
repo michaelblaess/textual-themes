@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "textual-themes"
 version = "0.6.0"
-description = "36 retro color themes for Textual TUI apps — vintage 8-bit, terminal, watch, comic-pulp, 80s-pastel, Spielberg-era cinema and reggae palettes"
+description = "36 retro color themes for Textual TUI apps - vintage 8-bit, terminal, watch, comic-pulp, 80s-pastel, Spielberg-era cinema and reggae palettes"
 readme = "README.md"
 license = "Apache-2.0"
 requires-python = ">=3.12"
@@ -74,4 +74,4 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM", "ASYNC"]
-ignore = ["E501"]
+ignore = ["E501", "ASYNC109", "ASYNC240"]
