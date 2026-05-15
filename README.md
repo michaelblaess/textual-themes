@@ -8,11 +8,11 @@
 [![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/textual-themes?logo=git&logoColor=white&color=3b82f6)](https://github.com/michaelblaess/textual-themes/commits/main)
 [![License](https://img.shields.io/badge/license-Apache_2.0-3b82f6)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12+-3b82f6?logo=python&logoColor=white)](https://www.python.org/)
-[![Themes](https://img.shields.io/badge/themes-31-fbbf24)](#gallery)
+[![Themes](https://img.shields.io/badge/themes-38-fbbf24)](#gallery)
 
 Retro color themes for [Textual](https://textual.textualize.io/) TUI applications.
 
-31 carefully crafted themes inspired by classic computers, operating systems, vintage diver watches, comic-book color schemes, 80s pastel and motorsport liveries.
+38 carefully crafted themes inspired by classic computers, operating systems, vintage diver watches, comic-book color schemes, 80s pastel, Spielberg-era cinema, motorsport liveries, reggae roots and mafia-noir cinema.
 
 > **⚠ Trademark Disclaimer**
 >
@@ -30,51 +30,62 @@ the bundled demo app (`python -m textual_themes`).
 
 <table>
 <tr>
-<td align="center"><a href="docs/screenshots/brotkasten.svg"><img src="docs/screenshots/brotkasten.svg" width="240" alt="Brotkasten"></a><br><sub><b>Brotkasten</b></sub></td>
-<td align="center"><a href="docs/screenshots/boing.svg"><img src="docs/screenshots/boing.svg" width="240" alt="Boing"></a><br><sub><b>Boing</b></sub></td>
-<td align="center"><a href="docs/screenshots/gemstone.svg"><img src="docs/screenshots/gemstone.svg" width="240" alt="Gemstone"></a><br><sub><b>Gemstone</b></sub></td>
-<td align="center"><a href="docs/screenshots/classic-terminal.svg"><img src="docs/screenshots/classic-terminal.svg" width="240" alt="Classic Terminal"></a><br><sub><b>Classic Terminal</b></sub></td>
-</tr>
-<tr>
-<td align="center"><a href="docs/screenshots/next.svg"><img src="docs/screenshots/next.svg" width="240" alt="Next"></a><br><sub><b>Next</b></sub></td>
-<td align="center"><a href="docs/screenshots/bebox.svg"><img src="docs/screenshots/bebox.svg" width="240" alt="BeBox"></a><br><sub><b>BeBox</b></sub></td>
-<td align="center"><a href="docs/screenshots/bunty.svg"><img src="docs/screenshots/bunty.svg" width="240" alt="Bunty"></a><br><sub><b>Bunty</b></sub></td>
-<td align="center"><a href="docs/screenshots/cupertino.svg"><img src="docs/screenshots/cupertino.svg" width="240" alt="Cupertino"></a><br><sub><b>Cupertino</b></sub></td>
-</tr>
-<tr>
-<td align="center"><a href="docs/screenshots/luna.svg"><img src="docs/screenshots/luna.svg" width="240" alt="Luna"></a><br><sub><b>Luna</b></sub></td>
-<td align="center"><a href="docs/screenshots/commandr.svg"><img src="docs/screenshots/commandr.svg" width="240" alt="Commandr"></a><br><sub><b>Commandr</b></sub></td>
-<td align="center"><a href="docs/screenshots/plan9.svg"><img src="docs/screenshots/plan9.svg" width="240" alt="Plan 9"></a><br><sub><b>Plan 9</b></sub></td>
-<td align="center"><a href="docs/screenshots/motif.svg"><img src="docs/screenshots/motif.svg" width="240" alt="Motif"></a><br><sub><b>Motif</b></sub></td>
-</tr>
-<tr>
-<td align="center"><a href="docs/screenshots/warp.svg"><img src="docs/screenshots/warp.svg" width="240" alt="Warp"></a><br><sub><b>Warp</b></sub></td>
-<td align="center"><a href="docs/screenshots/geeko.svg"><img src="docs/screenshots/geeko.svg" width="240" alt="Geeko"></a><br><sub><b>Geeko</b></sub></td>
-<td align="center"><a href="docs/screenshots/minty.svg"><img src="docs/screenshots/minty.svg" width="240" alt="Minty"></a><br><sub><b>Minty</b></sub></td>
-<td align="center"><a href="docs/screenshots/crimson.svg"><img src="docs/screenshots/crimson.svg" width="240" alt="Crimson"></a><br><sub><b>Crimson</b></sub></td>
-</tr>
-<tr>
-<td align="center"><a href="docs/screenshots/razzy.svg"><img src="docs/screenshots/razzy.svg" width="240" alt="Razzy"></a><br><sub><b>Razzy</b></sub></td>
+<td align="center"><a href="docs/screenshots/ascot.svg"><img src="docs/screenshots/ascot.svg" width="240" alt="Ascot"></a><br><sub><b>Ascot</b></sub></td>
 <td align="center"><a href="docs/screenshots/beastie.svg"><img src="docs/screenshots/beastie.svg" width="240" alt="Beastie"></a><br><sub><b>Beastie</b></sub></td>
-<td align="center"><a href="docs/screenshots/fifty-eight.svg"><img src="docs/screenshots/fifty-eight.svg" width="240" alt="Fifty-Eight"></a><br><sub><b>Fifty-Eight</b></sub></td>
+<td align="center"><a href="docs/screenshots/bebox.svg"><img src="docs/screenshots/bebox.svg" width="240" alt="BeBox"></a><br><sub><b>BeBox</b></sub></td>
 <td align="center"><a href="docs/screenshots/bluesy.svg"><img src="docs/screenshots/bluesy.svg" width="240" alt="Bluesy"></a><br><sub><b>Bluesy</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/boing.svg"><img src="docs/screenshots/boing.svg" width="240" alt="Boing"></a><br><sub><b>Boing</b></sub></td>
+<td align="center"><a href="docs/screenshots/brick.svg"><img src="docs/screenshots/brick.svg" width="240" alt="Brick"></a><br><sub><b>Brick</b></sub></td>
+<td align="center"><a href="docs/screenshots/brotkasten.svg"><img src="docs/screenshots/brotkasten.svg" width="240" alt="Brotkasten"></a><br><sub><b>Brotkasten</b></sub></td>
+<td align="center"><a href="docs/screenshots/bunty.svg"><img src="docs/screenshots/bunty.svg" width="240" alt="Bunty"></a><br><sub><b>Bunty</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/classic-navy.svg"><img src="docs/screenshots/classic-navy.svg" width="240" alt="Classic Navy"></a><br><sub><b>Classic Navy</b></sub></td>
+<td align="center"><a href="docs/screenshots/classic-terminal.svg"><img src="docs/screenshots/classic-terminal.svg" width="240" alt="Classic Terminal"></a><br><sub><b>Classic Terminal</b></sub></td>
+<td align="center"><a href="docs/screenshots/clipper.svg"><img src="docs/screenshots/clipper.svg" width="240" alt="Clipper"></a><br><sub><b>Clipper</b></sub></td>
+<td align="center"><a href="docs/screenshots/commandr.svg"><img src="docs/screenshots/commandr.svg" width="240" alt="Commandr"></a><br><sub><b>Commandr</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/corleone.svg"><img src="docs/screenshots/corleone.svg" width="240" alt="Corleone"></a><br><sub><b>Corleone</b></sub></td>
+<td align="center"><a href="docs/screenshots/crimson.svg"><img src="docs/screenshots/crimson.svg" width="240" alt="Crimson"></a><br><sub><b>Crimson</b></sub></td>
+<td align="center"><a href="docs/screenshots/cupertino.svg"><img src="docs/screenshots/cupertino.svg" width="240" alt="Cupertino"></a><br><sub><b>Cupertino</b></sub></td>
+<td align="center"><a href="docs/screenshots/fifty-eight.svg"><img src="docs/screenshots/fifty-eight.svg" width="240" alt="Fifty-Eight"></a><br><sub><b>Fifty-Eight</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/flughund.svg"><img src="docs/screenshots/flughund.svg" width="240" alt="Flughund"></a><br><sub><b>Flughund</b></sub></td>
+<td align="center"><a href="docs/screenshots/geeko.svg"><img src="docs/screenshots/geeko.svg" width="240" alt="Geeko"></a><br><sub><b>Geeko</b></sub></td>
+<td align="center"><a href="docs/screenshots/gemstone.svg"><img src="docs/screenshots/gemstone.svg" width="240" alt="Gemstone"></a><br><sub><b>Gemstone</b></sub></td>
+<td align="center"><a href="docs/screenshots/golden-brown.svg"><img src="docs/screenshots/golden-brown.svg" width="240" alt="Golden Brown"></a><br><sub><b>Golden Brown</b></sub></td>
 </tr>
 <tr>
 <td align="center"><a href="docs/screenshots/goldfinder.svg"><img src="docs/screenshots/goldfinder.svg" width="240" alt="Goldfinder"></a><br><sub><b>Goldfinder</b></sub></td>
 <td align="center"><a href="docs/screenshots/hulkula.svg"><img src="docs/screenshots/hulkula.svg" width="240" alt="Hulkula"></a><br><sub><b>Hulkula</b></sub></td>
-<td align="center"><a href="docs/screenshots/flughund.svg"><img src="docs/screenshots/flughund.svg" width="240" alt="Flughund"></a><br><sub><b>Flughund</b></sub></td>
-<td align="center"><a href="docs/screenshots/classic-navy.svg"><img src="docs/screenshots/classic-navy.svg" width="240" alt="Classic Navy"></a><br><sub><b>Classic Navy</b></sub></td>
+<td align="center"><a href="docs/screenshots/joker.svg"><img src="docs/screenshots/joker.svg" width="240" alt="Joker"></a><br><sub><b>Joker</b></sub></td>
+<td align="center"><a href="docs/screenshots/lenseflare.svg"><img src="docs/screenshots/lenseflare.svg" width="240" alt="Lenseflare"></a><br><sub><b>Lenseflare</b></sub></td>
 </tr>
 <tr>
-<td align="center"><a href="docs/screenshots/brick.svg"><img src="docs/screenshots/brick.svg" width="240" alt="Brick"></a><br><sub><b>Brick</b></sub></td>
-<td align="center"><a href="docs/screenshots/clipper.svg"><img src="docs/screenshots/clipper.svg" width="240" alt="Clipper"></a><br><sub><b>Clipper</b></sub></td>
-<td align="center"><a href="docs/screenshots/synthwave.svg"><img src="docs/screenshots/synthwave.svg" width="240" alt="Synthwave"></a><br><sub><b>Synthwave</b></sub></td>
+<td align="center"><a href="docs/screenshots/luna.svg"><img src="docs/screenshots/luna.svg" width="240" alt="Luna"></a><br><sub><b>Luna</b></sub></td>
+<td align="center"><a href="docs/screenshots/marley.svg"><img src="docs/screenshots/marley.svg" width="240" alt="Marley"></a><br><sub><b>Marley</b></sub></td>
+<td align="center"><a href="docs/screenshots/metropolis.svg"><img src="docs/screenshots/metropolis.svg" width="240" alt="Metropolis"></a><br><sub><b>Metropolis</b></sub></td>
 <td align="center"><a href="docs/screenshots/miami.svg"><img src="docs/screenshots/miami.svg" width="240" alt="Miami"></a><br><sub><b>Miami</b></sub></td>
 </tr>
 <tr>
+<td align="center"><a href="docs/screenshots/minty.svg"><img src="docs/screenshots/minty.svg" width="240" alt="Minty"></a><br><sub><b>Minty</b></sub></td>
+<td align="center"><a href="docs/screenshots/motif.svg"><img src="docs/screenshots/motif.svg" width="240" alt="Motif"></a><br><sub><b>Motif</b></sub></td>
+<td align="center"><a href="docs/screenshots/next.svg"><img src="docs/screenshots/next.svg" width="240" alt="Next"></a><br><sub><b>Next</b></sub></td>
+<td align="center"><a href="docs/screenshots/plan9.svg"><img src="docs/screenshots/plan9.svg" width="240" alt="Plan 9"></a><br><sub><b>Plan 9</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/platoon.svg"><img src="docs/screenshots/platoon.svg" width="240" alt="Platoon"></a><br><sub><b>Platoon</b></sub></td>
 <td align="center"><a href="docs/screenshots/racing.svg"><img src="docs/screenshots/racing.svg" width="240" alt="Racing"></a><br><sub><b>Racing</b></sub></td>
-<td align="center"><a href="docs/screenshots/metropolis.svg"><img src="docs/screenshots/metropolis.svg" width="240" alt="Metropolis"></a><br><sub><b>Metropolis</b></sub></td>
+<td align="center"><a href="docs/screenshots/razzy.svg"><img src="docs/screenshots/razzy.svg" width="240" alt="Razzy"></a><br><sub><b>Razzy</b></sub></td>
 <td align="center"><a href="docs/screenshots/spiderized.svg"><img src="docs/screenshots/spiderized.svg" width="240" alt="Spiderized"></a><br><sub><b>Spiderized</b></sub></td>
+</tr>
+<tr>
+<td align="center"><a href="docs/screenshots/synthwave.svg"><img src="docs/screenshots/synthwave.svg" width="240" alt="Synthwave"></a><br><sub><b>Synthwave</b></sub></td>
+<td align="center"><a href="docs/screenshots/warp.svg"><img src="docs/screenshots/warp.svg" width="240" alt="Warp"></a><br><sub><b>Warp</b></sub></td>
 </tr>
 </table>
 
@@ -84,42 +95,49 @@ the bundled demo app (`python -m textual_themes`).
 
 | Theme | Style |
 |-------|-------|
-| **Brotkasten** | Light blue on royal blue, the iconic 8-bit color cast (PETSCII) |
-| **Boing** | Three-color workbench palette: blue/white/orange |
-| **Classic Terminal** | Phosphor-green on black (CRT) |
-| **Next** | Dark gray with magenta accents — workstation-era 3D bevels |
-| **BeBox** | Blue-gray with yellow status-bar accent |
-| **Bunty** | Aubergine with warm orange accents |
-| **Luna** | Sky-blue task-bar with green start button |
-| **Commandr** | Blue/cyan/yellow file-manager palette |
-| **Motif** | Beige slate-gray corporate Unix toolkit |
-| **Warp** | Dark blue with teal accents |
-| **Geeko** | Dark green with white |
-| **Minty** | Warm mint-green on charcoal |
-| **Crimson** | Deep red on dark charcoal |
-| **Razzy** | Raspberry red on dark slate |
+| **Ascot** | Le-Mans racing green with signal yellow, silver and beige text |
 | **Beastie** | Daemon red on dark slate |
-| **Fifty-Eight** | Black dial with aged gold lume + bezel red (vintage diver) |
+| **BeBox** | Blue-gray with yellow status-bar accent |
 | **Bluesy** | Royal blue with rich yellow-gold accents |
+| **Boing** | Three-color workbench palette: blue/white/orange |
+| **Brotkasten** | Light blue on royal blue, the iconic 8-bit color cast (PETSCII) |
+| **Bunty** | Aubergine with warm orange accents |
+| **Classic Navy** | Deep navy with silver and muted brick-red |
+| **Classic Terminal** | Phosphor-green on black (CRT) |
+| **Commandr** | Blue/cyan/yellow file-manager palette |
+| **Corleone** | Cold mafia-noir — bronze, steel-gray and ash on bluish black |
+| **Crimson** | Deep red on dark charcoal |
+| **Fifty-Eight** | Black dial with aged gold lume + bezel red (vintage diver) |
+| **Flughund** | Midnight black & moonlit blue |
+| **Geeko** | Dark green with white |
+| **Golden Brown** | Warm mafia-noir — antique gold, sepia and parchment on warm black |
 | **Goldfinder** | Deep black with 18K gold accents — villain glamour |
 | **Hulkula** | Vivid green rage with steel-gray edges |
-| **Flughund** | Midnight black & moonlit blue |
-| **Classic Navy** | Deep navy with silver and muted brick-red |
-| **Synthwave** | Deep purple with neon pink and electric cyan |
-| **Miami** | Pastel 80s — twilight teal, flamingo pink, sunset coral |
-| **Racing** | Charcoal with deep blue, cherry red and silver stripes |
+| **Joker** | Comic Gotham villain — royal purple suit, acid-green hair, yellow vest |
+| **Lenseflare** | 80s Spielberg orange-teal bichromatic on twilight blue |
+| **Luna** | Sky-blue task-bar with green start button |
+| **Marley** | Reggae roots palette — black, green, gold and red |
 | **Metropolis** | Bold blue, crimson red and sun yellow primary triad |
+| **Miami** | Pastel 80s — twilight teal, flamingo pink, sunset coral |
+| **Minty** | Warm mint-green on charcoal |
+| **Motif** | Beige slate-gray corporate Unix toolkit |
+| **Next** | Dark gray with magenta accents — workstation-era 3D bevels |
+| **Platoon** | Muted military olive-drab with khaki accent on near-black |
+| **Racing** | Charcoal with deep blue, cherry red and silver stripes |
+| **Razzy** | Raspberry red on dark slate |
 | **Spiderized** | Red & royal-blue hero suit (high-contrast) |
+| **Synthwave** | Deep purple with neon pink and electric cyan |
+| **Warp** | Dark blue with teal accents |
 
 ### Light Themes
 
 | Theme | Style |
 |-------|-------|
-| **Gemstone** | Monochrome GEM Desktop look |
-| **Cupertino** | Clean light gray with blue accents |
-| **Plan 9** | Pulpy yellow/blue/green |
 | **Brick** | Olive-green handheld LCD on beige-gray case |
 | **Clipper** | Globe blue on ivory — jet-age livery |
+| **Cupertino** | Clean light gray with blue accents |
+| **Gemstone** | Monochrome GEM Desktop look |
+| **Plan 9** | Pulpy yellow/blue/green |
 
 ## Installation
 
@@ -167,7 +185,7 @@ from textual_themes import register_all
 class MyApp(App):
     def __init__(self):
         super().__init__()
-        register_all(self)       # registers all 31 themes
+        register_all(self)       # registers all 38 themes
         self.theme = "boing"     # pick one
 ```
 
@@ -222,7 +240,7 @@ from textual_themes import (
     SPIDERIZED_THEME,
 
     # Collections
-    RETRO_THEMES,          # list[Theme] — all 31 themes
+    RETRO_THEMES,          # list[Theme] — all 38 themes
     RETRO_THEME_NAMES,     # list[str]   — ["brotkasten", "boing", ...]
     THEME_DISPLAY_NAMES,   # dict[str, str]
 
@@ -273,6 +291,14 @@ Use these slugs with `app.theme = "..."`:
 
 - Python >= 3.12
 - Textual >= 0.85
+
+## Editing themes
+
+To tweak an existing theme or design a new one interactively, try
+[textual-theme-editor](https://github.com/TomJGooding/textual-theme-editor)
+by Tom J Gooding — a standalone visual theme editor for Textual. Install it
+separately (`pip install textual-theme-editor`); it is GPLv3-licensed and not
+a dependency of this package.
 
 ## License
 
