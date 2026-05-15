@@ -16,7 +16,6 @@ Run:
 
 from __future__ import annotations
 
-from datetime import datetime
 from pathlib import Path
 
 from rich.text import Text
@@ -822,9 +821,11 @@ class ThemeDemoApp(App[None]):
                 pass
 
     def action_screenshot(self) -> None:
+        # Save as <theme-slug>.svg (no timestamp) so repeated captures
+        # overwrite cleanly — run the demo from docs/screenshots/ to
+        # regenerate the gallery in place.
         slug = (self.theme or "screenshot").replace("/", "-")
-        timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-        filename = f"theme-{slug}-{timestamp}.svg"
+        filename = f"{slug}.svg"
         self.save_screenshot(str(Path.cwd() / filename))
         self.notify(f"Saved {filename}", title="Screenshot")
 

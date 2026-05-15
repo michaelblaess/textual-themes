@@ -53,7 +53,6 @@ demo = { cmd = "python -m textual_themes", help = "Startet die Theme-Demo" }
 test = { cmd = "pytest", help = "Tests sequentiell (schnell bei Unit-Tests)" }
 test-parallel = { cmd = "pytest -n auto", help = "Tests parallel (fuer langsame Test-Suiten)" }
 cov = { cmd = "pytest --cov=textual_themes --cov-report=term-missing", help = "Tests + Coverage" }
-gen-screenshots = { cmd = "python scripts/gen_screenshots.py", help = "Erzeugt alle Theme-Screenshots in docs/screenshots/" }
 typecheck = { cmd = "mypy src", help = "mypy strict ueber src/" }
 lint = { cmd = "ruff check .", help = "Ruff Linting" }
 fmt = { cmd = "ruff format .", help = "Ruff Formatting" }
