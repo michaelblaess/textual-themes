@@ -9,44 +9,45 @@ operating systems, vintage diver watches, comic-book color schemes,
 roots. Theme names are descriptive of the visual style only; no
 trademarks are used as product names.
 
-Themes:
-    Brotkasten        — light blue on royal blue (8-bit PETSCII style)
-    Boing             — three-color workbench palette: blue/white/orange
-    Gemstone          — monochrome GEM Desktop look (light)
-    Classic Terminal  — phosphor-green on black (CRT)
-    Next              — slate gray with magenta accents
-    BeBox             — blue-gray with yellow status-bar accent
-    Bunty             — aubergine with warm orange accents
-    Cupertino         — clean light gray with blue accents (light)
-    Luna              — sky-blue task-bar with green start button
-    Commandr          — blue/cyan/yellow file-manager palette
-    Plan 9            — pulpy yellow/blue/green (light)
-    Motif             — beige slate-gray corporate Unix toolkit
-    Warp              — dark blue with teal accents
-    Geeko             — dark green with white
-    Minty             — warm mint-green on charcoal
-    Crimson           — deep red on dark charcoal
-    Razzy             — raspberry red on dark slate
+Themes (alphabetical):
+    Ascot             — Le-Mans racing green with signal yellow, silver and beige text
     Beastie           — daemon red on dark slate
-    Fifty-Eight       — black dial with aged gold lume + bezel red
+    BeBox             — blue-gray with yellow status-bar accent
     Bluesy            — royal blue with rich yellow-gold accents
+    Boing             — three-color workbench palette: blue/white/orange
+    Brick             — olive-green handheld LCD (light)
+    Brotkasten        — light blue on royal blue (8-bit PETSCII style)
+    Bunty             — aubergine with warm orange accents
+    Classic Navy      — deep navy with silver and muted brick-red
+    Classic Terminal  — phosphor-green on black (CRT)
+    Clipper           — globe blue on ivory (light)
+    Commandr          — blue/cyan/yellow file-manager palette
+    Corleone          — cold mafia-noir: bronze, steel-grey and ash on bluish black
+    Crimson           — deep red on dark charcoal
+    Cupertino         — clean light gray with blue accents (light)
+    Fifty-Eight       — black dial with aged gold lume + bezel red
+    Flughund          — midnight black & moonlit blue
+    Geeko             — dark green with white
+    Gemstone          — monochrome GEM Desktop look (light)
+    Golden Brown      — warm mafia-noir: antique gold, sepia and parchment on warm black
     Goldfinder        — deep black with 18K gold accents
     Hulkula           — vivid green rage with steel-gray edges
-    Flughund          — midnight black & moonlit blue
-    Classic Navy      — deep navy with silver and muted brick-red
-    Brick             — olive-green handheld LCD (light)
-    Clipper           — globe blue on ivory (light)
-    Synthwave         — deep purple with neon pink and electric cyan
-    Miami             — pastel 80s: twilight teal, flamingo pink, sunset coral
-    Racing            — charcoal with blue, red and silver stripes
-    Metropolis        — bold blue, crimson red and sun yellow primary triad
-    Spiderized        — red & royal-blue hero suit (high-contrast)
-    Ascot             — Le-Mans racing green with signal yellow, silver and beige text
     Joker             — Comic Gotham villain: royal purple suit, acid-green hair & yellow vest
-    Marley            — reggae roots palette: black, green, gold, red
     Lenseflare        — 80s Spielberg orange-teal bichromatic on twilight blue
+    Luna              — sky-blue task-bar with green start button
+    Marley            — reggae roots palette: black, green, gold, red
+    Metropolis        — bold blue, crimson red and sun yellow primary triad
+    Miami             — pastel 80s: twilight teal, flamingo pink, sunset coral
+    Minty             — warm mint-green on charcoal
+    Motif             — beige slate-gray corporate Unix toolkit
+    Next              — slate gray with magenta accents
+    Plan 9            — pulpy yellow/blue/green (light)
     Platoon           — muted military olive-drab with khaki accent on near-black
-    Corleone          — cold mafia-noir: bronze, steel-grey and ash on bluish black
+    Racing            — charcoal with blue, red and silver stripes
+    Razzy             — raspberry red on dark slate
+    Spiderized        — red & royal-blue hero suit (high-contrast)
+    Synthwave         — deep purple with neon pink and electric cyan
+    Warp              — dark blue with teal accents
 """
 
 from __future__ import annotations
@@ -888,86 +889,125 @@ CORLEONE_THEME = Theme(
 )
 
 
+# ────────────────────────────────────────────────────────────────────────
+# Golden Brown
+# Warm mafia-noir counterpart to Corleone — a tungsten-lit night
+# instead of a cold one. Antique gold drives the buttons, sepia brown
+# handles secondary states, and an aged-parchment foreground glows on
+# a warm near-black canvas. Oxblood red for errors, amber for
+# warnings. The warm, smoky, cigar-lounge half of the noir pair.
+# ────────────────────────────────────────────────────────────────────────
+GOLDEN_BROWN_THEME = Theme(
+    name="golden-brown",
+    primary="#A8843F",
+    secondary="#6E4E36",
+    accent="#C29A4E",
+    foreground="#D5C5A4",
+    background="#0F0B07",
+    surface="#1C1611",
+    panel="#2B2018",
+    boost="#D2AC66",
+    warning="#BE8F39",
+    error="#9A2B2B",
+    success="#5F6B42",
+    dark=True,
+    variables={
+        # Visible gold-brown scrollbars — the gold primary blended onto the
+        # warm near-black background otherwise sinks out of sight.
+        "scrollbar": "#5A4A2C",
+        "scrollbar-hover": "#8A7038",
+        "scrollbar-active": "#C29A4E",
+        # Footer: lifted sepia bar so it reads as a distinct band.
+        "footer-background": "#352819",
+    },
+)
+
+
+# Kept alphabetically sorted by theme name — new themes must be inserted
+# in order, not appended.
 RETRO_THEMES: list[Theme] = [
-    BROTKASTEN_THEME,
-    BOING_THEME,
-    GEMSTONE_THEME,
-    CLASSIC_TERMINAL_THEME,
-    NEXT_THEME,
-    BEBOX_THEME,
-    BUNTY_THEME,
-    CUPERTINO_THEME,
-    LUNA_THEME,
-    COMMANDR_THEME,
-    PLAN9_THEME,
-    MOTIF_THEME,
-    WARP_THEME,
-    GEEKO_THEME,
-    MINTY_THEME,
-    CRIMSON_THEME,
-    RAZZY_THEME,
+    ASCOT_THEME,
     BEASTIE_THEME,
-    FIFTY_EIGHT_THEME,
+    BEBOX_THEME,
     BLUESY_THEME,
+    BOING_THEME,
+    BRICK_THEME,
+    BROTKASTEN_THEME,
+    BUNTY_THEME,
+    CLASSIC_NAVY_THEME,
+    CLASSIC_TERMINAL_THEME,
+    CLIPPER_THEME,
+    COMMANDR_THEME,
+    CORLEONE_THEME,
+    CRIMSON_THEME,
+    CUPERTINO_THEME,
+    FIFTY_EIGHT_THEME,
+    FLUGHUND_THEME,
+    GEEKO_THEME,
+    GEMSTONE_THEME,
+    GOLDEN_BROWN_THEME,
     GOLDFINDER_THEME,
     HULKULA_THEME,
-    FLUGHUND_THEME,
-    CLASSIC_NAVY_THEME,
-    BRICK_THEME,
-    CLIPPER_THEME,
-    SYNTHWAVE_THEME,
-    MIAMI_THEME,
-    RACING_THEME,
-    METROPOLIS_THEME,
-    SPIDERIZED_THEME,
-    ASCOT_THEME,
     JOKER_THEME,
-    MARLEY_THEME,
     LENSEFLARE_THEME,
+    LUNA_THEME,
+    MARLEY_THEME,
+    METROPOLIS_THEME,
+    MIAMI_THEME,
+    MINTY_THEME,
+    MOTIF_THEME,
+    NEXT_THEME,
+    PLAN9_THEME,
     PLATOON_THEME,
-    CORLEONE_THEME,
+    RACING_THEME,
+    RAZZY_THEME,
+    SPIDERIZED_THEME,
+    SYNTHWAVE_THEME,
+    WARP_THEME,
 ]
 
 RETRO_THEME_NAMES: list[str] = [t.name for t in RETRO_THEMES]
 
+# Kept alphabetically sorted by theme name — new entries go in order.
 THEME_DISPLAY_NAMES: dict[str, str] = {
-    "brotkasten": "Brotkasten — Light Blue on Royal Blue",
-    "boing": "Boing — Blue/White/Orange Workbench",
-    "gemstone": "Gemstone — Monochrome GEM Desktop",
-    "classic-terminal": "Classic Terminal — Phosphor Green on Black",
-    "next": "Next — Slate Gray with Magenta Accents",
-    "bebox": "BeBox — Blue-Gray with Yellow Accent",
-    "bunty": "Bunty — Aubergine with Warm Orange Accents",
-    "cupertino": "Cupertino — Clean Light Gray with Blue Accents",
-    "luna": "Luna — Sky Blue with Green Start Accent",
-    "commandr": "Commandr — Blue/Cyan/Yellow File Manager",
-    "plan9": "Plan 9 — Pulpy Yellow/Blue/Green",
-    "motif": "Motif — Beige Corporate Unix Toolkit",
-    "warp": "Warp — Dark Blue with Teal Accents",
-    "geeko": "Geeko — Dark Green with White",
-    "minty": "Minty — Warm Mint-Green on Charcoal",
-    "crimson": "Crimson — Deep Red on Dark Charcoal",
-    "razzy": "Razzy — Raspberry Red on Dark Slate",
+    "ascot": "Ascot — Racing Green with Yellow, Silver & Beige Text",
     "beastie": "Beastie — Daemon Red on Dark Slate",
-    "fifty-eight": "Fifty-Eight — Black Dial, Aged Gold Lume & Bezel Red",
+    "bebox": "BeBox — Blue-Gray with Yellow Accent",
     "bluesy": "Bluesy — Royal Blue & Gold",
+    "boing": "Boing — Blue/White/Orange Workbench",
+    "brick": "Brick — Olive-Green Handheld LCD",
+    "brotkasten": "Brotkasten — Light Blue on Royal Blue",
+    "bunty": "Bunty — Aubergine with Warm Orange Accents",
+    "classic-navy": "Classic Navy",
+    "classic-terminal": "Classic Terminal — Phosphor Green on Black",
+    "clipper": "Clipper — Globe Blue on Ivory",
+    "commandr": "Commandr — Blue/Cyan/Yellow File Manager",
+    "corleone": "Corleone — Cold Noir Bronze & Steel",
+    "crimson": "Crimson — Deep Red on Dark Charcoal",
+    "cupertino": "Cupertino — Clean Light Gray with Blue Accents",
+    "fifty-eight": "Fifty-Eight — Black Dial, Aged Gold Lume & Bezel Red",
+    "flughund": "Flughund — Midnight Black & Moonlit Blue",
+    "geeko": "Geeko — Dark Green with White",
+    "gemstone": "Gemstone — Monochrome GEM Desktop",
+    "golden-brown": "Golden Brown — Warm Gold & Sepia Noir",
     "goldfinder": "Goldfinder — Deep Black with 18K Gold Accents",
     "hulkula": "Hulkula — Verdant Green with Steel Edges",
-    "flughund": "Flughund — Midnight Black & Moonlit Blue",
-    "classic-navy": "Classic Navy",
-    "brick": "Brick — Olive-Green Handheld LCD",
-    "clipper": "Clipper — Globe Blue on Ivory",
-    "synthwave": "Synthwave — 80s Retro-Futurism",
-    "miami": "Miami — Twilight Teal, Flamingo Pink & Sunset Coral",
-    "racing": "Racing — Charcoal with Blue, Red & Silver Stripes",
-    "metropolis": "Metropolis — Bold Blue, Crimson & Sun Yellow",
-    "spiderized": "Spiderized — Red & Royal-Blue Hero Suit",
-    "ascot": "Ascot — Racing Green with Yellow, Silver & Beige Text",
     "joker": "Joker — Royal Purple Suit, Acid Green Hair & Yellow Vest",
-    "marley": "Marley — Reggae Black, Green, Gold & Red",
     "lenseflare": "Lenseflare — 80s Orange-Teal on Twilight Blue",
+    "luna": "Luna — Sky Blue with Green Start Accent",
+    "marley": "Marley — Reggae Black, Green, Gold & Red",
+    "metropolis": "Metropolis — Bold Blue, Crimson & Sun Yellow",
+    "miami": "Miami — Twilight Teal, Flamingo Pink & Sunset Coral",
+    "minty": "Minty — Warm Mint-Green on Charcoal",
+    "motif": "Motif — Beige Corporate Unix Toolkit",
+    "next": "Next — Slate Gray with Magenta Accents",
+    "plan9": "Plan 9 — Pulpy Yellow/Blue/Green",
     "platoon": "Platoon — Jungle Olive Drab & Khaki",
-    "corleone": "Corleone — Cold Noir Bronze & Steel",
+    "racing": "Racing — Charcoal with Blue, Red & Silver Stripes",
+    "razzy": "Razzy — Raspberry Red on Dark Slate",
+    "spiderized": "Spiderized — Red & Royal-Blue Hero Suit",
+    "synthwave": "Synthwave — 80s Retro-Futurism",
+    "warp": "Warp — Dark Blue with Teal Accents",
 }
 
 
