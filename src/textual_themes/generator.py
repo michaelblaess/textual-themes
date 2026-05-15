@@ -1,7 +1,7 @@
 """Random theme generator + JSON persistence.
 
 Internal helper used by the demo app. Not part of the public package
-API — the textual-themes package exports only the 36 curated themes.
+API — the textual-themes package exports only the 38 curated themes.
 
 The generator builds a Textual `Theme` from a randomly picked HSL
 colour-harmony strategy (analogous / complementary / triadic /

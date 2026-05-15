@@ -53,7 +53,7 @@ from .themes import (
     register_all,
 )
 
-__version__ = "0.6.0"
+__version__ = "0.7.0"
 __author__ = "Michael Blaess"
 
 # Theme constants kept alphabetically sorted — new entries go in order.

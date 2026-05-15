@@ -3,7 +3,7 @@
 Each theme is a `textual.theme.Theme` instance that can be registered
 with any Textual `App` via `app.register_theme(theme)`.
 
-This package contains 36 themes inspired by classic computers,
+This package contains 38 themes inspired by classic computers,
 operating systems, vintage diver watches, comic-book color schemes,
 80s pastel and Spielberg-era cinema, motorsport liveries and reggae
 roots. Theme names are descriptive of the visual style only; no
