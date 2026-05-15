@@ -141,9 +141,40 @@ the bundled demo app (`python -m textual_themes`).
 
 ## Installation
 
+Add the themes to your own Textual project:
+
 ```bash
 pip install git+https://github.com/michaelblaess/textual-themes.git
 ```
+
+## Storybook
+
+Browse all 38 themes interactively in the bundled storybook. Install it with
+a single command — it sets up an isolated environment and adds a
+`textual-themes-demo` launcher to your PATH:
+
+**Linux / macOS**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/michaelblaess/textual-themes/main/install.sh | bash
+```
+
+**Windows (PowerShell)**
+
+```powershell
+irm https://raw.githubusercontent.com/michaelblaess/textual-themes/main/install.ps1 | iex
+```
+
+Then launch it:
+
+```bash
+textual-themes-demo
+```
+
+Requires Python 3.12+ and `git`. To update later, just run the installer
+again; to remove it, delete `~/.textual-themes` (Linux/macOS) or
+`%LOCALAPPDATA%\textual-themes` (Windows) and the `textual-themes-demo`
+launcher.
 
 ## Quick Start
 
