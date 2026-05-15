@@ -439,6 +439,9 @@ class ThemeDemoApp(App[None]):
         self._last_generated_name: str | None = None
         # Plain-text mirror of the log panel for copy-to-clipboard
         self._log_history: list[str] = []
+        # Gate sidebar-cursor theme switching until after the initial mount,
+        # so mount-time tree highlights don't override the startup theme.
+        self._tree_theme_live = False
 
     def compose(self) -> ComposeResult:
         yield Header(show_clock=False)
@@ -692,6 +695,13 @@ class ThemeDemoApp(App[None]):
         if self._saved_themes:
             self._log(f"[green]Loaded {len(self._saved_themes)} saved theme(s) from disk.[/green]")
 
+        # Enable live theme switching on sidebar arrow-key navigation only
+        # after all mount-time tree highlights have drained.
+        self.call_after_refresh(self._enable_tree_theme)
+
+    def _enable_tree_theme(self) -> None:
+        self._tree_theme_live = True
+
     def watch_theme(self, theme_name: str) -> None:
         """Update header subtitle and sidebar cursor when the theme changes."""
         display = THEME_DISPLAY_NAMES.get(theme_name, theme_name)
@@ -716,10 +726,17 @@ class ThemeDemoApp(App[None]):
                     return
 
     def on_tree_node_selected(self, event: Tree.NodeSelected[str]) -> None:
-        """Sidebar selection changes the active theme."""
-        if event.control.id != "theme-tree":
-            return
-        name = event.node.data
+        """Click or Enter on a sidebar node applies that theme."""
+        if event.control.id == "theme-tree":
+            self._select_tree_theme(event.node.data)
+
+    def on_tree_node_highlighted(self, event: Tree.NodeHighlighted[str]) -> None:
+        """Arrow-key navigation in the sidebar live-applies the theme."""
+        if self._tree_theme_live and event.control.id == "theme-tree":
+            self._select_tree_theme(event.node.data)
+
+    def _select_tree_theme(self, name: str | None) -> None:
+        """Apply a theme picked from the sidebar tree (skips category nodes)."""
         if name and name != self.theme and name in self._all_theme_names:
             self.theme = name
 
