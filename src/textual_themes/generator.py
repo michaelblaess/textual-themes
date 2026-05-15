@@ -210,7 +210,7 @@ def generate_random_theme(
 
 def theme_to_dict(theme: Theme) -> dict[str, object]:
     """Serialise a Theme to a plain dict suitable for JSON."""
-    return {
+    data: dict[str, object] = {
         "name": theme.name,
         "primary": theme.primary,
         "secondary": theme.secondary,
@@ -225,10 +225,19 @@ def theme_to_dict(theme: Theme) -> dict[str, object]:
         "success": theme.success,
         "is_dark": theme.dark,
     }
+    # Only persist variable overrides when present, so unmodified saved
+    # themes keep their slim JSON shape.
+    if theme.variables:
+        data["variables"] = dict(theme.variables)
+    return data
 
 
 def theme_from_dict(data: dict[str, object]) -> Theme:
     """Deserialise a Theme from the dict produced by `theme_to_dict`."""
+    # Optional variable overrides (scrollbar, footer-background, ...) —
+    # absent in older saved files, hence the defensive parsing.
+    raw_vars = data.get("variables")
+    variables = {str(k): str(v) for k, v in raw_vars.items()} if isinstance(raw_vars, dict) else {}
     return Theme(
         name=str(data["name"]),
         primary=str(data["primary"]),
@@ -243,6 +252,7 @@ def theme_from_dict(data: dict[str, object]) -> Theme:
         error=str(data["error"]),
         success=str(data["success"]),
         dark=bool(data["is_dark"]),
+        variables=variables,
     )
 
 
