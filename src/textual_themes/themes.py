@@ -765,7 +765,9 @@ MARLEY_THEME = Theme(
     secondary="#DA121A",
     accent="#FCDD09",
     foreground="#F5EFD8",
-    background="#0A0A0A",
+    # Warmes Fast-Schwarz statt neutralem #0A0A0A — passt zur
+    # sun-drenched Palette und kollidiert nicht mit classic-terminal.
+    background="#0C0A06",
     surface="#181818",
     panel="#050505",
     boost="#0AA63D",
