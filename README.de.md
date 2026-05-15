@@ -1,8 +1,8 @@
 # textual-themes
 
 <p align="center">
-  <img src="docs/flags/gb.svg" height="13" alt=""> <b>English</b> ·
-  <img src="docs/flags/de.svg" height="13" alt=""> <a href="README.de.md">Deutsch</a>
+  <img src="docs/flags/gb.svg" height="13" alt=""> <a href="README.md">English</a> ·
+  <img src="docs/flags/de.svg" height="13" alt=""> <b>Deutsch</b>
 </p>
 
 ---
@@ -15,25 +15,27 @@
 [![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/textual-themes?logo=git&logoColor=white&color=3b82f6)](https://github.com/michaelblaess/textual-themes/commits/main)
 [![License](https://img.shields.io/badge/license-Apache_2.0-3b82f6)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12+-3b82f6?logo=python&logoColor=white)](https://www.python.org/)
-[![Themes](https://img.shields.io/badge/themes-38-fbbf24)](#gallery)
+[![Themes](https://img.shields.io/badge/themes-38-fbbf24)](#galerie)
 
-Retro color themes for [Textual](https://textual.textualize.io/) TUI applications.
+Retro-Farbthemes fuer [Textual](https://textual.textualize.io/) TUI-Anwendungen.
 
-38 carefully crafted themes inspired by classic computers, operating systems, vintage diver watches, comic-book color schemes, 80s pastel, Spielberg-era cinema, motorsport liveries, reggae roots and mafia-noir cinema.
+38 sorgfaeltig gestaltete Themes, inspiriert von klassischen Computern, Betriebssystemen, historischen Taucheruhren, Comic-Farbschemata, 80er-Pastell, Spielberg-Aera-Kino, Motorsport-Lackierungen, Reggae-Roots und Mafia-Noir-Kino.
 
-> **⚠ Trademark Disclaimer**
+> **⚠ Markenrechtlicher Hinweis**
 >
-> This is an **independent, fan-made, non-commercial** project. Theme names
-> are descriptive of the visual style only — no third-party trademarks are
-> used as theme names. Any remaining brand reference in descriptive text
-> (e.g. "PETSCII style", "GEM Desktop", "Cinnamon-style") is purely
-> descriptive and not affiliated with, endorsed by, sponsored by, or
-> licensed by the respective trademark owners.
+> Dies ist ein **unabhaengiges, von Fans erstelltes, nicht-kommerzielles**
+> Projekt. Die Theme-Namen beschreiben ausschliesslich den visuellen Stil —
+> es werden keine Marken Dritter als Theme-Namen verwendet. Jegliche
+> verbleibende Markenbezugnahme im beschreibenden Text (z. B. "PETSCII style",
+> "GEM Desktop", "Cinnamon-style") ist rein beschreibend und steht in keiner
+> Verbindung zu den jeweiligen Markeninhabern, wird von ihnen weder
+> unterstuetzt noch gesponsert noch lizenziert.
 
-## Gallery
+## Galerie
 
-Click any thumbnail to open the full-size SVG. Screenshots are taken from
-the bundled demo app (`python -m textual_themes`).
+Klicke auf eine beliebige Miniatur, um die SVG-Datei in voller Groesse zu
+oeffnen. Die Screenshots stammen aus der mitgelieferten Demo-App
+(`python -m textual_themes`).
 
 <table>
 <tr>
@@ -98,57 +100,57 @@ the bundled demo app (`python -m textual_themes`).
 
 ## Themes
 
-### Dark Themes
+### Dunkle Themes
 
-| Theme | Style |
-|-------|-------|
-| **Ascot** | Le-Mans racing green with signal yellow, silver and beige text |
-| **Beastie** | Daemon red on dark slate |
-| **BeBox** | Blue-gray with yellow status-bar accent |
-| **Bluesy** | Royal blue with rich yellow-gold accents |
-| **Boing** | Three-color workbench palette: blue/white/orange |
-| **Brotkasten** | Light blue on royal blue, the iconic 8-bit color cast (PETSCII) |
-| **Bunty** | Aubergine with warm orange accents |
-| **Classic Navy** | Deep navy with silver and muted brick-red |
-| **Classic Terminal** | Phosphor-green on black (CRT) |
-| **Commandr** | Blue/cyan/yellow file-manager palette |
-| **Corleone** | Cold mafia-noir — bronze, steel-gray and ash on bluish black |
-| **Crimson** | Deep red on dark charcoal |
-| **Fifty-Eight** | Black dial with aged gold lume + bezel red (vintage diver) |
-| **Flughund** | Midnight black & moonlit blue |
-| **Geeko** | Dark green with white |
-| **Golden Brown** | Warm mafia-noir — antique gold, sepia and parchment on warm black |
-| **Goldfinder** | Deep black with 18K gold accents — villain glamour |
-| **Hulkula** | Vivid green rage with steel-gray edges |
-| **Joker** | Comic Gotham villain — royal purple suit, acid-green hair, yellow vest |
-| **Lenseflare** | 80s Spielberg orange-teal bichromatic on twilight blue |
-| **Luna** | Sky-blue task-bar with green start button |
-| **Marley** | Reggae roots palette — black, green, gold and red |
-| **Metropolis** | Bold blue, crimson red and sun yellow primary triad |
-| **Miami** | Pastel 80s — twilight teal, flamingo pink, sunset coral |
-| **Minty** | Warm mint-green on charcoal |
-| **Motif** | Beige slate-gray corporate Unix toolkit |
-| **Next** | Dark gray with magenta accents — workstation-era 3D bevels |
-| **Platoon** | Muted military olive-drab with khaki accent on near-black |
-| **Racing** | Charcoal with deep blue, cherry red and silver stripes |
-| **Razzy** | Raspberry red on dark slate |
-| **Spiderized** | Red & royal-blue hero suit (high-contrast) |
-| **Synthwave** | Deep purple with neon pink and electric cyan |
-| **Warp** | Dark blue with teal accents |
+| Theme | Stil |
+|-------|------|
+| **Ascot** | Le-Mans-Rennsportgruen mit Signalgelb, Silber und beigem Text |
+| **Beastie** | Daemon-Rot auf dunklem Schiefer |
+| **BeBox** | Blaugrau mit gelbem Statusleisten-Akzent |
+| **Bluesy** | Koenigsblau mit kraeftigen gelb-goldenen Akzenten |
+| **Boing** | Dreifarbige Workbench-Palette: Blau/Weiss/Orange |
+| **Brotkasten** | Hellblau auf Koenigsblau, der ikonische 8-Bit-Farbeindruck (PETSCII) |
+| **Bunty** | Aubergine mit warmen Orange-Akzenten |
+| **Classic Navy** | Tiefes Marineblau mit Silber und gedaempftem Ziegelrot |
+| **Classic Terminal** | Phosphorgruen auf Schwarz (CRT) |
+| **Commandr** | Blau/Cyan/Gelb-Dateimanager-Palette |
+| **Corleone** | Kuehles Mafia-Noir — Bronze, Stahlgrau und Asche auf blaeulichem Schwarz |
+| **Crimson** | Tiefes Rot auf dunklem Anthrazit |
+| **Fifty-Eight** | Schwarzes Zifferblatt mit gealtertem Gold-Leuchtstoff und rotem Lunette-Akzent (historische Taucheruhr) |
+| **Flughund** | Mitternachtsschwarz und mondbeschienenes Blau |
+| **Geeko** | Dunkelgruen mit Weiss |
+| **Golden Brown** | Warmes Mafia-Noir — Antikgold, Sepia und Pergament auf warmem Schwarz |
+| **Goldfinder** | Tiefes Schwarz mit 18-Karat-Gold-Akzenten — Schurken-Glamour |
+| **Hulkula** | Leuchtend gruene Wut mit stahlgrauen Kanten |
+| **Joker** | Comic-Gotham-Schurke — koenigsvioletter Anzug, saeuregruenes Haar, gelbe Weste |
+| **Lenseflare** | 80er-Spielberg-Orange-Tuerkis bichromatisch auf Daemmerungsblau |
+| **Luna** | Himmelblaue Taskleiste mit gruenem Start-Button |
+| **Marley** | Reggae-Roots-Palette — Schwarz, Gruen, Gold und Rot |
+| **Metropolis** | Kraeftige Primaer-Triade aus Blau, Karminrot und Sonnengelb |
+| **Miami** | Pastell-80er — Daemmerungstuerkis, Flamingo-Pink, Sonnenuntergangs-Koralle |
+| **Minty** | Warmes Minzgruen auf Anthrazit |
+| **Motif** | Beige-schiefergraues Corporate-Unix-Toolkit |
+| **Next** | Dunkelgrau mit Magenta-Akzenten — 3D-Abschraegungen der Workstation-Aera |
+| **Platoon** | Gedaempftes militaerisches Olivgruen mit Khaki-Akzent auf Fast-Schwarz |
+| **Racing** | Anthrazit mit tiefblauen, kirschroten und silbernen Streifen |
+| **Razzy** | Himbeerrot auf dunklem Schiefer |
+| **Spiderized** | Rot-koenigsblauer Helden-Anzug (hoher Kontrast) |
+| **Synthwave** | Tiefes Violett mit Neon-Pink und elektrischem Cyan |
+| **Warp** | Dunkelblau mit Tuerkis-Akzenten |
 
-### Light Themes
+### Helle Themes
 
-| Theme | Style |
-|-------|-------|
-| **Brick** | Olive-green handheld LCD on beige-gray case |
-| **Clipper** | Globe blue on ivory — jet-age livery |
-| **Cupertino** | Clean light gray with blue accents |
-| **Gemstone** | Monochrome GEM Desktop look |
-| **Plan 9** | Pulpy yellow/blue/green |
+| Theme | Stil |
+|-------|------|
+| **Brick** | Olivgruenes Handheld-LCD auf beige-grauem Gehaeuse |
+| **Clipper** | Globusblau auf Elfenbein — Jet-Age-Lackierung |
+| **Cupertino** | Klares Hellgrau mit blauen Akzenten |
+| **Gemstone** | Monochromer GEM-Desktop-Look |
+| **Plan 9** | Knalliges Gelb/Blau/Gruen |
 
 ## Installation
 
-Add the themes to your own Textual project:
+Fuege die Themes zu deinem eigenen Textual-Projekt hinzu:
 
 ```bash
 pip install git+https://github.com/michaelblaess/textual-themes.git
@@ -156,9 +158,9 @@ pip install git+https://github.com/michaelblaess/textual-themes.git
 
 ## Storybook
 
-Browse all 38 themes interactively in the bundled storybook. Install it with
-a single command — it sets up an isolated environment and adds a
-`textual-themes-demo` launcher to your PATH:
+Durchstoebere alle 38 Themes interaktiv im mitgelieferten Storybook.
+Installiere es mit einem einzigen Befehl — er richtet eine isolierte Umgebung
+ein und fuegt einen `textual-themes-demo`-Launcher zu deinem PATH hinzu:
 
 **Linux / macOS**
 
@@ -172,18 +174,18 @@ curl -fsSL https://raw.githubusercontent.com/michaelblaess/textual-themes/main/i
 irm https://raw.githubusercontent.com/michaelblaess/textual-themes/main/install.ps1 | iex
 ```
 
-Then launch it:
+Anschliessend startest du es:
 
 ```bash
 textual-themes-demo
 ```
 
-Requires Python 3.12+ and `git`. To update later, just run the installer
-again; to remove it, delete `~/.textual-themes` (Linux/macOS) or
-`%LOCALAPPDATA%\textual-themes` (Windows) and the `textual-themes-demo`
-launcher.
+Erfordert Python 3.12+ und `git`. Um spaeter zu aktualisieren, fuehre einfach
+den Installer erneut aus; zum Entfernen loeschst du `~/.textual-themes`
+(Linux/macOS) oder `%LOCALAPPDATA%\textual-themes` (Windows) sowie den
+`textual-themes-demo`-Launcher.
 
-## Quick Start
+## Schnellstart
 
 ```python
 from textual.app import App, ComposeResult
@@ -213,9 +215,9 @@ class MyApp(App):
 MyApp().run()
 ```
 
-## Usage
+## Verwendung
 
-### Register all themes at once
+### Alle Themes auf einmal registrieren
 
 ```python
 from textual_themes import register_all
@@ -223,11 +225,11 @@ from textual_themes import register_all
 class MyApp(App):
     def __init__(self):
         super().__init__()
-        register_all(self)       # registers all 38 themes
-        self.theme = "boing"     # pick one
+        register_all(self)       # registriert alle 38 Themes
+        self.theme = "boing"     # eines auswaehlen
 ```
 
-### Register individual themes
+### Einzelne Themes registrieren
 
 ```python
 from textual_themes import BROTKASTEN_THEME, CLASSIC_TERMINAL_THEME
@@ -240,11 +242,11 @@ class MyApp(App):
         self.theme = "classic-terminal"
 ```
 
-### Available constants
+### Verfuegbare Konstanten
 
 ```python
 from textual_themes import (
-    # Individual Theme objects
+    # Einzelne Theme-Objekte
     BROTKASTEN_THEME,
     BOING_THEME,
     GEMSTONE_THEME,
@@ -277,21 +279,21 @@ from textual_themes import (
     METROPOLIS_THEME,
     SPIDERIZED_THEME,
 
-    # Collections
-    RETRO_THEMES,          # list[Theme] — all 38 themes
+    # Sammlungen
+    RETRO_THEMES,          # list[Theme] — alle 38 Themes
     RETRO_THEME_NAMES,     # list[str]   — ["brotkasten", "boing", ...]
     THEME_DISPLAY_NAMES,   # dict[str, str]
 
-    # Helper
-    register_all,          # register_all(app) — registers all themes
+    # Hilfsfunktion
+    register_all,          # register_all(app) — registriert alle Themes
 )
 ```
 
-### Theme names
+### Theme-Namen
 
-Use these slugs with `app.theme = "..."`:
+Verwende diese Slugs mit `app.theme = "..."`:
 
-| Slug | Display |
+| Slug | Anzeige |
 |------|---------|
 | `brotkasten` | Brotkasten — Light Blue on Royal Blue |
 | `boing` | Boing — Blue/White/Orange Workbench |
@@ -325,19 +327,19 @@ Use these slugs with `app.theme = "..."`:
 | `metropolis` | Metropolis — Bold Blue, Crimson & Sun Yellow |
 | `spiderized` | Spiderized — Red & Royal-Blue Hero Suit |
 
-## Requirements
+## Voraussetzungen
 
 - Python >= 3.12
 - Textual >= 0.85
 
-## Editing themes
+## Themes bearbeiten
 
-To tweak an existing theme or design a new one interactively, try
-[textual-theme-editor](https://github.com/TomJGooding/textual-theme-editor)
-by Tom J Gooding — a standalone visual theme editor for Textual. Install it
-separately (`pip install textual-theme-editor`); it is GPLv3-licensed and not
-a dependency of this package.
+Um ein bestehendes Theme anzupassen oder ein neues interaktiv zu gestalten,
+probiere [textual-theme-editor](https://github.com/TomJGooding/textual-theme-editor)
+von Tom J Gooding — einen eigenstaendigen visuellen Theme-Editor fuer Textual.
+Installiere ihn separat (`pip install textual-theme-editor`); er steht unter
+der GPLv3-Lizenz und ist keine Abhaengigkeit dieses Pakets.
 
-## License
+## Lizenz
 
-Apache License 2.0 — see [LICENSE](LICENSE).
+Apache License 2.0 — siehe [LICENSE](LICENSE).
