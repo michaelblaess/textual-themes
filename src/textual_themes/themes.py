@@ -42,10 +42,11 @@ Themes:
     Metropolis        — bold blue, crimson red and sun yellow primary triad
     Spiderized        — red & royal-blue hero suit (high-contrast)
     Ascot             — Le-Mans racing green with signal yellow, silver and beige text
-    Vision            — DOS IDE editor blue with yellow keywords and red hotkeys
     Joker             — Comic Gotham villain: royal purple suit, acid-green hair & yellow vest
     Marley            — reggae roots palette: black, green, gold, red
     Lenseflare        — 80s Spielberg orange-teal bichromatic on twilight blue
+    Platoon           — muted military olive-drab with khaki accent on near-black
+    Corleone          — cold mafia-noir: bronze, steel-grey and ash on bluish black
 """
 
 from __future__ import annotations
@@ -724,32 +725,6 @@ ASCOT_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
-# Vision
-# Late-80s text-mode IDE editor look (Turbo-Vision framework aesthetic
-# and a sly nod to the Vision Skateboards era): blue editor background
-# with white code text and yellow accents, red hotkey letters. The
-# original used a two-zone palette — blue for the editor body and grey
-# for menus/dialogs. Apps can opt into the authentic grey menu/modal
-# style with the `.vision-classic` CSS helper class (see the demo's
-# AboutModalScreen for a reference).
-# ────────────────────────────────────────────────────────────────────────
-VISION_THEME = Theme(
-    name="vision",
-    primary="#00AA00",
-    secondary="#00AAAA",
-    accent="#FFFFFF",
-    foreground="#FFFFFF",
-    background="#0000AA",
-    surface="#1818CC",
-    panel="#000080",
-    boost="#FFFF55",
-    warning="#FFAA00",
-    error="#AA0000",
-    success="#00AA00",
-    dark=True,
-)
-
-# ────────────────────────────────────────────────────────────────────────
 # Joker
 # Comic-book Joker palette modelled after the Bronze-Age look —
 # royal-purple suit drives the primary buttons, acid-green hair
@@ -826,6 +801,90 @@ LENSEFLARE_THEME = Theme(
     error="#E5283A",
     success="#2BD0E0",
     dark=True,
+    variables={
+        # Cool teal scrollbars instead of the muddy orange-brown that the
+        # orange primary blends into on the dark twilight background.
+        "scrollbar": "#1C4F5C",
+        "scrollbar-hover": "#2BD0E0",
+        "scrollbar-active": "#2BD0E0",
+        # Muted teal selection highlight instead of brown (Tree/OptionList).
+        "block-cursor-background": "#2E7E8A",
+        "block-cursor-foreground": "#0A1226",
+        "block-cursor-text-style": "bold",
+        "block-cursor-blurred-background": "#1C4F5C",
+        "block-cursor-blurred-foreground": "#F0E5D2",
+        # Footer: lifted twilight-blue panel so the accent keys read against
+        # it instead of disappearing on the near-black default panel.
+        "footer-background": "#14213D",
+    },
+)
+
+
+# ────────────────────────────────────────────────────────────────────────
+# Platoon
+# Muted military olive-drab palette — jungle olive primary, deep
+# sepia-olive secondary and a warm khaki accent on a near-black
+# canvas. Field-gear gold for warnings, a desaturated napalm red for
+# errors. Born from the random theme generator, then hand-tuned away
+# from neon lime toward authentic olive-drab uniform cloth.
+# ────────────────────────────────────────────────────────────────────────
+PLATOON_THEME = Theme(
+    name="platoon",
+    primary="#9AA04A",
+    secondary="#6F8A3C",
+    accent="#C7B06A",
+    foreground="#E4E0CF",
+    background="#12130B",
+    surface="#22241A",
+    panel="#3A3D22",
+    boost="#AEB56A",
+    warning="#E0B330",
+    error="#BF3B2A",
+    success="#6F9A4A",
+    dark=True,
+    variables={
+        # Visible mid-olive scrollbars — the olive primary blended onto the
+        # near-black background otherwise sinks completely out of sight.
+        "scrollbar": "#666B38",
+        "scrollbar-hover": "#8A9048",
+        "scrollbar-active": "#C7B06A",
+        # Footer: lifted olive bar so it reads as a distinct band.
+        "footer-background": "#474C28",
+    },
+)
+
+
+# ────────────────────────────────────────────────────────────────────────
+# Corleone
+# Cold mafia-noir palette — smoke-and-shadow night. A faintly bluish
+# near-black canvas keeps it cold and melancholic; bronze (not yellow
+# gold) drives the buttons, cold steel-grey handles secondary states,
+# and an ash-cream foreground stays deliberately unglamorous. Oxblood
+# red for errors, field amber for warnings. A quiet, somber theme.
+# ────────────────────────────────────────────────────────────────────────
+CORLEONE_THEME = Theme(
+    name="corleone",
+    primary="#A88B52",
+    secondary="#4A4E58",
+    accent="#9A8147",
+    foreground="#C3C0B4",
+    background="#0B0C0E",
+    surface="#16181C",
+    panel="#1F2228",
+    boost="#C0A263",
+    warning="#B89043",
+    error="#8C2F2F",
+    success="#5E7355",
+    dark=True,
+    variables={
+        # Cold-grey scrollbars — the bronze primary blended onto the near-
+        # black background would otherwise sink out of sight.
+        "scrollbar": "#3A3D44",
+        "scrollbar-hover": "#5A5E68",
+        "scrollbar-active": "#A88B52",
+        # Footer: lifted slate bar so it reads as a distinct band.
+        "footer-background": "#22252C",
+    },
 )
 
 
@@ -862,10 +921,11 @@ RETRO_THEMES: list[Theme] = [
     METROPOLIS_THEME,
     SPIDERIZED_THEME,
     ASCOT_THEME,
-    VISION_THEME,
     JOKER_THEME,
     MARLEY_THEME,
     LENSEFLARE_THEME,
+    PLATOON_THEME,
+    CORLEONE_THEME,
 ]
 
 RETRO_THEME_NAMES: list[str] = [t.name for t in RETRO_THEMES]
@@ -903,10 +963,11 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "metropolis": "Metropolis — Bold Blue, Crimson & Sun Yellow",
     "spiderized": "Spiderized — Red & Royal-Blue Hero Suit",
     "ascot": "Ascot — Racing Green with Yellow, Silver & Beige Text",
-    "vision": "Vision — DOS IDE Editor Blue with Yellow Keywords",
     "joker": "Joker — Royal Purple Suit, Acid Green Hair & Yellow Vest",
     "marley": "Marley — Reggae Black, Green, Gold & Red",
     "lenseflare": "Lenseflare — 80s Orange-Teal on Twilight Blue",
+    "platoon": "Platoon — Jungle Olive Drab & Khaki",
+    "corleone": "Corleone — Cold Noir Bronze & Steel",
 }
 
 

@@ -130,13 +130,6 @@ class AboutModalScreen(ModalScreen[None]):
 
     Renders title bar, body text, and a button row so that surface,
     accent, border and button variants can be inspected together.
-
-    For the `vision` theme the modal opts into the classic Turbo
-    Vision two-zone look: the editor background stays blue (theme
-    default) but the modal switches to the authentic grey menu /
-    dialog palette with black text and red hotkey accents. This is
-    triggered by adding the `.vision-classic` CSS class on the
-    modal — apps can do the same for their own dialogs.
     """
 
     DEFAULT_CSS = """
@@ -179,28 +172,6 @@ class AboutModalScreen(ModalScreen[None]):
         color: $text-muted;
         margin-top: 1;
     }
-
-    /* TVision authentic menu/modal palette: grey surface + black text
-       with white double-line border (the classic Turbo Vision dialog
-       look). Applied only when the modal is opened while the vision
-       theme is active. */
-    AboutModalScreen.vision-classic > VerticalScroll {
-        background: #C0C0C0;
-        border: double #FFFFFF;
-    }
-    AboutModalScreen.vision-classic #modal-title {
-        background: #C0C0C0;
-        color: #000000;
-        border-bottom: heavy #FFFFFF;
-    }
-    AboutModalScreen.vision-classic #modal-content {
-        background: #C0C0C0;
-        color: #000000;
-    }
-    AboutModalScreen.vision-classic #modal-footer {
-        background: #C0C0C0;
-        color: #555555;
-    }
     """
 
     BINDINGS = [
@@ -208,11 +179,9 @@ class AboutModalScreen(ModalScreen[None]):
         Binding("a,A", "close", "Close", key_display="a"),
     ]
 
-    def __init__(self, theme_display: str, theme_name: str = "") -> None:
+    def __init__(self, theme_display: str) -> None:
         super().__init__()
         self._theme_display = theme_display
-        if theme_name == "vision":
-            self.add_class("vision-classic")
 
     def compose(self) -> ComposeResult:
         with VerticalScroll():
@@ -758,9 +727,7 @@ class ThemeDemoApp(App[None]):
     def action_show_modal(self) -> None:
         theme_name = self.theme or ""
         display = THEME_DISPLAY_NAMES.get(theme_name, theme_name)
-        self.push_screen(
-            AboutModalScreen(theme_display=display, theme_name=theme_name),
-        )
+        self.push_screen(AboutModalScreen(theme_display=display))
 
     def action_next_theme(self) -> None:
         self._cycle_theme(1)
