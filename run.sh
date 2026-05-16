@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
+# run.sh - starts the textual-themes storybook demo from source.
 set -euo pipefail
+cd "$(dirname "$0")"
 
-REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-VENV_PYTHON="$REPO/.venv/bin/python"
-
-if [ -x "$VENV_PYTHON" ]; then
-    exec "$VENV_PYTHON" -m textual_themes "$@"
-else
-    exec "${PYTHON:-python3}" -m textual_themes "$@"
+if [ ! -d ".venv" ]; then
+    echo "Please run ./bootstrap.sh first." >&2
+    exit 1
 fi
+
+.venv/bin/python -m textual_themes "$@"
