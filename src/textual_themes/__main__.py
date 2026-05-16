@@ -9,6 +9,8 @@ import argparse
 import contextlib
 import sys
 
+from textual_widgets import reset_terminal_title, set_terminal_title
+
 from . import __version__
 from .demo import ThemeDemoApp
 from .themes import RETRO_THEME_NAMES, THEME_DISPLAY_NAMES
@@ -42,7 +44,13 @@ def main() -> None:
             print(f"{name:<{width}}  {display}")
         sys.exit(0)
 
-    ThemeDemoApp(initial_theme=args.theme).run()
+    # Terminal-Tab-Titel setzen - Textual macht das nicht selbst.
+    set_terminal_title(f"textual-themes v{__version__}")
+    try:
+        app = ThemeDemoApp(initial_theme=args.theme)
+        app.run()
+    finally:
+        reset_terminal_title()
 
 
 if __name__ == "__main__":
