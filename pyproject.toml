@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "textual-themes"
-version = "0.8.0"
+version = "0.9.0"
 description = "38 retro color themes for Textual TUI apps - vintage 8-bit, terminal, watch, comic-pulp, 80s-pastel, Spielberg-era cinema, reggae and mafia-noir palettes"
 readme = "README.md"
 license = "Apache-2.0"
