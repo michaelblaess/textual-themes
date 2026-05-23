@@ -69,15 +69,26 @@ started=$(date +%s)
 # --standalone        : self-contained, kein Python auf dem Zielrechner noetig
 # --remove-output     : C-/Objekt-Zwischendateien nach dem Build aufraeumen
 # --include-package-data=textual_themes : Paket-Datendateien mitnehmen
-"$python" -m nuitka \
-    --standalone \
-    --assume-yes-for-downloads \
-    --remove-output \
-    --include-package=textual_themes \
-    --include-package-data=textual_themes \
-    --output-dir="$out_dir" \
-    --output-filename=textual-themes-demo \
-    "$entry"
+nuitka_args=(
+    --standalone
+    --assume-yes-for-downloads
+    --remove-output
+    --include-package=textual_themes
+    --include-package-data=textual_themes
+    --output-dir="$out_dir"
+    --output-filename=textual-themes-demo
+)
+
+# App-Icon einbetten. Natives .icns verwenden - ein PNG braeuchte hier sonst
+# das Zusatzpaket imageio (Nuitka: "Need to install 'imageio' ...").
+icon_icns="$root/assets/icon.icns"
+if [ -f "$icon_icns" ]; then
+    nuitka_args+=(--macos-app-icon="$icon_icns")
+else
+    echo "Hinweis: $icon_icns fehlt - Binary wird ohne Icon gebaut."
+fi
+
+"$python" -m nuitka "${nuitka_args[@]}" "$entry"
 
 # Nuitka benennt den dist-Ordner nach dem Hauptmodul (__main__.dist) - umbenennen
 if [ -d "$out_dir/__main__.dist" ]; then

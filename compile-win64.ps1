@@ -50,19 +50,29 @@ $started = Get-Date
 # --remove-output     : C-/Objekt-Zwischendateien nach dem Build aufraeumen
 # --include-package-data=textual_themes : Paket-Datendateien mitnehmen
 # (kein --windows-console-mode: Default behaelt die Konsole - noetig fuer das TUI)
-& $python -m nuitka `
-    --standalone `
-    --assume-yes-for-downloads `
-    --remove-output `
-    --include-package=textual_themes `
-    --include-package-data=textual_themes `
-    --output-dir=$outDir `
-    --output-filename=textual-themes-demo.exe `
-    --company-name="Michael Blaess" `
-    --product-name="textual-themes-demo" `
-    --file-version=$version `
-    --product-version=$version `
-    $entry
+$nuitkaArgs = @(
+    "--standalone"
+    "--assume-yes-for-downloads"
+    "--remove-output"
+    "--include-package=textual_themes"
+    "--include-package-data=textual_themes"
+    "--output-dir=$outDir"
+    "--output-filename=textual-themes-demo.exe"
+    "--company-name=Michael Blaess"
+    "--product-name=textual-themes-demo"
+    "--file-version=$version"
+    "--product-version=$version"
+)
+
+# App-Icon in die EXE einbetten (assets\icon.ico, multi-resolution).
+$iconPath = Join-Path $root "assets\icon.ico"
+if (Test-Path $iconPath) {
+    $nuitkaArgs += "--windows-icon-from-ico=$iconPath"
+} else {
+    Write-Host "Hinweis: $iconPath fehlt - EXE wird ohne Icon gebaut." -ForegroundColor Yellow
+}
+
+& $python -m nuitka @nuitkaArgs $entry
 
 if ($LASTEXITCODE -ne 0) { throw "Nuitka-Build fehlgeschlagen (Exit $LASTEXITCODE)" }
 

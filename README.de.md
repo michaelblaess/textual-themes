@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/icon-dark.svg">
+    <img src="docs/icon-light.svg" width="120" alt="textual-themes Logo">
+  </picture>
+</p>
+
 # textual-themes
 
 <p align="center">

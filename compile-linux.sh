@@ -63,6 +63,9 @@ started=$(date +%s)
 # --standalone        : self-contained, kein Python auf dem Zielrechner noetig
 # --remove-output     : C-/Objekt-Zwischendateien nach dem Build aufraeumen
 # --include-package-data=textual_themes : Paket-Datendateien mitnehmen
+#
+# Kein App-Icon: ein ELF-Binary kann kein Icon einbetten (--linux-icon nur bei
+# AppImage/--onefile). Auf dem Desktop kaeme das Icon ueber eine .desktop-Datei.
 "$python" -m nuitka \
     --standalone \
     --assume-yes-for-downloads \
