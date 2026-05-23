@@ -578,8 +578,8 @@ provides-extras = ["dev"]
 
 [[package]]
 name = "textual-widgets"
-version = "0.8.0"
-source = { git = "https://github.com/michaelblaess/textual-widgets.git#66c90b6c41a2877509034b06344e074cfaa1d287" }
+version = "0.25.0"
+source = { git = "https://github.com/michaelblaess/textual-widgets.git#bfe6a4a3a17a81606bddc8d642f528088d5b76bf" }
 dependencies = [
     { name = "rich" },
     { name = "textual" },
