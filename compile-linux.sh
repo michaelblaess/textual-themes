@@ -66,6 +66,13 @@ started=$(date +%s)
 #
 # Kein App-Icon: ein ELF-Binary kann kein Icon einbetten (--linux-icon nur bei
 # AppImage/--onefile). Auf dem Desktop kaeme das Icon ueber eine .desktop-Datei.
+# Nuitka als Build-Tool sicherstellen (kein Dev-Dep, wird ad-hoc installiert).
+# 'uv sync' ohne --inexact entfernt es wieder, daher: nach jedem Sync pruefen.
+if ! "$python" -m nuitka --version >/dev/null 2>&1; then
+    echo "Nuitka fehlt im venv - installiere..."
+    uv pip install nuitka || { echo "Nuitka-Installation fehlgeschlagen" >&2; exit 1; }
+fi
+
 "$python" -m nuitka \
     --standalone \
     --assume-yes-for-downloads \

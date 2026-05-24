@@ -11,9 +11,14 @@ import sys
 
 from textual_widgets import reset_terminal_title, set_terminal_title
 
-from . import __version__
-from .demo import ThemeDemoApp
-from .themes import RETRO_THEME_NAMES, THEME_DISPLAY_NAMES
+# Absolute Imports, damit das Nuitka-Standalone-Kompilat funktioniert:
+# Nuitka kompiliert __main__.py als Top-Level (ohne Parent-Package), dort
+# scheitern relative Imports mit "attempted relative import with no known
+# parent package". 'python -m textual_themes' funktioniert mit absoluten
+# Imports genauso, weil das Paket dann im sys.path liegt.
+from textual_themes import __version__
+from textual_themes.demo import ThemeDemoApp
+from textual_themes.themes import RETRO_THEME_NAMES, THEME_DISPLAY_NAMES
 
 
 def main() -> None:
