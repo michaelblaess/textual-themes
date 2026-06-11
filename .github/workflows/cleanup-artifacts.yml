@@ -1,0 +1,44 @@
+name: Cleanup old artifacts
+
+# Loescht aktive Workflow-Artifacts, die aelter als RETENTION_DAYS sind.
+# Sicherheitsnetz gegen auflaufenden Actions-Storage; laeuft woechentlich
+# und kann manuell ueber "Run workflow" gestartet werden.
+
+on:
+  schedule:
+    - cron: '0 4 * * 0'   # jeden Sonntag 04:00 UTC
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete artifacts older than retention window
+        uses: actions/github-script@v7
+        env:
+          RETENTION_DAYS: '7'
+        with:
+          script: |
+            const days = Number(process.env.RETENTION_DAYS);
+            const cutoff = Date.now() - days * 24 * 60 * 60 * 1000;
+            const artifacts = await github.paginate(
+              github.rest.actions.listArtifactsForRepo,
+              { owner: context.repo.owner, repo: context.repo.repo, per_page: 100 }
+            );
+            let deleted = 0;
+            for (const a of artifacts) {
+              if (a.expired) continue;
+              if (new Date(a.created_at).getTime() < cutoff) {
+                await github.rest.actions.deleteArtifact({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  artifact_id: a.id,
+                });
+                deleted++;
+                core.info(`deleted ${a.name} (#${a.id})`);
+              }
+            }
+            core.info(`Done. Deleted ${deleted} artifact(s) older than ${days} day(s).`);
