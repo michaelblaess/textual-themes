@@ -19,7 +19,7 @@ jobs:
       - name: Delete artifacts older than retention window
         uses: actions/github-script@v7
         env:
-          RETENTION_DAYS: '7'
+          RETENTION_DAYS: '1'
         with:
           script: |
             const days = Number(process.env.RETENTION_DAYS);
