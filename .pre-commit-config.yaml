@@ -15,8 +15,18 @@ repos:
         args: [--maxkb=500]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.13
+    rev: v0.15.20
     hooks:
       - id: ruff-check
         args: [--fix]
       - id: ruff-format
+
+  # Lokaler pytest-Lauf - faengt Regressionen vor dem Commit ab (~schnell).
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: uv run pytest -q
+        language: system
+        pass_filenames: false
+        always_run: true
