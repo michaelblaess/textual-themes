@@ -9,16 +9,21 @@ import argparse
 import contextlib
 import sys
 
-from textual_widgets import reset_terminal_title, set_terminal_title
-
 # Absolute Imports, damit das Nuitka-Standalone-Kompilat funktioniert:
 # Nuitka kompiliert __main__.py als Top-Level (ohne Parent-Package), dort
 # scheitern relative Imports mit "attempted relative import with no known
 # parent package". 'python -m textual_themes' funktioniert mit absoluten
 # Imports genauso, weil das Paket dann im sys.path liegt.
 from textual_themes import __version__
-from textual_themes.demo import ThemeDemoApp
 from textual_themes.themes import RETRO_THEME_NAMES, THEME_DISPLAY_NAMES
+
+_DEMO_FEHLT = """Der Demo braucht das Extra 'demo' (textual-widgets):
+
+    uv sync --extra demo
+    pip install "textual-themes[demo] @ git+https://github.com/michaelblaess/textual-themes.git"
+
+Die Themes selbst brauchen es nicht - 'from textual_themes import register_all'
+laeuft ohne dieses Extra."""
 
 
 def main() -> None:
@@ -48,6 +53,17 @@ def main() -> None:
             display = THEME_DISPLAY_NAMES.get(name, "")
             print(f"{name:<{width}}  {display}")
         sys.exit(0)
+
+    # Demo und Terminal-Titel liegen im Extra 'demo'. Bewusst erst hier
+    # importiert, und erst nach --list: wer nur die Themes einbindet, soll
+    # textual-widgets nicht mitschleppen muessen.
+    try:
+        from textual_widgets import reset_terminal_title, set_terminal_title
+
+        from textual_themes.demo import ThemeDemoApp
+    except ImportError:
+        print(_DEMO_FEHLT, file=sys.stderr)
+        raise SystemExit(1) from None
 
     # Terminal-Tab-Titel setzen - Textual macht das nicht selbst.
     set_terminal_title(f"textual-themes v{__version__}")

@@ -7,7 +7,7 @@
 # launcher on the user PATH.
 $ErrorActionPreference = "Stop"
 
-$RepoUrl    = "git+https://github.com/michaelblaess/textual-themes.git"
+$RepoUrl    = "textual-themes[demo] @ git+https://github.com/michaelblaess/textual-themes.git"
 $InstallDir = Join-Path $env:LOCALAPPDATA "textual-themes"
 $Venv       = Join-Path $InstallDir "venv"
 $BinDir     = Join-Path $InstallDir "bin"

@@ -7,7 +7,7 @@
 # ~/.textual-themes and puts a `textual-themes-demo` launcher on PATH.
 set -euo pipefail
 
-REPO_URL="git+https://github.com/michaelblaess/textual-themes.git"
+REPO_URL="textual-themes[demo] @ git+https://github.com/michaelblaess/textual-themes.git"
 INSTALL_DIR="${TEXTUAL_THEMES_HOME:-$HOME/.textual-themes}"
 VENV="$INSTALL_DIR/venv"
 BIN_DIR="$HOME/.local/bin"

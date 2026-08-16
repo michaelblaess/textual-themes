@@ -165,6 +165,14 @@ Fuege die Themes zu deinem eigenen Textual-Projekt hinzu:
 pip install git+https://github.com/michaelblaess/textual-themes.git
 ```
 
+Damit kommt nur `textual` mit - die Themes sind reine Daten. Das mitgelieferte
+Storybook braucht zusätzlich `textual-widgets`, und das steckt im Extra `demo`.
+So zwingt die Bibliothek diese Abhängigkeit keinem Konsumenten auf:
+
+```bash
+pip install "textual-themes[demo] @ git+https://github.com/michaelblaess/textual-themes.git"
+```
+
 ## Storybook
 
 Durchstoebere alle 39 Themes interaktiv im mitgelieferten Storybook.

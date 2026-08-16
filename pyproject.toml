@@ -26,11 +26,17 @@ classifiers = [
 ]
 dependencies = [
     "textual>=0.85",
-    "textual-widgets @ git+https://github.com/michaelblaess/textual-widgets.git",
 ]
 
 [project.optional-dependencies]
+# Die Demo braucht Splitter und den Terminal-Titel, die Themes selbst nicht.
+# Als Laufzeit-Dependency zwaenge diese URL jedem Konsumenten eine ungepinnte
+# Git-Quelle auf und kollidiert mit dessen eigenem Pin auf textual-widgets.
+demo = [
+    "textual-widgets @ git+https://github.com/michaelblaess/textual-widgets.git",
+]
 dev = [
+    "textual-themes[demo]",
     "pytest>=8.0",
     "pytest-asyncio>=0.23",
     "pytest-cov>=4.0",
