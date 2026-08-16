@@ -3,7 +3,7 @@
 Each theme is a `textual.theme.Theme` instance that can be registered
 with any Textual `App` via `app.register_theme(theme)`.
 
-This package contains 38 themes inspired by classic computers,
+This package contains 39 themes inspired by classic computers,
 operating systems, vintage diver watches, comic-book color schemes,
 80s pastel and Spielberg-era cinema, motorsport liveries and reggae
 roots. Theme names are descriptive of the visual style only; no
@@ -31,6 +31,7 @@ Themes (alphabetical):
     Gemstone          — monochrome GEM Desktop look (light)
     Golden Brown      — warm mafia-noir: antique gold, sepia and parchment on warm black
     Goldfinder        — deep black with 18K gold accents
+    Goldrunner        — Atari-ST shooter gold, magenta and green on black
     Hulkula           — vivid green rage with steel-gray edges
     Joker             — Comic Gotham villain: royal purple suit, acid-green hair & yellow vest
     Lenseflare        — 80s Spielberg orange-teal bichromatic on twilight blue
@@ -493,6 +494,39 @@ GOLDFINDER_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
+# Goldrunner
+# Atari-ST-era shooter palette: a golden ship over a magenta city and a
+# green tiled world, all on black. Gold carries the content, magenta frames
+# it, green marks what worked. The variables keep scrollbars and footer
+# visible on the near-black ground.
+# ────────────────────────────────────────────────────────────────────────
+GOLDRUNNER_THEME = Theme(
+    name="goldrunner",
+    primary="#E0A82E",
+    secondary="#CE4CC0",
+    accent="#FFD873",
+    foreground="#F0E6D2",
+    background="#07070C",
+    surface="#140B1A",
+    panel="#0D0A14",
+    boost="#FFE9A8",
+    warning="#E8A33A",
+    error="#DC5A70",
+    success="#7BB04E",
+    dark=True,
+    variables={
+        # Near-black ground: the derived scrollbar would vanish.
+        "scrollbar": "#A63BB5",
+        "scrollbar-hover": "#CE4CC0",
+        "scrollbar-active": "#E0A82E",
+        "footer-background": "#140B1A",
+        "block-cursor-background": "#E0A82E",
+        "block-cursor-foreground": "#07070C",
+        "block-cursor-blurred-background": "#3A1140",
+    },
+)
+
+# ────────────────────────────────────────────────────────────────────────
 # Hulkula
 # Vivid green rage with steel-gray edges — gamma-strong contrast,
 # secondary cool steel keeps the boldness from going neon.
@@ -949,6 +983,7 @@ RETRO_THEMES: list[Theme] = [
     GEMSTONE_THEME,
     GOLDEN_BROWN_THEME,
     GOLDFINDER_THEME,
+    GOLDRUNNER_THEME,
     HULKULA_THEME,
     JOKER_THEME,
     LENSEFLARE_THEME,
@@ -993,6 +1028,7 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "gemstone": "Gemstone — Monochrome GEM Desktop",
     "golden-brown": "Golden Brown — Warm Gold & Sepia Noir",
     "goldfinder": "Goldfinder — Deep Black with 18K Gold Accents",
+    "goldrunner": "Goldrunner — Atari-ST Gold, Magenta & Green on Black",
     "hulkula": "Hulkula — Verdant Green with Steel Edges",
     "joker": "Joker — Royal Purple Suit, Acid Green Hair & Yellow Vest",
     "lenseflare": "Lenseflare — 80s Orange-Teal on Twilight Blue",

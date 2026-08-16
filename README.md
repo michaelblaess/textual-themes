@@ -22,11 +22,11 @@
 [![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/textual-themes?logo=git&logoColor=white&color=3b82f6)](https://github.com/michaelblaess/textual-themes/commits/main)
 [![License](https://img.shields.io/badge/license-Apache_2.0-3b82f6)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12+-3b82f6?logo=python&logoColor=white)](https://www.python.org/)
-[![Themes](https://img.shields.io/badge/themes-38-fbbf24)](#gallery)
+[![Themes](https://img.shields.io/badge/themes-39-fbbf24)](#gallery)
 
 Retro color themes for [Textual](https://textual.textualize.io/) TUI applications.
 
-38 carefully crafted themes inspired by classic computers, operating systems, vintage diver watches, comic-book color schemes, 80s pastel, Spielberg-era cinema, motorsport liveries, reggae roots and mafia-noir cinema.
+39 carefully crafted themes inspired by classic computers, operating systems, vintage diver watches, comic-book color schemes, 80s pastel, Spielberg-era cinema, motorsport liveries, reggae roots and mafia-noir cinema.
 
 > **⚠ Trademark Disclaimer**
 >
@@ -75,6 +75,7 @@ the bundled demo app (`python -m textual_themes`).
 </tr>
 <tr>
 <td align="center"><a href="docs/screenshots/goldfinder.svg"><img src="docs/screenshots/goldfinder.svg" width="240" alt="Goldfinder"></a><br><sub><b>Goldfinder</b></sub></td>
+<td align="center"><a href="docs/screenshots/goldrunner.svg"><img src="docs/screenshots/goldrunner.svg" width="240" alt="Goldrunner"></a><br><sub><b>Goldrunner</b></sub></td>
 <td align="center"><a href="docs/screenshots/hulkula.svg"><img src="docs/screenshots/hulkula.svg" width="240" alt="Hulkula"></a><br><sub><b>Hulkula</b></sub></td>
 <td align="center"><a href="docs/screenshots/joker.svg"><img src="docs/screenshots/joker.svg" width="240" alt="Joker"></a><br><sub><b>Joker</b></sub></td>
 <td align="center"><a href="docs/screenshots/lenseflare.svg"><img src="docs/screenshots/lenseflare.svg" width="240" alt="Lenseflare"></a><br><sub><b>Lenseflare</b></sub></td>
@@ -126,6 +127,7 @@ the bundled demo app (`python -m textual_themes`).
 | **Geeko** | Dark green with white |
 | **Golden Brown** | Warm mafia-noir — antique gold, sepia and parchment on warm black |
 | **Goldfinder** | Deep black with 18K gold accents — villain glamour |
+| **Goldrunner** | Atari-ST shooter palette: golden ship, magenta city, green tiles on black |
 | **Hulkula** | Vivid green rage with steel-gray edges |
 | **Joker** | Comic Gotham villain — royal purple suit, acid-green hair, yellow vest |
 | **Lenseflare** | 80s Spielberg orange-teal bichromatic on twilight blue |
@@ -163,7 +165,7 @@ pip install git+https://github.com/michaelblaess/textual-themes.git
 
 ## Storybook
 
-Browse all 38 themes interactively in the bundled storybook. Install it with
+Browse all 39 themes interactively in the bundled storybook. Install it with
 a single command — it sets up an isolated environment and adds a
 `textual-themes-demo` launcher to your PATH:
 
@@ -230,7 +232,7 @@ from textual_themes import register_all
 class MyApp(App):
     def __init__(self):
         super().__init__()
-        register_all(self)       # registers all 38 themes
+        register_all(self)       # registers all 39 themes
         self.theme = "boing"     # pick one
 ```
 
@@ -285,7 +287,7 @@ from textual_themes import (
     SPIDERIZED_THEME,
 
     # Collections
-    RETRO_THEMES,          # list[Theme] — all 38 themes
+    RETRO_THEMES,          # list[Theme] — all 39 themes
     RETRO_THEME_NAMES,     # list[str]   — ["brotkasten", "boing", ...]
     THEME_DISPLAY_NAMES,   # dict[str, str]
 
@@ -321,6 +323,7 @@ Use these slugs with `app.theme = "..."`:
 | `fifty-eight` | Fifty-Eight — Black Dial, Aged Gold Lume & Bezel Red |
 | `bluesy` | Bluesy — Royal Blue & Gold |
 | `goldfinder` | Goldfinder — Deep Black with 18K Gold Accents |
+| `goldrunner` | Goldrunner — Atari-ST Gold, Magenta & Green on Black |
 | `hulkula` | Hulkula — Verdant Green with Steel Edges |
 | `flughund` | Flughund — Midnight Black & Moonlit Blue |
 | `classic-navy` | Classic Navy |

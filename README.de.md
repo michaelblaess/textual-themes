@@ -22,11 +22,11 @@
 [![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/textual-themes?logo=git&logoColor=white&color=3b82f6)](https://github.com/michaelblaess/textual-themes/commits/main)
 [![License](https://img.shields.io/badge/license-Apache_2.0-3b82f6)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12+-3b82f6?logo=python&logoColor=white)](https://www.python.org/)
-[![Themes](https://img.shields.io/badge/themes-38-fbbf24)](#galerie)
+[![Themes](https://img.shields.io/badge/themes-39-fbbf24)](#galerie)
 
 Retro-Farbthemes fuer [Textual](https://textual.textualize.io/) TUI-Anwendungen.
 
-38 sorgfaeltig gestaltete Themes, inspiriert von klassischen Computern, Betriebssystemen, historischen Taucheruhren, Comic-Farbschemata, 80er-Pastell, Spielberg-Aera-Kino, Motorsport-Lackierungen, Reggae-Roots und Mafia-Noir-Kino.
+39 sorgfaeltig gestaltete Themes, inspiriert von klassischen Computern, Betriebssystemen, historischen Taucheruhren, Comic-Farbschemata, 80er-Pastell, Spielberg-Aera-Kino, Motorsport-Lackierungen, Reggae-Roots und Mafia-Noir-Kino.
 
 > **⚠ Markenrechtlicher Hinweis**
 >
@@ -77,6 +77,7 @@ oeffnen. Die Screenshots stammen aus der mitgelieferten Demo-App
 </tr>
 <tr>
 <td align="center"><a href="docs/screenshots/goldfinder.svg"><img src="docs/screenshots/goldfinder.svg" width="240" alt="Goldfinder"></a><br><sub><b>Goldfinder</b></sub></td>
+<td align="center"><a href="docs/screenshots/goldrunner.svg"><img src="docs/screenshots/goldrunner.svg" width="240" alt="Goldrunner"></a><br><sub><b>Goldrunner</b></sub></td>
 <td align="center"><a href="docs/screenshots/hulkula.svg"><img src="docs/screenshots/hulkula.svg" width="240" alt="Hulkula"></a><br><sub><b>Hulkula</b></sub></td>
 <td align="center"><a href="docs/screenshots/joker.svg"><img src="docs/screenshots/joker.svg" width="240" alt="Joker"></a><br><sub><b>Joker</b></sub></td>
 <td align="center"><a href="docs/screenshots/lenseflare.svg"><img src="docs/screenshots/lenseflare.svg" width="240" alt="Lenseflare"></a><br><sub><b>Lenseflare</b></sub></td>
@@ -128,6 +129,7 @@ oeffnen. Die Screenshots stammen aus der mitgelieferten Demo-App
 | **Geeko** | Dunkelgruen mit Weiss |
 | **Golden Brown** | Warmes Mafia-Noir — Antikgold, Sepia und Pergament auf warmem Schwarz |
 | **Goldfinder** | Tiefes Schwarz mit 18-Karat-Gold-Akzenten — Schurken-Glamour |
+| **Goldrunner** | Atari-ST-Shooter-Palette: goldenes Schiff, Magenta-Stadt, gruene Kacheln auf Schwarz |
 | **Hulkula** | Leuchtend gruene Wut mit stahlgrauen Kanten |
 | **Joker** | Comic-Gotham-Schurke — koenigsvioletter Anzug, saeuregruenes Haar, gelbe Weste |
 | **Lenseflare** | 80er-Spielberg-Orange-Tuerkis bichromatisch auf Daemmerungsblau |
@@ -165,7 +167,7 @@ pip install git+https://github.com/michaelblaess/textual-themes.git
 
 ## Storybook
 
-Durchstoebere alle 38 Themes interaktiv im mitgelieferten Storybook.
+Durchstoebere alle 39 Themes interaktiv im mitgelieferten Storybook.
 Installiere es mit einem einzigen Befehl — er richtet eine isolierte Umgebung
 ein und fuegt einen `textual-themes-demo`-Launcher zu deinem PATH hinzu:
 
@@ -232,7 +234,7 @@ from textual_themes import register_all
 class MyApp(App):
     def __init__(self):
         super().__init__()
-        register_all(self)       # registriert alle 38 Themes
+        register_all(self)       # registriert alle 39 Themes
         self.theme = "boing"     # eines auswaehlen
 ```
 
@@ -287,7 +289,7 @@ from textual_themes import (
     SPIDERIZED_THEME,
 
     # Sammlungen
-    RETRO_THEMES,          # list[Theme] — alle 38 Themes
+    RETRO_THEMES,          # list[Theme] — alle 39 Themes
     RETRO_THEME_NAMES,     # list[str]   — ["brotkasten", "boing", ...]
     THEME_DISPLAY_NAMES,   # dict[str, str]
 
@@ -323,6 +325,7 @@ Verwende diese Slugs mit `app.theme = "..."`:
 | `fifty-eight` | Fifty-Eight — Black Dial, Aged Gold Lume & Bezel Red |
 | `bluesy` | Bluesy — Royal Blue & Gold |
 | `goldfinder` | Goldfinder — Deep Black with 18K Gold Accents |
+| `goldrunner` | Goldrunner — Atari-ST Gold, Magenta & Green on Black |
 | `hulkula` | Hulkula — Verdant Green with Steel Edges |
 | `flughund` | Flughund — Midnight Black & Moonlit Blue |
 | `classic-navy` | Classic Navy |
