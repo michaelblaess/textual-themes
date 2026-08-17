@@ -32,8 +32,24 @@ async def main(slug: str) -> None:
         # Re-Layout aus, und die Seitenleiste zieht den Fokus nach.
         for _ in range(20):
             await pilot.pause()
-        app.save_screenshot(str(Path.cwd() / f"{slug}.svg"))
+        ziel = Path.cwd() / f"{slug}.svg"
+        app.save_screenshot(str(ziel))
+    _hook_konform_schreiben(ziel)
     print(f"{slug}.svg geschrieben")
+
+
+def _hook_konform_schreiben(datei: Path) -> None:
+    """Raeumt die frisch geschriebene SVG so auf, wie es pre-commit erwartet.
+
+    Zwei Dinge stoeren dort, beide gemessen am Ergebnis von save_screenshot:
+    der Export laesst eine Zeile mit reinen Leerzeichen stehen (der
+    trailing-whitespace-Hook entfernt sie), und unter Windows schreibt der
+    Textmodus CRLF. Beides fuehrte dazu, dass der Hook die Datei aendert,
+    fehlschlaegt und den Commit abbricht - jeder Galerie-Screenshot brauchte
+    zwei Anlaeufe. Hier steht es einmal richtig.
+    """
+    zeilen = datei.read_bytes().replace(b"\r\n", b"\n").split(b"\n")
+    datei.write_bytes(b"\n".join(z.rstrip() for z in zeilen))
 
 
 if __name__ == "__main__":
