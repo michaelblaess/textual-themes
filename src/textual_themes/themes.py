@@ -507,8 +507,12 @@ GOLDRUNNER_THEME = Theme(
     accent="#FFD873",
     foreground="#F0E6D2",
     background="#07070C",
-    surface="#140B1A",
-    panel="#0D0A14",
+    # Neutral grey surfaces, no magenta tint. The first draft used #140B1A,
+    # which only reached a 1.05 contrast ratio against the background - the
+    # worst of all 34 dark themes, median is 1.18. Input fields were then
+    # indistinguishable from the page. #1C1C22 lands on that median.
+    surface="#1C1C22",
+    panel="#111116",
     boost="#FFE9A8",
     warning="#E8A33A",
     error="#DC5A70",
@@ -519,10 +523,16 @@ GOLDRUNNER_THEME = Theme(
         "scrollbar": "#A63BB5",
         "scrollbar-hover": "#CE4CC0",
         "scrollbar-active": "#E0A82E",
-        "footer-background": "#140B1A",
+        "footer-background": "#111116",
         "block-cursor-background": "#E0A82E",
         "block-cursor-foreground": "#07070C",
-        "block-cursor-blurred-background": "#3A1140",
+        # An unfocused table row is the most visible surface in the theme.
+        # The derived border and the first draft's aubergine (#3A1140) were
+        # both rejected: the border vanished (1.06 against surface), the
+        # aubergine simply did not fit the palette.
+        "border-blurred": "#43434E",
+        "block-cursor-blurred-background": "#3A3A46",
+        "block-cursor-blurred-foreground": "#F0E6D2",
     },
 )
 
