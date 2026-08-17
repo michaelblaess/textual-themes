@@ -519,13 +519,16 @@ GOLDRUNNER_THEME = Theme(
     success="#7BB04E",
     dark=True,
     variables={
-        # Near-black ground: the derived scrollbar would vanish. The first
-        # draft over-corrected - #A63BB5 reached a 3.91 contrast ratio, the
-        # loudest scrollbar of all dark themes (median 1.93). Toned down to
-        # 2.22, which keeps it easy to find without shouting. The magenta
-        # stays deliberately: it is the counterpoint the theme is named for.
-        "scrollbar": "#64355F",
-        "scrollbar-hover": "#8A4A85",
+        # Near-black ground: the derived scrollbar would vanish. Took three
+        # attempts. #A63BB5 was the loudest scrollbar of all dark themes
+        # (3.91 against a median of 1.93); toning the same magenta down to
+        # #64355F still did not work, because a HORIZONTAL bar spans the full
+        # window and turns the colour into a surface rather than a hairline.
+        # Muted gold at 2.31 belongs to the palette, so the bar reads as part
+        # of the theme instead of a second colour. The magenta keeps its place
+        # in secondary.
+        "scrollbar": "#55471F",
+        "scrollbar-hover": "#7A6529",
         "scrollbar-active": "#E0A82E",
         "footer-background": "#111116",
         "block-cursor-background": "#E0A82E",
