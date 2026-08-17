@@ -331,7 +331,7 @@ Use these slugs with `app.theme = "..."`:
 | `fifty-eight` | Fifty-Eight — Black Dial, Aged Gold Lume & Bezel Red |
 | `bluesy` | Bluesy — Royal Blue & Gold |
 | `goldfinder` | Goldfinder — Deep Black with 18K Gold Accents |
-| `goldrunner` | Goldrunner — Atari-ST Gold, Magenta & Green on Black |
+| `goldrunner` | Goldrunner — Atari-ST Gold on Violet City |
 | `hulkula` | Hulkula — Verdant Green with Steel Edges |
 | `flughund` | Flughund — Midnight Black & Moonlit Blue |
 | `classic-navy` | Classic Navy |

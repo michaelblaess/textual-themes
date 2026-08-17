@@ -31,7 +31,7 @@ Themes (alphabetical):
     Gemstone          — monochrome GEM Desktop look (light)
     Golden Brown      — warm mafia-noir: antique gold, sepia and parchment on warm black
     Goldfinder        — deep black with 18K gold accents
-    Goldrunner        — Atari-ST shooter gold, magenta and green on black
+    Goldrunner        — Atari-ST shooter gold on the violet city skyline
     Hulkula           — vivid green rage with steel-gray edges
     Joker             — Comic Gotham villain: royal purple suit, acid-green hair & yellow vest
     Lenseflare        — 80s Spielberg orange-teal bichromatic on twilight blue
@@ -502,44 +502,38 @@ GOLDFINDER_THEME = Theme(
 # ────────────────────────────────────────────────────────────────────────
 GOLDRUNNER_THEME = Theme(
     name="goldrunner",
-    primary="#E0A82E",
-    secondary="#CE4CC0",
-    accent="#FFD873",
-    foreground="#F0E6D2",
-    background="#07070C",
-    # Neutral grey surfaces, no magenta tint. The first draft used #140B1A,
-    # which only reached a 1.05 contrast ratio against the background - the
-    # worst of all 34 dark themes, median is 1.18. Input fields were then
-    # indistinguishable from the page. #1C1C22 lands on that median.
-    surface="#1C1C22",
-    panel="#111116",
+    # Every value below is MEASURED from the 1987 Atari ST title screen
+    # (Pillow, most frequent tone per colour family), not guessed. The
+    # earlier drafts kept correcting the wrong end: the scrollbar was blamed
+    # for standing out, when in truth the ground was too neutral. In the
+    # artwork the violet city sits in front of a violet-blue sky, which is
+    # why the colour belongs there - on neutral black it reads as foreign.
+    #   sky #010023 | city #43238A / #8444AC | gold #856600 / #C8A93A
+    #   light #EEEECA | pink #C788CE / #561056 | green #1B6600 | orange #B06400
+    primary="#C8A93A",
+    secondary="#C788CE",
+    accent="#E8C547",
+    foreground="#EEEECA",
+    background="#080520",
+    surface="#1A0F3D",
+    panel="#120A2E",
     boost="#FFE9A8",
-    warning="#E8A33A",
-    error="#DC5A70",
-    success="#7BB04E",
+    warning="#B06400",
+    error="#D6456A",
+    success="#5FA82E",
     dark=True,
     variables={
-        # Near-black ground: the derived scrollbar would vanish. Took three
-        # attempts. #A63BB5 was the loudest scrollbar of all dark themes
-        # (3.91 against a median of 1.93); toning the same magenta down to
-        # #64355F still did not work, because a HORIZONTAL bar spans the full
-        # window and turns the colour into a surface rather than a hairline.
-        # Muted gold at 2.31 belongs to the palette, so the bar reads as part
-        # of the theme instead of a second colour. The magenta keeps its place
-        # in secondary.
-        "scrollbar": "#55471F",
-        "scrollbar-hover": "#7A6529",
-        "scrollbar-active": "#E0A82E",
-        "footer-background": "#111116",
-        "block-cursor-background": "#E0A82E",
-        "block-cursor-foreground": "#07070C",
-        # An unfocused table row is the most visible surface in the theme.
-        # The derived border and the first draft's aubergine (#3A1140) were
-        # both rejected: the border vanished (1.06 against surface), the
-        # aubergine simply did not fit the palette.
-        "border-blurred": "#43434E",
-        "block-cursor-blurred-background": "#3A3A46",
-        "block-cursor-blurred-foreground": "#F0E6D2",
+        "scrollbar": "#43238A",
+        "scrollbar-hover": "#8444AC",
+        "scrollbar-active": "#C8A93A",
+        "footer-background": "#120A2E",
+        "block-cursor-background": "#C8A93A",
+        "block-cursor-foreground": "#080520",
+        # An unfocused table row and an unfocused input border are the two
+        # spots the derived values leave invisible on a ground this dark.
+        "border-blurred": "#4A3A72",
+        "block-cursor-blurred-background": "#43238A",
+        "block-cursor-blurred-foreground": "#EEEECA",
     },
 )
 
@@ -1045,7 +1039,7 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "gemstone": "Gemstone — Monochrome GEM Desktop",
     "golden-brown": "Golden Brown — Warm Gold & Sepia Noir",
     "goldfinder": "Goldfinder — Deep Black with 18K Gold Accents",
-    "goldrunner": "Goldrunner — Atari-ST Gold, Magenta & Green on Black",
+    "goldrunner": "Goldrunner — Atari-ST Gold on Violet City",
     "hulkula": "Hulkula — Verdant Green with Steel Edges",
     "joker": "Joker — Royal Purple Suit, Acid Green Hair & Yellow Vest",
     "lenseflare": "Lenseflare — 80s Orange-Teal on Twilight Blue",
