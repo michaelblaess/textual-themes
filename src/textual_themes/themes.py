@@ -543,9 +543,12 @@ GOLDRUNNER_THEME = Theme(
 # several brightnesses, the way a P3 tube could only ever show one.
 # Deliberately orange rather than yellow: that is what separates it from
 # the gold themes, and it is what the DOS-era tubes actually looked like.
-# The background stays near-neutral on purpose. The glow around the text
-# on photographs of these monitors is phosphor persistence and camera
-# bloom - as a surface colour it would smear the whole interface.
+# The screen itself is BLACK - background, surface and panel are all
+# near-neutral (5% saturation, matching what a working amber theme
+# measures). Everything *drawn* glows amber instead: text, borders and
+# the scrollbar. The glow around the text on photographs of these
+# monitors is phosphor persistence and camera bloom, not a surface
+# colour - tinting the panels with it turns the whole interface brown.
 # Only `error` breaks the monochrome, otherwise a failure is invisible.
 # ────────────────────────────────────────────────────────────────────────
 HERCULES_THEME = Theme(
@@ -554,9 +557,9 @@ HERCULES_THEME = Theme(
     secondary="#A85F12",
     accent="#FFC470",
     foreground="#F5A742",
-    background="#0C0805",
-    surface="#211408",
-    panel="#160D05",
+    background="#0C0B0B",
+    surface="#1F1D1C",
+    panel="#131211",
     boost="#FFC470",
     warning="#FFC470",
     error="#FF4A1F",
@@ -566,9 +569,9 @@ HERCULES_THEME = Theme(
         "scrollbar": "#5E3A0C",
         "scrollbar-hover": "#8F5A12",
         "scrollbar-active": "#FF9A2E",
-        "footer-background": "#160D05",
+        "footer-background": "#131211",
         "block-cursor-background": "#FF9A2E",
-        "block-cursor-foreground": "#0C0805",
+        "block-cursor-foreground": "#0C0B0B",
         "border-blurred": "#70450F",
         "block-cursor-blurred-background": "#5E3A0C",
         "block-cursor-blurred-foreground": "#F5A742",
