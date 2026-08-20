@@ -22,11 +22,11 @@
 [![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/textual-themes?logo=git&logoColor=white&color=3b82f6)](https://github.com/michaelblaess/textual-themes/commits/main)
 [![License](https://img.shields.io/badge/license-Apache_2.0-3b82f6)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12+-3b82f6?logo=python&logoColor=white)](https://www.python.org/)
-[![Themes](https://img.shields.io/badge/themes-39-fbbf24)](#gallery)
+[![Themes](https://img.shields.io/badge/themes-40-fbbf24)](#gallery)
 
 Retro color themes for [Textual](https://textual.textualize.io/) TUI applications.
 
-39 carefully crafted themes inspired by classic computers, operating systems, vintage diver watches, comic-book color schemes, 80s pastel, Spielberg-era cinema, motorsport liveries, reggae roots and mafia-noir cinema.
+40 carefully crafted themes inspired by classic computers, operating systems, vintage diver watches, comic-book color schemes, 80s pastel, Spielberg-era cinema, motorsport liveries, reggae roots and mafia-noir cinema.
 
 > **⚠ Trademark Disclaimer**
 >
@@ -48,26 +48,24 @@ the bundled demo app (`python -m textual_themes`).
 <td align="center"><a href="docs/screenshots/beastie.svg"><img src="docs/screenshots/beastie.svg" width="240" alt="Beastie"></a><br><sub><b>Beastie</b></sub></td>
 <td align="center"><a href="docs/screenshots/bebox.svg"><img src="docs/screenshots/bebox.svg" width="240" alt="BeBox"></a><br><sub><b>BeBox</b></sub></td>
 <td align="center"><a href="docs/screenshots/bluesy.svg"><img src="docs/screenshots/bluesy.svg" width="240" alt="Bluesy"></a><br><sub><b>Bluesy</b></sub></td>
+<td align="center"><a href="docs/screenshots/boing.svg"><img src="docs/screenshots/boing.svg" width="240" alt="Boing"></a><br><sub><b>Boing</b></sub></td>
 </tr>
 <tr>
-<td align="center"><a href="docs/screenshots/boing.svg"><img src="docs/screenshots/boing.svg" width="240" alt="Boing"></a><br><sub><b>Boing</b></sub></td>
 <td align="center"><a href="docs/screenshots/brick.svg"><img src="docs/screenshots/brick.svg" width="240" alt="Brick"></a><br><sub><b>Brick</b></sub></td>
 <td align="center"><a href="docs/screenshots/brotkasten.svg"><img src="docs/screenshots/brotkasten.svg" width="240" alt="Brotkasten"></a><br><sub><b>Brotkasten</b></sub></td>
 <td align="center"><a href="docs/screenshots/bunty.svg"><img src="docs/screenshots/bunty.svg" width="240" alt="Bunty"></a><br><sub><b>Bunty</b></sub></td>
-</tr>
-<tr>
 <td align="center"><a href="docs/screenshots/classic-navy.svg"><img src="docs/screenshots/classic-navy.svg" width="240" alt="Classic Navy"></a><br><sub><b>Classic Navy</b></sub></td>
 <td align="center"><a href="docs/screenshots/classic-terminal.svg"><img src="docs/screenshots/classic-terminal.svg" width="240" alt="Classic Terminal"></a><br><sub><b>Classic Terminal</b></sub></td>
-<td align="center"><a href="docs/screenshots/clipper.svg"><img src="docs/screenshots/clipper.svg" width="240" alt="Clipper"></a><br><sub><b>Clipper</b></sub></td>
-<td align="center"><a href="docs/screenshots/commandr.svg"><img src="docs/screenshots/commandr.svg" width="240" alt="Commandr"></a><br><sub><b>Commandr</b></sub></td>
 </tr>
 <tr>
+<td align="center"><a href="docs/screenshots/clipper.svg"><img src="docs/screenshots/clipper.svg" width="240" alt="Clipper"></a><br><sub><b>Clipper</b></sub></td>
+<td align="center"><a href="docs/screenshots/commandr.svg"><img src="docs/screenshots/commandr.svg" width="240" alt="Commandr"></a><br><sub><b>Commandr</b></sub></td>
 <td align="center"><a href="docs/screenshots/corleone.svg"><img src="docs/screenshots/corleone.svg" width="240" alt="Corleone"></a><br><sub><b>Corleone</b></sub></td>
 <td align="center"><a href="docs/screenshots/crimson.svg"><img src="docs/screenshots/crimson.svg" width="240" alt="Crimson"></a><br><sub><b>Crimson</b></sub></td>
 <td align="center"><a href="docs/screenshots/cupertino.svg"><img src="docs/screenshots/cupertino.svg" width="240" alt="Cupertino"></a><br><sub><b>Cupertino</b></sub></td>
-<td align="center"><a href="docs/screenshots/fifty-eight.svg"><img src="docs/screenshots/fifty-eight.svg" width="240" alt="Fifty-Eight"></a><br><sub><b>Fifty-Eight</b></sub></td>
 </tr>
 <tr>
+<td align="center"><a href="docs/screenshots/fifty-eight.svg"><img src="docs/screenshots/fifty-eight.svg" width="240" alt="Fifty-Eight"></a><br><sub><b>Fifty-Eight</b></sub></td>
 <td align="center"><a href="docs/screenshots/flughund.svg"><img src="docs/screenshots/flughund.svg" width="240" alt="Flughund"></a><br><sub><b>Flughund</b></sub></td>
 <td align="center"><a href="docs/screenshots/geeko.svg"><img src="docs/screenshots/geeko.svg" width="240" alt="Geeko"></a><br><sub><b>Geeko</b></sub></td>
 <td align="center"><a href="docs/screenshots/gemstone.svg"><img src="docs/screenshots/gemstone.svg" width="240" alt="Gemstone"></a><br><sub><b>Gemstone</b></sub></td>
@@ -76,11 +74,12 @@ the bundled demo app (`python -m textual_themes`).
 <tr>
 <td align="center"><a href="docs/screenshots/goldfinder.svg"><img src="docs/screenshots/goldfinder.svg" width="240" alt="Goldfinder"></a><br><sub><b>Goldfinder</b></sub></td>
 <td align="center"><a href="docs/screenshots/goldrunner.svg"><img src="docs/screenshots/goldrunner.svg" width="240" alt="Goldrunner"></a><br><sub><b>Goldrunner</b></sub></td>
+<td align="center"><a href="docs/screenshots/hercules.svg"><img src="docs/screenshots/hercules.svg" width="240" alt="Hercules"></a><br><sub><b>Hercules</b></sub></td>
 <td align="center"><a href="docs/screenshots/hulkula.svg"><img src="docs/screenshots/hulkula.svg" width="240" alt="Hulkula"></a><br><sub><b>Hulkula</b></sub></td>
 <td align="center"><a href="docs/screenshots/joker.svg"><img src="docs/screenshots/joker.svg" width="240" alt="Joker"></a><br><sub><b>Joker</b></sub></td>
-<td align="center"><a href="docs/screenshots/lenseflare.svg"><img src="docs/screenshots/lenseflare.svg" width="240" alt="Lenseflare"></a><br><sub><b>Lenseflare</b></sub></td>
 </tr>
 <tr>
+<td align="center"><a href="docs/screenshots/lenseflare.svg"><img src="docs/screenshots/lenseflare.svg" width="240" alt="Lenseflare"></a><br><sub><b>Lenseflare</b></sub></td>
 <td align="center"><a href="docs/screenshots/luna.svg"><img src="docs/screenshots/luna.svg" width="240" alt="Luna"></a><br><sub><b>Luna</b></sub></td>
 <td align="center"><a href="docs/screenshots/marley.svg"><img src="docs/screenshots/marley.svg" width="240" alt="Marley"></a><br><sub><b>Marley</b></sub></td>
 <td align="center"><a href="docs/screenshots/metropolis.svg"><img src="docs/screenshots/metropolis.svg" width="240" alt="Metropolis"></a><br><sub><b>Metropolis</b></sub></td>
@@ -91,14 +90,12 @@ the bundled demo app (`python -m textual_themes`).
 <td align="center"><a href="docs/screenshots/motif.svg"><img src="docs/screenshots/motif.svg" width="240" alt="Motif"></a><br><sub><b>Motif</b></sub></td>
 <td align="center"><a href="docs/screenshots/next.svg"><img src="docs/screenshots/next.svg" width="240" alt="Next"></a><br><sub><b>Next</b></sub></td>
 <td align="center"><a href="docs/screenshots/plan9.svg"><img src="docs/screenshots/plan9.svg" width="240" alt="Plan 9"></a><br><sub><b>Plan 9</b></sub></td>
+<td align="center"><a href="docs/screenshots/platoon.svg"><img src="docs/screenshots/platoon.svg" width="240" alt="Platoon"></a><br><sub><b>Platoon</b></sub></td>
 </tr>
 <tr>
-<td align="center"><a href="docs/screenshots/platoon.svg"><img src="docs/screenshots/platoon.svg" width="240" alt="Platoon"></a><br><sub><b>Platoon</b></sub></td>
 <td align="center"><a href="docs/screenshots/racing.svg"><img src="docs/screenshots/racing.svg" width="240" alt="Racing"></a><br><sub><b>Racing</b></sub></td>
 <td align="center"><a href="docs/screenshots/razzy.svg"><img src="docs/screenshots/razzy.svg" width="240" alt="Razzy"></a><br><sub><b>Razzy</b></sub></td>
 <td align="center"><a href="docs/screenshots/spiderized.svg"><img src="docs/screenshots/spiderized.svg" width="240" alt="Spiderized"></a><br><sub><b>Spiderized</b></sub></td>
-</tr>
-<tr>
 <td align="center"><a href="docs/screenshots/synthwave.svg"><img src="docs/screenshots/synthwave.svg" width="240" alt="Synthwave"></a><br><sub><b>Synthwave</b></sub></td>
 <td align="center"><a href="docs/screenshots/warp.svg"><img src="docs/screenshots/warp.svg" width="240" alt="Warp"></a><br><sub><b>Warp</b></sub></td>
 </tr>
@@ -173,7 +170,7 @@ pip install "textual-themes[demo] @ git+https://github.com/michaelblaess/textual
 
 ## Storybook
 
-Browse all 39 themes interactively in the bundled storybook. Install it with
+Browse all 40 themes interactively in the bundled storybook. Install it with
 a single command — it sets up an isolated environment and adds a
 `textual-themes-demo` launcher to your PATH:
 
@@ -240,7 +237,7 @@ from textual_themes import register_all
 class MyApp(App):
     def __init__(self):
         super().__init__()
-        register_all(self)       # registers all 39 themes
+        register_all(self)       # registers all 40 themes
         self.theme = "boing"     # pick one
 ```
 
@@ -295,7 +292,7 @@ from textual_themes import (
     SPIDERIZED_THEME,
 
     # Collections
-    RETRO_THEMES,          # list[Theme] — all 39 themes
+    RETRO_THEMES,          # list[Theme] — all 40 themes
     RETRO_THEME_NAMES,     # list[str]   — ["brotkasten", "boing", ...]
     THEME_DISPLAY_NAMES,   # dict[str, str]
 
@@ -332,6 +329,7 @@ Use these slugs with `app.theme = "..."`:
 | `bluesy` | Bluesy — Royal Blue & Gold |
 | `goldfinder` | Goldfinder — Deep Black with 18K Gold Accents |
 | `goldrunner` | Goldrunner — Atari-ST Gold on Violet City |
+| `hercules` | Hercules — Amber Phosphor Monochrome |
 | `hulkula` | Hulkula — Verdant Green with Steel Edges |
 | `flughund` | Flughund — Midnight Black & Moonlit Blue |
 | `classic-navy` | Classic Navy |

@@ -538,6 +538,46 @@ GOLDRUNNER_THEME = Theme(
 )
 
 # ────────────────────────────────────────────────────────────────────────
+# Hercules
+# The amber-phosphor monochrome monitor of the mid-80s — one hue in
+# several brightnesses, the way a P3 tube could only ever show one.
+# Deliberately orange rather than yellow: that is what separates it from
+# the gold themes, and it is what the DOS-era tubes actually looked like.
+# The background stays near-neutral on purpose. The glow around the text
+# on photographs of these monitors is phosphor persistence and camera
+# bloom - as a surface colour it would smear the whole interface.
+# Only `error` breaks the monochrome, otherwise a failure is invisible.
+# ────────────────────────────────────────────────────────────────────────
+HERCULES_THEME = Theme(
+    name="hercules",
+    primary="#FF9A2E",
+    secondary="#A85F12",
+    accent="#FFC470",
+    foreground="#F5A742",
+    background="#0C0805",
+    surface="#211408",
+    panel="#160D05",
+    boost="#FFC470",
+    warning="#FFC470",
+    error="#FF4A1F",
+    success="#F5A742",
+    dark=True,
+    variables={
+        "scrollbar": "#5E3A0C",
+        "scrollbar-hover": "#8F5A12",
+        "scrollbar-active": "#FF9A2E",
+        "footer-background": "#160D05",
+        "block-cursor-background": "#FF9A2E",
+        "block-cursor-foreground": "#0C0805",
+        "border-blurred": "#70450F",
+        "block-cursor-blurred-background": "#5E3A0C",
+        "block-cursor-blurred-foreground": "#F5A742",
+        "input-selection-background": "#8F5A12 45%",
+    },
+)
+
+
+# ────────────────────────────────────────────────────────────────────────
 # Hulkula
 # Vivid green rage with steel-gray edges — gamma-strong contrast,
 # secondary cool steel keeps the boldness from going neon.
@@ -995,6 +1035,7 @@ RETRO_THEMES: list[Theme] = [
     GOLDEN_BROWN_THEME,
     GOLDFINDER_THEME,
     GOLDRUNNER_THEME,
+    HERCULES_THEME,
     HULKULA_THEME,
     JOKER_THEME,
     LENSEFLARE_THEME,
@@ -1040,6 +1081,7 @@ THEME_DISPLAY_NAMES: dict[str, str] = {
     "golden-brown": "Golden Brown — Warm Gold & Sepia Noir",
     "goldfinder": "Goldfinder — Deep Black with 18K Gold Accents",
     "goldrunner": "Goldrunner — Atari-ST Gold on Violet City",
+    "hercules": "Hercules — Amber Phosphor Monochrome",
     "hulkula": "Hulkula — Verdant Green with Steel Edges",
     "joker": "Joker — Royal Purple Suit, Acid Green Hair & Yellow Vest",
     "lenseflare": "Lenseflare — 80s Orange-Teal on Twilight Blue",
