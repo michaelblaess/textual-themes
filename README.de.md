@@ -159,12 +159,28 @@ Klicke auf eine beliebige Miniatur, um die SVG-Datei in voller Größe zu
 Füge die Themes zu deinem eigenen Textual-Projekt hinzu:
 
 ```bash
+pip install "textual-themes[textual] @ git+https://github.com/michaelblaess/textual-themes.git"
+```
+
+Das Extra `textual` bringt Textual selbst mit, und sonst kommt nichts dazu -
+die Themes sind reine Daten.
+
+Lässt du das Extra weg, bekommst du genau diese Daten:
+
+```bash
 pip install git+https://github.com/michaelblaess/textual-themes.git
 ```
 
-Damit kommt nur `textual` mit - die Themes sind reine Daten. Das mitgelieferte
-Storybook braucht zusätzlich `textual-widgets`, und das steckt im Extra `demo`.
-So zwingt die Bibliothek diese Abhängigkeit keinem Konsumenten auf:
+`textual_themes.palettes` liefert dann alle 40 Paletten, ohne eine einzige
+Abhängigkeit außer der Standardbibliothek. Das ist der Zugang für alles, was
+die Farben ohne TUI-Framework braucht - eine mit Nuitka übersetzte
+Qt-Anwendung, ein Generator für statische Seiten, ein Skript. Die
+Theme-Objekte in `textual_themes.themes` brauchen weiterhin Textual und sagen
+es, wenn es fehlt.
+
+Das mitgelieferte Storybook braucht zusätzlich `textual-widgets`, und das
+steckt im Extra `demo`. So zwingt die Bibliothek diese Abhängigkeit keinem
+Konsumenten auf:
 
 ```bash
 pip install "textual-themes[demo] @ git+https://github.com/michaelblaess/textual-themes.git"

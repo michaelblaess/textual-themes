@@ -546,12 +546,10 @@ wheels = [
 name = "textual-themes"
 version = "0.14.0"
 source = { editable = "." }
-dependencies = [
-    { name = "textual" },
-]
 
 [package.optional-dependencies]
 demo = [
+    { name = "textual" },
     { name = "textual-widgets" },
 ]
 dev = [
@@ -562,7 +560,11 @@ dev = [
     { name = "pytest-cov" },
     { name = "pytest-xdist" },
     { name = "ruff" },
+    { name = "textual" },
     { name = "textual-widgets" },
+]
+textual = [
+    { name = "textual" },
 ]
 
 [package.metadata]
@@ -574,11 +576,12 @@ requires-dist = [
     { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=4.0" },
     { name = "pytest-xdist", marker = "extra == 'dev'", specifier = ">=3.5" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.3" },
-    { name = "textual", specifier = ">=0.85" },
+    { name = "textual", marker = "extra == 'textual'", specifier = ">=0.85" },
     { name = "textual-themes", extras = ["demo"], marker = "extra == 'dev'" },
+    { name = "textual-themes", extras = ["textual"], marker = "extra == 'demo'" },
     { name = "textual-widgets", marker = "extra == 'demo'", git = "https://github.com/michaelblaess/textual-widgets.git" },
 ]
-provides-extras = ["demo", "dev"]
+provides-extras = ["textual", "demo", "dev"]
 
 [[package]]
 name = "textual-widgets"

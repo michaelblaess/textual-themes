@@ -157,12 +157,26 @@ the bundled demo app (`python -m textual_themes`).
 Add the themes to your own Textual project:
 
 ```bash
+pip install "textual-themes[textual] @ git+https://github.com/michaelblaess/textual-themes.git"
+```
+
+The `textual` extra is what pulls in Textual itself, and nothing else comes
+with it - the themes are plain data.
+
+Leave the extra off and you get that data on its own:
+
+```bash
 pip install git+https://github.com/michaelblaess/textual-themes.git
 ```
 
-That pulls in nothing but `textual` — the themes are plain data. The bundled
-storybook additionally needs `textual-widgets`, which lives in the `demo`
-extra, so consumers are never forced into that dependency:
+`textual_themes.palettes` then gives you all 40 palettes with no dependency
+beyond the standard library. That is the way in for anything that wants the
+colours without a TUI framework - a Qt application compiled with Nuitka, a
+static site generator, a script. The theme objects in `textual_themes.themes`
+still need Textual and say so if it is missing.
+
+The bundled storybook additionally needs `textual-widgets`, which lives in the
+`demo` extra, so consumers are never forced into that dependency:
 
 ```bash
 pip install "textual-themes[demo] @ git+https://github.com/michaelblaess/textual-themes.git"

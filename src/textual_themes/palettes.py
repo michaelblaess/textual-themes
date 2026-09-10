@@ -1,0 +1,1061 @@
+"""Colour data for the retro themes - no dependencies, not even Textual.
+
+Every theme is eleven colours plus the light/dark flag. That is plain data,
+and it is deliberately kept apart from `themes.py`, which wraps it into
+`textual.theme.Theme` objects and therefore needs Textual.
+
+The split exists so a non-Textual consumer - a Qt application, a web page, a
+generator - can read the palettes without pulling a TUI framework into its
+dependency tree. Compiled Qt binaries are the case that prompted it.
+
+    from textual_themes.palettes import RETRO_PALETTES, Palette
+
+`themes.py` builds on this module, never the other way round.
+
+Generated from the theme definitions; see PLAN-themes.md in QAppFramework for
+the background. Edit the values here - `themes.py` picks them up.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+
+
+@dataclass(frozen=True, slots=True)
+class Palette:
+    """The eleven base colours of a theme plus its light/dark flag.
+
+    The field names match `textual.theme.Theme` one to one, so building a
+    Theme from a Palette needs no translation table. They are also the names
+    Textual itself uses in stylesheets, which makes them the closest thing to
+    a common vocabulary a colour scheme has.
+
+    Attributes:
+        name: Stable identifier, lower case with hyphens. Goes into settings
+            files, so it must not change once published.
+        primary: The theme's leading colour.
+        secondary: Its counterpart, used where two colours must be told apart.
+        accent: Highlights - active tab, links, focus.
+        foreground: Body text.
+        background: The window behind everything.
+        surface: Panels and cards sitting on the background.
+        panel: A third level, usually recessed rather than raised.
+        boost: A translucent lift over whatever is underneath.
+        warning: Amber, or whatever the theme uses for it.
+        error: Red, likewise.
+        success: Green, likewise.
+        dark: Whether this is a dark scheme. Not derived from `background`,
+            because a few themes sit close to the middle and the author's
+            intent decides, not a threshold.
+    """
+
+    name: str
+    primary: str
+    secondary: str
+    accent: str
+    foreground: str
+    background: str
+    surface: str
+    panel: str
+    boost: str
+    warning: str
+    error: str
+    success: str
+    dark: bool
+
+
+# ────────────────────────────────────────────────────────────────────────
+# Brotkasten
+# Light blue on royal blue, the iconic 8-bit color cast (PETSCII style).
+# Pepto-inspired palette: deep blue background, vivid light-blue text,
+# lifted surface so widgets pop, yellow accents for highlights.
+# ────────────────────────────────────────────────────────────────────────
+
+BROTKASTEN_PALETTE = Palette(
+    name="brotkasten",
+    primary="#7C70DA",
+    secondary="#3A2B8A",
+    accent="#EDF171",
+    foreground="#D0CCFF",
+    background="#3A2B8A",
+    surface="#5446B8",
+    panel="#241870",
+    boost="#FFFFFF",
+    warning="#EDF171",
+    error="#C46C71",
+    success="#A9FF9F",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Boing
+# Three-color workbench palette — blue background, white foreground,
+# orange accents. The bouncing-ball-demo aesthetic.
+# ────────────────────────────────────────────────────────────────────────
+
+BOING_PALETTE = Palette(
+    name="boing",
+    primary="#FF8800",
+    secondary="#0055AA",
+    accent="#FF8800",
+    foreground="#FFFFFF",
+    background="#0055AA",
+    surface="#0066BB",
+    panel="#004499",
+    boost="#FF9922",
+    warning="#FFAA00",
+    error="#FF4444",
+    success="#44BB44",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Gemstone
+# White / black / green — the monochrome GEM Desktop look (light).
+# ────────────────────────────────────────────────────────────────────────
+
+GEMSTONE_PALETTE = Palette(
+    name="gemstone",
+    primary="#007700",
+    secondary="#555555",
+    accent="#009900",
+    foreground="#111111",
+    background="#E8E8E8",
+    surface="#F2F2F2",
+    panel="#DDDDDD",
+    boost="#00AA00",
+    warning="#AA8800",
+    error="#CC0000",
+    success="#007700",
+    dark=False,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Classic Terminal
+# Phosphor-green on black — the archetypal CRT terminal look.
+# Subtle green-tinted surface / panel give the phosphor glow,
+# so borders are visible without breaking the monochrome feel.
+# ────────────────────────────────────────────────────────────────────────
+
+CLASSIC_TERMINAL_PALETTE = Palette(
+    name="classic-terminal",
+    primary="#33FF33",
+    secondary="#2A7A2A",
+    accent="#88FF88",
+    foreground="#33FF33",
+    background="#0A0A0A",
+    surface="#162616",
+    panel="#0F1B0F",
+    boost="#88FF88",
+    warning="#FFAA00",
+    error="#FF4444",
+    success="#33FF33",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Next
+# Dark gray with subtle magenta accents — workstation-era 3D bevels,
+# elegant dark interface.
+# ────────────────────────────────────────────────────────────────────────
+
+NEXT_PALETTE = Palette(
+    name="next",
+    primary="#9966CC",
+    secondary="#555555",
+    accent="#9966CC",
+    foreground="#E0E0E0",
+    background="#2A2A2A",
+    surface="#3A3A3A",
+    panel="#222222",
+    boost="#AA77DD",
+    warning="#CC9933",
+    error="#CC4444",
+    success="#44AA44",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# BeBox
+# Gray with yellow status-bar accent — fast, elegant, ahead of its time.
+# ────────────────────────────────────────────────────────────────────────
+
+BEBOX_PALETTE = Palette(
+    name="bebox",
+    primary="#FFD800",
+    secondary="#5F5F5F",
+    accent="#FFD800",
+    foreground="#E8E8E8",
+    background="#3A3A4A",
+    surface="#4A4A5A",
+    panel="#333344",
+    boost="#FFE433",
+    warning="#FF9900",
+    error="#DD3333",
+    success="#33BB33",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Bunty
+# Aubergine / purple with warm orange accents — a soft signature look.
+# Toned-down accent + lifted surface so the orange stops shouting.
+# ────────────────────────────────────────────────────────────────────────
+
+BUNTY_PALETTE = Palette(
+    name="bunty",
+    primary="#DD4814",
+    secondary="#77216F",
+    accent="#E18B5C",
+    foreground="#F2EAEA",
+    background="#2C001E",
+    surface="#4A2540",
+    panel="#1F0014",
+    boost="#E18B5C",
+    warning="#F99B11",
+    error="#DF382C",
+    success="#38B44A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Cupertino
+# Clean light gray with blue accents — minimalism (light).
+# ────────────────────────────────────────────────────────────────────────
+
+CUPERTINO_PALETTE = Palette(
+    name="cupertino",
+    primary="#007AFF",
+    secondary="#5856D6",
+    accent="#007AFF",
+    foreground="#1D1D1F",
+    background="#F5F5F7",
+    surface="#FFFFFF",
+    panel="#E8E8ED",
+    boost="#0A84FF",
+    warning="#FF9500",
+    error="#FF3B30",
+    success="#34C759",
+    dark=False,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Luna
+# Blue task-bar with green start button — early-2000s sky-blue UI.
+# ────────────────────────────────────────────────────────────────────────
+
+LUNA_PALETTE = Palette(
+    name="luna",
+    primary="#0054E3",
+    secondary="#21A121",
+    accent="#0054E3",
+    foreground="#FFFFFF",
+    background="#003399",
+    surface="#0044AA",
+    panel="#002D8A",
+    boost="#2266EE",
+    warning="#FFCC00",
+    error="#E81123",
+    success="#21A121",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Commandr
+# Blue background, white text, bright cyan / yellow highlights — the
+# classic 16-color VGA file-manager palette. Yellow is the iconic
+# selection / active highlight; cyan the secondary color for column
+# headers and borders.
+# ────────────────────────────────────────────────────────────────────────
+
+COMMANDR_PALETTE = Palette(
+    name="commandr",
+    primary="#FFFF55",
+    secondary="#55FFFF",
+    accent="#FFFF55",
+    foreground="#FFFFFF",
+    background="#0000AA",
+    surface="#1A1ACC",
+    panel="#000077",
+    boost="#FFFF55",
+    warning="#FFAA00",
+    error="#FF5555",
+    success="#55FF55",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Plan 9
+# Pulpy yellow / blue / green palette — bold, distinctive (light).
+# ────────────────────────────────────────────────────────────────────────
+
+PLAN9_PALETTE = Palette(
+    name="plan9",
+    primary="#228844",
+    secondary="#4488AA",
+    accent="#228844",
+    foreground="#111111",
+    background="#FFFFEA",
+    surface="#EAFFFF",
+    panel="#D5E8D0",
+    boost="#33AA55",
+    warning="#BB8800",
+    error="#CC2222",
+    success="#228844",
+    dark=False,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Motif
+# Beige / slate-gray corporate Unix toolkit — warm accents on cool gray.
+# ────────────────────────────────────────────────────────────────────────
+
+MOTIF_PALETTE = Palette(
+    name="motif",
+    primary="#CC9966",
+    secondary="#5F7B8A",
+    accent="#CC9966",
+    foreground="#D8D0C8",
+    background="#3A4A5A",
+    surface="#455565",
+    panel="#303F4F",
+    boost="#DDAA77",
+    warning="#CCAA44",
+    error="#CC5544",
+    success="#55AA66",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Warp
+# Dark blue with teal accents.
+# ────────────────────────────────────────────────────────────────────────
+
+WARP_PALETTE = Palette(
+    name="warp",
+    primary="#00BBBB",
+    secondary="#3333AA",
+    accent="#00BBBB",
+    foreground="#D0D0D0",
+    background="#1A1A4E",
+    surface="#25255E",
+    panel="#141442",
+    boost="#22DDDD",
+    warning="#DDAA22",
+    error="#DD4444",
+    success="#44BB66",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Geeko
+# Dark green with white — chameleon-mascot palette.
+# ────────────────────────────────────────────────────────────────────────
+
+GEEKO_PALETTE = Palette(
+    name="geeko",
+    primary="#73BA25",
+    secondary="#35B9AB",
+    accent="#73BA25",
+    foreground="#EEEEEE",
+    background="#173F0F",
+    surface="#1E4D15",
+    panel="#12330B",
+    boost="#85CC37",
+    warning="#F0A30A",
+    error="#DD3333",
+    success="#73BA25",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Minty
+# Warm mint-green on charcoal — Cinnamon-style desktop palette.
+# ────────────────────────────────────────────────────────────────────────
+
+MINTY_PALETTE = Palette(
+    name="minty",
+    primary="#8BB158",
+    secondary="#6DAB76",
+    accent="#8BB158",
+    foreground="#E8E8E8",
+    background="#2B2B2B",
+    surface="#363636",
+    panel="#232323",
+    boost="#9EC46A",
+    warning="#E5A50A",
+    error="#CC3333",
+    success="#8BB158",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Crimson
+# Deep red on dark charcoal — bold and corporate.
+# ────────────────────────────────────────────────────────────────────────
+
+CRIMSON_PALETTE = Palette(
+    name="crimson",
+    primary="#CC0000",
+    secondary="#A30000",
+    accent="#EE0000",
+    foreground="#E0E0E0",
+    background="#1A0A0A",
+    surface="#2A1515",
+    panel="#140808",
+    boost="#FF2222",
+    warning="#EEA500",
+    error="#FF4444",
+    success="#44AA44",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Razzy
+# Raspberry red on dark slate — playful but high-contrast.
+# ────────────────────────────────────────────────────────────────────────
+
+RAZZY_PALETTE = Palette(
+    name="razzy",
+    primary="#C51A4A",
+    secondary="#6CC24A",
+    accent="#C51A4A",
+    foreground="#EEEEEE",
+    background="#1E1E2E",
+    surface="#2A2A3A",
+    panel="#181828",
+    boost="#DD2A5A",
+    warning="#E5A50A",
+    error="#DD3333",
+    success="#6CC24A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Beastie
+# Daemon red on dark slate — Unix demon mascot palette.
+# ────────────────────────────────────────────────────────────────────────
+
+BEASTIE_PALETTE = Palette(
+    name="beastie",
+    primary="#AB2B28",
+    secondary="#5E8AAA",
+    accent="#AB2B28",
+    foreground="#D4D4D4",
+    background="#1C2028",
+    surface="#262A32",
+    panel="#161A20",
+    boost="#CC3533",
+    warning="#CC9933",
+    error="#DD4444",
+    success="#55AA66",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Fifty-Eight
+# Black dial with aged gold lume + bezel red — vintage diver style
+# (the iconic 1958 dive-watch look).
+# ────────────────────────────────────────────────────────────────────────
+
+FIFTY_EIGHT_PALETTE = Palette(
+    name="fifty-eight",
+    primary="#C9A96E",
+    secondary="#6A6A6A",
+    accent="#9E1B25",
+    foreground="#E8C985",
+    background="#100C08",
+    surface="#1E1914",
+    panel="#080605",
+    boost="#D9BC80",
+    warning="#C9A048",
+    error="#B8252E",
+    success="#6A9A5A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Bluesy
+# Deep royal blue dial with rich yellow-gold indices, hands, and case.
+# (Bluesy is a watch-collector nickname for the iconic gold/blue diver.)
+# ────────────────────────────────────────────────────────────────────────
+
+BLUESY_PALETTE = Palette(
+    name="bluesy",
+    primary="#D4AF37",
+    secondary="#1E4FA0",
+    accent="#F0C85A",
+    foreground="#F5D76E",
+    background="#081F54",
+    surface="#0E2E6E",
+    panel="#04133A",
+    boost="#FFD960",
+    warning="#E8A838",
+    error="#DD3344",
+    success="#48B870",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Goldfinder
+# Deep black with 18K gold accents — villain-glamour palette.
+# ────────────────────────────────────────────────────────────────────────
+
+GOLDFINDER_PALETTE = Palette(
+    name="goldfinder",
+    primary="#E6B800",
+    secondary="#8A6E20",
+    accent="#FFD740",
+    foreground="#E8DFC0",
+    background="#080705",
+    surface="#18140A",
+    panel="#040302",
+    boost="#FFE066",
+    warning="#E8A838",
+    error="#CC4040",
+    success="#5AAA5A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Goldrunner
+# Atari-ST-era shooter palette: a golden ship over a magenta city and a
+# green tiled world, all on black. Gold carries the content, magenta frames
+# it, green marks what worked. The variables keep scrollbars and footer
+# visible on the near-black ground.
+# ────────────────────────────────────────────────────────────────────────
+
+GOLDRUNNER_PALETTE = Palette(
+    name="goldrunner",
+    primary="#C8A93A",
+    secondary="#C788CE",
+    accent="#E8C547",
+    foreground="#EEEECA",
+    background="#080520",
+    surface="#1A0F3D",
+    panel="#120A2E",
+    boost="#FFE9A8",
+    warning="#B06400",
+    error="#D6456A",
+    success="#5FA82E",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Hercules
+# The amber-phosphor monochrome monitor of the mid-80s — one hue in
+# several brightnesses, the way a P3 tube could only ever show one.
+# Deliberately orange rather than yellow: that is what separates it from
+# the gold themes, and it is what the DOS-era tubes actually looked like.
+# The screen itself is BLACK - background, surface and panel are all
+# near-neutral (5% saturation, matching what a working amber theme
+# measures). Everything *drawn* glows amber instead: text, borders and
+# the scrollbar. The glow around the text on photographs of these
+# monitors is phosphor persistence and camera bloom, not a surface
+# colour - tinting the panels with it turns the whole interface brown.
+# Only `error` breaks the monochrome, otherwise a failure is invisible.
+# ────────────────────────────────────────────────────────────────────────
+
+HERCULES_PALETTE = Palette(
+    name="hercules",
+    primary="#FF9A2E",
+    secondary="#A85F12",
+    accent="#FFC470",
+    foreground="#F5A742",
+    background="#0B0A09",
+    surface="#1D1B19",
+    panel="#12110F",
+    boost="#FFC470",
+    warning="#FFC470",
+    error="#FF4A1F",
+    success="#F5A742",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Hulkula
+# Vivid green rage with steel-gray edges — gamma-strong contrast,
+# secondary cool steel keeps the boldness from going neon.
+# ────────────────────────────────────────────────────────────────────────
+
+HULKULA_PALETTE = Palette(
+    name="hulkula",
+    primary="#2BA841",
+    secondary="#BCC4CA",
+    accent="#4DC962",
+    foreground="#F0F2EE",
+    background="#083C14",
+    surface="#104B1B",
+    panel="#042608",
+    boost="#5FD974",
+    warning="#D4A040",
+    error="#CC2222",
+    success="#4DC962",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Flughund
+# Midnight black & moonlit blue — urban-night palette.
+# ────────────────────────────────────────────────────────────────────────
+
+FLUGHUND_PALETTE = Palette(
+    name="flughund",
+    primary="#244B85",
+    secondary="#BCC4CA",
+    accent="#3D6FB8",
+    foreground="#F0F2F5",
+    background="#060810",
+    surface="#0E1422",
+    panel="#030509",
+    boost="#5282D0",
+    warning="#D4A040",
+    error="#CC3030",
+    success="#50AA50",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Classic Navy
+# Deep navy dial with silver sub-dials and muted brick-red accents —
+# aviation-inspired three-register chronograph feel.
+# ────────────────────────────────────────────────────────────────────────
+
+CLASSIC_NAVY_PALETTE = Palette(
+    name="classic-navy",
+    primary="#C0C5CC",
+    secondary="#1E4585",
+    accent="#9E3A42",
+    foreground="#EEF0F5",
+    background="#0C2B5C",
+    surface="#143465",
+    panel="#061A3A",
+    boost="#D8DCE2",
+    warning="#D4A040",
+    error="#B04048",
+    success="#50AA50",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Brick
+# Olive-green LCD handheld — beige-gray case with magenta accents (light).
+# ("Brick" is the affectionate community nickname for the original
+# DMG-01 form-factor handheld.)
+# ────────────────────────────────────────────────────────────────────────
+
+BRICK_PALETTE = Palette(
+    name="brick",
+    primary="#8E2A5E",
+    secondary="#5A4858",
+    accent="#D63B68",
+    foreground="#241F28",
+    background="#D4CEBC",
+    surface="#E2DCCA",
+    panel="#B2AC9A",
+    boost="#B83470",
+    warning="#C85820",
+    error="#A0203A",
+    success="#4A7A3A",
+    dark=False,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Clipper
+# Globe blue on ivory — jet-age livery palette (light).
+# ────────────────────────────────────────────────────────────────────────
+
+CLIPPER_PALETTE = Palette(
+    name="clipper",
+    primary="#1A4FA0",
+    secondary="#C61F2C",
+    accent="#D4222F",
+    foreground="#1A1A1A",
+    background="#F6F3E8",
+    surface="#FCFAF0",
+    panel="#EBE6D4",
+    boost="#2A6BC8",
+    warning="#C88A20",
+    error="#C61F2C",
+    success="#2E8B3D",
+    dark=False,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Synthwave
+# 80s retro-futurism — deep purple with neon pink and electric cyan,
+# a sunset-on-a-Lamborghini aesthetic.
+# ────────────────────────────────────────────────────────────────────────
+
+SYNTHWAVE_PALETTE = Palette(
+    name="synthwave",
+    primary="#FF2E93",
+    secondary="#7B2D8E",
+    accent="#05D9E8",
+    foreground="#F5E9FF",
+    background="#1A0B3D",
+    surface="#261553",
+    panel="#0E0524",
+    boost="#FF6EC7",
+    warning="#FFD319",
+    error="#FF3860",
+    success="#39FF14",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Miami
+# Pastel 80s — twilight teal with flamingo pink and sunset coral.
+# ────────────────────────────────────────────────────────────────────────
+
+MIAMI_PALETTE = Palette(
+    name="miami",
+    primary="#FF6FAB",
+    secondary="#1FB8BC",
+    accent="#FFA06A",
+    foreground="#FFE8E0",
+    background="#0B2F3F",
+    surface="#124050",
+    panel="#051825",
+    boost="#FF8FC5",
+    warning="#FFD76B",
+    error="#E63970",
+    success="#4ECDA8",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Racing
+# Charcoal engine-bay background that lets the signature motorsport
+# stripes pop: deep blue, cherry red, silver.
+# ────────────────────────────────────────────────────────────────────────
+
+RACING_PALETTE = Palette(
+    name="racing",
+    primary="#1A5CC8",
+    secondary="#C0C6D0",
+    accent="#E42030",
+    foreground="#EEF0F5",
+    background="#14161E",
+    surface="#1F232E",
+    panel="#080A10",
+    boost="#2E72DC",
+    warning="#E8A838",
+    error="#E42030",
+    success="#3AAA4A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Metropolis
+# Bold primary-color triad: deep blue, crimson red, sun yellow.
+# Optimistic city-at-sunrise palette built around the three-color
+# combination that classic comic panels and 60s pulp covers loved.
+# ────────────────────────────────────────────────────────────────────────
+
+METROPOLIS_PALETTE = Palette(
+    name="metropolis",
+    primary="#E02030",
+    secondary="#1A5CC8",
+    accent="#FFD53B",
+    foreground="#F0F2F8",
+    background="#0A2A5E",
+    surface="#123876",
+    panel="#051838",
+    boost="#F83040",
+    warning="#FFD53B",
+    error="#C80A18",
+    success="#3AAA4A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Spiderized
+# Red & royal-blue hero suit — high-contrast wallcrawler palette,
+# white for the spider-eye lenses, deep night royal-blue as the canvas.
+# ────────────────────────────────────────────────────────────────────────
+
+SPIDERIZED_PALETTE = Palette(
+    name="spiderized",
+    primary="#D71920",
+    secondary="#1F75FE",
+    accent="#1F75FE",
+    foreground="#FFFFFF",
+    background="#0E1A3A",
+    surface="#1A2C5F",
+    panel="#070D24",
+    boost="#FF3344",
+    warning="#FFA830",
+    error="#C80A18",
+    success="#4AA85A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Ascot
+# Royal-meeting meets Le-Mans paddock: deep British Racing Green with
+# a signal-yellow accent and silver secondary, plus a warm beige
+# foreground (instead of pure white) that's much easier on the eyes
+# during long sessions — the colour of weathered race-card paper.
+# ────────────────────────────────────────────────────────────────────────
+
+ASCOT_PALETTE = Palette(
+    name="ascot",
+    primary="#F2C200",
+    secondary="#C0C5CC",
+    accent="#F2C200",
+    foreground="#F5EBD2",
+    background="#173E2D",
+    surface="#1F4E3A",
+    panel="#0E2C1E",
+    boost="#FFD835",
+    warning="#F2C200",
+    error="#C81E2A",
+    success="#2E7D52",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Joker
+# Comic-book Joker palette modelled after the Bronze-Age look —
+# royal-purple suit drives the primary buttons, acid-green hair
+# (and bowtie) drives the secondary, golden-yellow vest is the
+# accent for modal title bars and key highlights. Cream face-
+# powder foreground on a dark Gotham-night background; sidebar
+# uses a subtler dark purple than the suit so it grounds the
+# layout instead of shouting. No red in the title bars — only
+# in semantic errors.
+# ────────────────────────────────────────────────────────────────────────
+
+JOKER_PALETTE = Palette(
+    name="joker",
+    primary="#7B3FB2",
+    secondary="#2FCC2F",
+    accent="#FFC72C",
+    foreground="#F5F0E5",
+    background="#0E0824",
+    surface="#1F0F3F",
+    panel="#2D1758",
+    boost="#9555D4",
+    warning="#FFC72C",
+    error="#DC4040",
+    success="#2FCC2F",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Marley
+# Reggae roots palette: black canvas with the green / gold / red
+# tricolour. Green is the primary (lion-of-Judah dominance), gold the
+# accent (highlights and warnings), red the alert color. Warm cream
+# foreground keeps the vibe sun-drenched rather than sterile.
+# ────────────────────────────────────────────────────────────────────────
+
+MARLEY_PALETTE = Palette(
+    name="marley",
+    primary="#078930",
+    secondary="#DA121A",
+    accent="#FCDD09",
+    foreground="#F5EFD8",
+    background="#0C0A06",
+    surface="#181818",
+    panel="#050505",
+    boost="#0AA63D",
+    warning="#FCDD09",
+    error="#DA121A",
+    success="#078930",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Lenseflare
+# 80s Spielberg / Stranger-Things / Poltergeist atmospheric night —
+# the iconic orange-teal lens-flare bichromatic on a deep twilight
+# blue sky, with a Stranger-Things red accent for dramatic title
+# bars. Warm amber drives the buttons (warm lens-flare side); cool
+# teal handles success and secondary states (the cold counter-glow).
+# Cream foreground keeps that tungsten-light glow on the suburban
+# 80s night palette.
+# ────────────────────────────────────────────────────────────────────────
+
+LENSEFLARE_PALETTE = Palette(
+    name="lenseflare",
+    primary="#FF8C42",
+    secondary="#2BD0E0",
+    accent="#E5283A",
+    foreground="#F0E5D2",
+    background="#0A1226",
+    surface="#14213D",
+    panel="#060B18",
+    boost="#FFA85C",
+    warning="#FFB838",
+    error="#E5283A",
+    success="#2BD0E0",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Platoon
+# Muted military olive-drab palette — jungle olive primary, deep
+# sepia-olive secondary and a warm khaki accent on a near-black
+# canvas. Field-gear gold for warnings, a desaturated napalm red for
+# errors. Born from the random theme generator, then hand-tuned away
+# from neon lime toward authentic olive-drab uniform cloth.
+# ────────────────────────────────────────────────────────────────────────
+
+PLATOON_PALETTE = Palette(
+    name="platoon",
+    primary="#9AA04A",
+    secondary="#6F8A3C",
+    accent="#C7B06A",
+    foreground="#E4E0CF",
+    background="#12130B",
+    surface="#22241A",
+    panel="#3A3D22",
+    boost="#AEB56A",
+    warning="#E0B330",
+    error="#BF3B2A",
+    success="#6F9A4A",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Corleone
+# Cold mafia-noir palette — smoke-and-shadow night. A faintly bluish
+# near-black canvas keeps it cold and melancholic; bronze (not yellow
+# gold) drives the buttons, cold steel-grey handles secondary states,
+# and an ash-cream foreground stays deliberately unglamorous. Oxblood
+# red for errors, field amber for warnings. A quiet, somber theme.
+# ────────────────────────────────────────────────────────────────────────
+
+CORLEONE_PALETTE = Palette(
+    name="corleone",
+    primary="#A88B52",
+    secondary="#4A4E58",
+    accent="#9A8147",
+    foreground="#C3C0B4",
+    background="#0B0C0E",
+    surface="#16181C",
+    panel="#1F2228",
+    boost="#C0A263",
+    warning="#B89043",
+    error="#8C2F2F",
+    success="#5E7355",
+    dark=True,
+)
+
+# ────────────────────────────────────────────────────────────────────────
+# Golden Brown
+# Warm mafia-noir counterpart to Corleone — a tungsten-lit night
+# instead of a cold one. Antique gold drives the buttons, sepia brown
+# handles secondary states, and an aged-parchment foreground glows on
+# a warm near-black canvas. Oxblood red for errors, amber for
+# warnings. The warm, smoky, cigar-lounge half of the noir pair.
+# ────────────────────────────────────────────────────────────────────────
+
+GOLDEN_BROWN_PALETTE = Palette(
+    name="golden-brown",
+    primary="#A8843F",
+    secondary="#6E4E36",
+    accent="#C29A4E",
+    foreground="#D5C5A4",
+    background="#0F0B07",
+    surface="#1C1611",
+    panel="#2B2018",
+    boost="#D2AC66",
+    warning="#BE8F39",
+    error="#9A2B2B",
+    success="#5F6B42",
+    dark=True,
+)
+
+RETRO_PALETTES: list[Palette] = [
+    BROTKASTEN_PALETTE,
+    BOING_PALETTE,
+    GEMSTONE_PALETTE,
+    CLASSIC_TERMINAL_PALETTE,
+    NEXT_PALETTE,
+    BEBOX_PALETTE,
+    BUNTY_PALETTE,
+    CUPERTINO_PALETTE,
+    LUNA_PALETTE,
+    COMMANDR_PALETTE,
+    PLAN9_PALETTE,
+    MOTIF_PALETTE,
+    WARP_PALETTE,
+    GEEKO_PALETTE,
+    MINTY_PALETTE,
+    CRIMSON_PALETTE,
+    RAZZY_PALETTE,
+    BEASTIE_PALETTE,
+    FIFTY_EIGHT_PALETTE,
+    BLUESY_PALETTE,
+    GOLDFINDER_PALETTE,
+    GOLDRUNNER_PALETTE,
+    HERCULES_PALETTE,
+    HULKULA_PALETTE,
+    FLUGHUND_PALETTE,
+    CLASSIC_NAVY_PALETTE,
+    BRICK_PALETTE,
+    CLIPPER_PALETTE,
+    SYNTHWAVE_PALETTE,
+    MIAMI_PALETTE,
+    RACING_PALETTE,
+    METROPOLIS_PALETTE,
+    SPIDERIZED_PALETTE,
+    ASCOT_PALETTE,
+    JOKER_PALETTE,
+    MARLEY_PALETTE,
+    LENSEFLARE_PALETTE,
+    PLATOON_PALETTE,
+    CORLEONE_PALETTE,
+    GOLDEN_BROWN_PALETTE,
+]
+
+PALETTE_NAMES: list[str] = [p.name for p in RETRO_PALETTES]
+
+PALETTES_BY_NAME: dict[str, Palette] = {p.name: p for p in RETRO_PALETTES}
+
+# Kept alphabetically sorted by theme name - new entries go in order.
+DISPLAY_NAMES: dict[str, str] = {
+    "ascot": "Ascot — Racing Green with Yellow, Silver & Beige Text",
+    "beastie": "Beastie — Daemon Red on Dark Slate",
+    "bebox": "BeBox — Blue-Gray with Yellow Accent",
+    "bluesy": "Bluesy — Royal Blue & Gold",
+    "boing": "Boing — Blue/White/Orange Workbench",
+    "brick": "Brick — Olive-Green Handheld LCD",
+    "brotkasten": "Brotkasten — Light Blue on Royal Blue",
+    "bunty": "Bunty — Aubergine with Warm Orange Accents",
+    "classic-navy": "Classic Navy",
+    "classic-terminal": "Classic Terminal — Phosphor Green on Black",
+    "clipper": "Clipper — Globe Blue on Ivory",
+    "commandr": "Commandr — Blue/Cyan/Yellow File Manager",
+    "corleone": "Corleone — Cold Noir Bronze & Steel",
+    "crimson": "Crimson — Deep Red on Dark Charcoal",
+    "cupertino": "Cupertino — Clean Light Gray with Blue Accents",
+    "fifty-eight": "Fifty-Eight — Black Dial, Aged Gold Lume & Bezel Red",
+    "flughund": "Flughund — Midnight Black & Moonlit Blue",
+    "geeko": "Geeko — Dark Green with White",
+    "gemstone": "Gemstone — Monochrome GEM Desktop",
+    "golden-brown": "Golden Brown — Warm Gold & Sepia Noir",
+    "goldfinder": "Goldfinder — Deep Black with 18K Gold Accents",
+    "goldrunner": "Goldrunner — Atari-ST Gold on Violet City",
+    "hercules": "Hercules — Amber Phosphor Monochrome",
+    "hulkula": "Hulkula — Verdant Green with Steel Edges",
+    "joker": "Joker — Royal Purple Suit, Acid Green Hair & Yellow Vest",
+    "lenseflare": "Lenseflare — 80s Orange-Teal on Twilight Blue",
+    "luna": "Luna — Sky Blue with Green Start Accent",
+    "marley": "Marley — Reggae Black, Green, Gold & Red",
+    "metropolis": "Metropolis — Bold Blue, Crimson & Sun Yellow",
+    "miami": "Miami — Twilight Teal, Flamingo Pink & Sunset Coral",
+    "minty": "Minty — Warm Mint-Green on Charcoal",
+    "motif": "Motif — Beige Corporate Unix Toolkit",
+    "next": "Next — Slate Gray with Magenta Accents",
+    "plan9": "Plan 9 — Pulpy Yellow/Blue/Green",
+    "platoon": "Platoon — Jungle Olive Drab & Khaki",
+    "racing": "Racing — Charcoal with Blue, Red & Silver Stripes",
+    "razzy": "Razzy — Raspberry Red on Dark Slate",
+    "spiderized": "Spiderized — Red & Royal-Blue Hero Suit",
+    "synthwave": "Synthwave — 80s Retro-Futurism",
+    "warp": "Warp — Dark Blue with Teal Accents",
+}

@@ -24,15 +24,25 @@ classifiers = [
     "Topic :: Terminals",
     "Typing :: Typed",
 ]
-dependencies = [
-    "textual>=0.85",
-]
+# Bewusst leer. Die Farbdaten in palettes.py brauchen nichts ausser der
+# Standardbibliothek, und wer nur sie liest - eine Qt-Anwendung, ein
+# Generator - soll sich kein TUI-Framework einhandeln. Fuer die
+# Theme-Objekte gibt es das Extra textual. Die TUIs merken davon nichts:
+# sie haengen ohnehin selbst an Textual.
+dependencies = []
 
 [project.optional-dependencies]
+# Die Theme-Objekte in themes.py sind Textual-Typen. Als Extra statt als
+# harte Abhaengigkeit, damit die Trennung zu palettes.py auch in der
+# Installation sichtbar wird.
+textual = [
+    "textual>=0.85",
+]
 # Die Demo braucht Splitter und den Terminal-Titel, die Themes selbst nicht.
 # Als Laufzeit-Dependency zwaenge diese URL jedem Konsumenten eine ungepinnte
 # Git-Quelle auf und kollidiert mit dessen eigenem Pin auf textual-widgets.
 demo = [
+    "textual-themes[textual]",
     "textual-widgets @ git+https://github.com/michaelblaess/textual-widgets.git",
 ]
 dev = [
