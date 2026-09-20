@@ -1,10 +1,3 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/icon-dark.svg">
-    <img src="docs/icon-light.svg" width="120" alt="textual-themes Logo">
-  </picture>
-</p>
-
 # textual-themes
 
 <p align="center">
@@ -13,6 +6,10 @@
 </p>
 
 ---
+
+<p align="center">
+  <img src="docs/banner.jpg" alt="textual-themes - das Vier-Kachel-Logo mit Terminalfenstern in verschiedenen Farbschemata" width="100%">
+</p>
 
 [![Stars](https://img.shields.io/github/stars/michaelblaess/textual-themes?logo=github&logoColor=white&color=fbbf24)](https://github.com/michaelblaess/textual-themes/stargazers)
 [![Forks](https://img.shields.io/github/forks/michaelblaess/textual-themes?logo=github&logoColor=white&color=34d399)](https://github.com/michaelblaess/textual-themes/network/members)
