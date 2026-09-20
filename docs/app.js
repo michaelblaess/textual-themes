@@ -25,6 +25,8 @@
     { slug: "gemstone",         name: "Gemstone — Monochrome GEM Desktop",                        dark: false },
     { slug: "golden-brown",     name: "Golden Brown — Warm Gold & Sepia Noir",                    dark: true  },
     { slug: "goldfinder",       name: "Goldfinder — Deep Black with 18K Gold Accents",            dark: true  },
+    { slug: "goldrunner",       name: "Goldrunner — Atari-ST Gold on Violet City",                dark: true  },
+    { slug: "hercules",         name: "Hercules — Amber Phosphor Monochrome",                     dark: true  },
     { slug: "hulkula",          name: "Hulkula — Verdant Green with Steel Edges",                 dark: true  },
     { slug: "joker",            name: "Joker — Royal Purple Suit, Acid Green Hair & Yellow Vest", dark: true  },
     { slug: "lenseflare",       name: "Lenseflare — 80s Orange-Teal on Twilight Blue",            dark: true  },
