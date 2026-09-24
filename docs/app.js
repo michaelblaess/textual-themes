@@ -12,6 +12,7 @@
     { slug: "brick",            name: "Brick — Olive-Green Handheld LCD",                         dark: false },
     { slug: "brotkasten",       name: "Brotkasten — Light Blue on Royal Blue",                    dark: true  },
     { slug: "bunty",            name: "Bunty — Aubergine with Warm Orange Accents",               dark: true  },
+    { slug: "christophorus",    name: "Christophorus — Navy & Logo Gold",                         dark: true  },
     { slug: "classic-navy",     name: "Classic Navy",                                             dark: true  },
     { slug: "classic-terminal", name: "Classic Terminal — Phosphor Green on Black",               dark: true  },
     { slug: "clipper",          name: "Clipper — Globe Blue on Ivory",                            dark: false },

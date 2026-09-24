@@ -30,14 +30,14 @@ COLOUR_FIELDS = tuple(f.name for f in fields(Palette) if f.name not in {"name", 
 
 
 class TestPaletteData:
-    def test_forty_palettes(self) -> None:
+    def test_forty_one_palettes(self) -> None:
         """The count is pinned on purpose.
 
         Adding a theme is a deliberate act, and this line is where it gets
         confirmed - together with the display name below, which is the part
         people forget.
         """
-        assert len(RETRO_PALETTES) == 40
+        assert len(RETRO_PALETTES) == 41
 
     def test_names_are_unique(self) -> None:
         assert len(set(PALETTE_NAMES)) == len(PALETTE_NAMES)
@@ -91,7 +91,7 @@ class TestImportsWithoutTextual:
             check=False,
         )
         assert ergebnis.returncode == 0, ergebnis.stderr
-        assert ergebnis.stdout.strip() == "40"
+        assert ergebnis.stdout.strip() == "41"
 
     def test_the_block_actually_blocks(self) -> None:
         """Counter-check: without it the test above proves nothing.

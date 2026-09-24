@@ -3,7 +3,7 @@
 Each theme is a `textual.theme.Theme` instance that can be registered
 with any Textual `App` via `app.register_theme(theme)`.
 
-This package contains 40 themes inspired by classic computers,
+This package contains 41 themes inspired by classic computers,
 operating systems, vintage diver watches, comic-book color schemes,
 80s pastel and Spielberg-era cinema, motorsport liveries and reggae
 roots. Theme names are descriptive of the visual style only; no
@@ -18,6 +18,7 @@ Themes (alphabetical):
     Brick             — olive-green handheld LCD (light)
     Brotkasten        — light blue on royal blue (8-bit PETSCII style)
     Bunty             — aubergine with warm orange accents
+    Christophorus     — navy and gold from the Christophorus logo
     Classic Navy      — deep navy with silver and muted brick-red
     Classic Terminal  — phosphor-green on black (CRT)
     Clipper           — globe blue on ivory (light)
@@ -130,6 +131,7 @@ LENSEFLARE_THEME = _BY_NAME["lenseflare"]
 PLATOON_THEME = _BY_NAME["platoon"]
 CORLEONE_THEME = _BY_NAME["corleone"]
 GOLDEN_BROWN_THEME = _BY_NAME["golden-brown"]
+CHRISTOPHORUS_THEME = _BY_NAME["christophorus"]
 
 RETRO_THEMES: list[Theme] = list(_BY_NAME.values())
 

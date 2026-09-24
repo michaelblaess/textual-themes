@@ -969,6 +969,33 @@ GOLDEN_BROWN_PALETTE = Palette(
     dark=True,
 )
 
+# ────────────────────────────────────────────────────────────────────────
+# Christophorus
+# Navy and gold from the Christophorus logo (the logbook app). The only
+# theme that did not start here: it was drawn for the Christophorus web
+# mockups of 17.09.2026 and lives in web-themes as well. The colours are
+# taken over from there one to one - bg_primary, bg_secondary and
+# bg_elevated become background, surface and panel, the logo gold is the
+# primary. Secondary is the lighter navy of the hover border, so the
+# theme keeps its two-tone character instead of a second accent hue.
+# ────────────────────────────────────────────────────────────────────────
+
+CHRISTOPHORUS_PALETTE = Palette(
+    name="christophorus",
+    primary="#D4A15A",
+    secondary="#50698A",
+    accent="#E0B574",
+    foreground="#E6E9EE",
+    background="#102640",
+    surface="#132D4B",
+    panel="#1A3A5E",
+    boost="#E0B574",
+    warning="#E8B45A",
+    error="#FF6B8B",
+    success="#8FD16A",
+    dark=True,
+)
+
 RETRO_PALETTES: list[Palette] = [
     BROTKASTEN_PALETTE,
     BOING_PALETTE,
@@ -1010,6 +1037,7 @@ RETRO_PALETTES: list[Palette] = [
     PLATOON_PALETTE,
     CORLEONE_PALETTE,
     GOLDEN_BROWN_PALETTE,
+    CHRISTOPHORUS_PALETTE,
 ]
 
 PALETTE_NAMES: list[str] = [p.name for p in RETRO_PALETTES]
@@ -1026,6 +1054,7 @@ DISPLAY_NAMES: dict[str, str] = {
     "brick": "Brick — Olive-Green Handheld LCD",
     "brotkasten": "Brotkasten — Light Blue on Royal Blue",
     "bunty": "Bunty — Aubergine with Warm Orange Accents",
+    "christophorus": "Christophorus — Navy & Logo Gold",
     "classic-navy": "Classic Navy",
     "classic-terminal": "Classic Terminal — Phosphor Green on Black",
     "clipper": "Clipper — Globe Blue on Ivory",
