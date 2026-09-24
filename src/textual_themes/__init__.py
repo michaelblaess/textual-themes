@@ -77,7 +77,7 @@ if TYPE_CHECKING:
         register_all,
     )
 
-__version__ = "0.14.0"
+__version__ = "0.15.0"
 __author__ = "Michael Blaess"
 
 # Everything that lives in themes.py and therefore needs Textual.
