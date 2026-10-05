@@ -158,7 +158,7 @@ the bundled demo app (`python -m textual_themes`).
 Add the themes to your own Textual project:
 
 ```bash
-pip install "textual-themes[textual] @ git+https://github.com/michaelblaess/textual-themes.git"
+pip install "textual-themes[textual]"
 ```
 
 The `textual` extra is what pulls in Textual itself, and nothing else comes
@@ -167,7 +167,7 @@ with it - the themes are plain data.
 Leave the extra off and you get that data on its own:
 
 ```bash
-pip install git+https://github.com/michaelblaess/textual-themes.git
+pip install textual-themes
 ```
 
 `textual_themes.palettes` then gives you all 41 palettes with no dependency
@@ -180,7 +180,13 @@ The bundled storybook additionally needs `textual-widgets`, which lives in the
 `demo` extra, so consumers are never forced into that dependency:
 
 ```bash
-pip install "textual-themes[demo] @ git+https://github.com/michaelblaess/textual-themes.git"
+pip install "textual-themes[demo]"
+```
+
+Without installing, with [uv](https://docs.astral.sh/uv/):
+
+```bash
+uvx --from "textual-themes[demo]" textual-themes-demo
 ```
 
 ## Storybook

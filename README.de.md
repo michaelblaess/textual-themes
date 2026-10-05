@@ -160,7 +160,7 @@ Klicke auf eine beliebige Miniatur, um die SVG-Datei in voller Größe zu
 Füge die Themes zu deinem eigenen Textual-Projekt hinzu:
 
 ```bash
-pip install "textual-themes[textual] @ git+https://github.com/michaelblaess/textual-themes.git"
+pip install "textual-themes[textual]"
 ```
 
 Das Extra `textual` bringt Textual selbst mit, und sonst kommt nichts dazu -
@@ -169,7 +169,7 @@ die Themes sind reine Daten.
 Lässt du das Extra weg, bekommst du genau diese Daten:
 
 ```bash
-pip install git+https://github.com/michaelblaess/textual-themes.git
+pip install textual-themes
 ```
 
 `textual_themes.palettes` liefert dann alle 41 Paletten, ohne eine einzige
@@ -184,7 +184,13 @@ steckt im Extra `demo`. So zwingt die Bibliothek diese Abhängigkeit keinem
 Konsumenten auf:
 
 ```bash
-pip install "textual-themes[demo] @ git+https://github.com/michaelblaess/textual-themes.git"
+pip install "textual-themes[demo]"
+```
+
+Ohne Installation, mit [uv](https://docs.astral.sh/uv/):
+
+```bash
+uvx --from "textual-themes[demo]" textual-themes-demo
 ```
 
 ## Storybook
