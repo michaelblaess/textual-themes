@@ -1,0 +1,83 @@
+name: Publish to PyPI
+
+# Laeuft bei jedem Versions-Tag parallel zu release.yml. Hochgeladen wird per
+# Trusted Publishing (OIDC), es gibt kein Token. Der Publisher ist auf PyPI fuer
+# dieses Repo, diese Datei und das Environment "pypi" eingetragen.
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: false
+
+      # Der Tag muss zur Version im pyproject.toml passen, sonst landet auf PyPI
+      # eine andere Nummer als im GitHub-Release
+      - name: Check tag against version
+        if: github.ref_type == 'tag'
+        run: |
+          VERSION=$(python -c "import tomllib; print(tomllib.load(open('pyproject.toml','rb'))['project']['version'])")
+          test "v$VERSION" = "$GITHUB_REF_NAME" || { echo "Tag $GITHUB_REF_NAME passt nicht zu Version $VERSION"; exit 1; }
+
+      # PyPI loest relative Pfade in der README nicht auf. Bilder und Links werden
+      # deshalb nur fuer den Build auf diesen Commit festgeschrieben.
+      - name: Make README links absolute
+        run: |
+          python - <<'EOF'
+          import os, re, pathlib
+          repo, sha = os.environ["GITHUB_REPOSITORY"], os.environ["GITHUB_SHA"]
+          raw = f"https://raw.githubusercontent.com/{repo}/{sha}/"
+          blob = f"https://github.com/{repo}/blob/{sha}/"
+          images = (".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp")
+
+          def absolute(url):
+              if re.match(r"^(https?:|#|mailto:)", url):
+                  return url
+              return (raw if url.lower().endswith(images) else blob) + url
+
+          path = pathlib.Path("README.md")
+          text = path.read_text(encoding="utf-8")
+          text = re.sub(r'((?:src|href)=")([^"]+)"', lambda m: m.group(1) + absolute(m.group(2)) + '"', text)
+          text = re.sub(r"(\]\()([^)\s]+)", lambda m: m.group(1) + absolute(m.group(2)), text)
+          path.write_text(text, encoding="utf-8")
+          EOF
+
+      - name: Build
+        run: uv build
+
+      - name: Check metadata
+        run: uvx twine check --strict dist/*
+
+      - uses: actions/upload-artifact@v5
+        with:
+          name: dist
+          path: dist/
+          retention-days: 1
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/${{ github.event.repository.name }}
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v5
+        with:
+          name: dist
+          path: dist/
+
+      - uses: pypa/gh-action-pypi-publish@release/v1

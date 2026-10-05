@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=68.0"]
+requires = ["setuptools>=77.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "textual-themes"
-version = "0.15.0"
+version = "0.15.1"
 description = "39 retro color themes for Textual TUI apps - vintage 8-bit, terminal, watch, comic-pulp, 80s-pastel, Spielberg-era cinema, reggae and mafia-noir palettes"
 readme = "README.md"
 license = "Apache-2.0"
@@ -16,7 +16,6 @@ keywords = ["textual", "tui", "themes", "retro", "terminal"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: Console",
-    "Framework :: Textual",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.12",
@@ -39,11 +38,11 @@ textual = [
     "textual>=0.85",
 ]
 # Die Demo braucht Splitter und den Terminal-Titel, die Themes selbst nicht.
-# Als Laufzeit-Dependency zwaenge diese URL jedem Konsumenten eine ungepinnte
-# Git-Quelle auf und kollidiert mit dessen eigenem Pin auf textual-widgets.
+# Deshalb nur als Extra. Seit textual-widgets auf PyPI liegt, als Version statt
+# als Git-URL - PyPI nimmt keine Pakete mit Git-Abhaengigkeiten an.
 demo = [
     "textual-themes[textual]",
-    "textual-widgets @ git+https://github.com/michaelblaess/textual-widgets.git",
+    "textual-widgets>=0.32.1",
 ]
 dev = [
     "textual-themes[demo]",

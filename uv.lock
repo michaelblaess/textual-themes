@@ -544,7 +544,7 @@ wheels = [
 
 [[package]]
 name = "textual-themes"
-version = "0.15.0"
+version = "0.15.1"
 source = { editable = "." }
 
 [package.optional-dependencies]
@@ -579,17 +579,21 @@ requires-dist = [
     { name = "textual", marker = "extra == 'textual'", specifier = ">=0.85" },
     { name = "textual-themes", extras = ["demo"], marker = "extra == 'dev'" },
     { name = "textual-themes", extras = ["textual"], marker = "extra == 'demo'" },
-    { name = "textual-widgets", marker = "extra == 'demo'", git = "https://github.com/michaelblaess/textual-widgets.git" },
+    { name = "textual-widgets", marker = "extra == 'demo'", specifier = ">=0.32.1" },
 ]
 provides-extras = ["textual", "demo", "dev"]
 
 [[package]]
 name = "textual-widgets"
-version = "0.26.2"
-source = { git = "https://github.com/michaelblaess/textual-widgets.git#5f79c2d70e320ad9bc85d247c6ec8d2c2db0de56" }
+version = "0.32.1"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "rich" },
     { name = "textual" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/95/16/e59d1080b43801005aced7556fe19bad0522c99cc58ed63af3d8f927f925/textual_widgets-0.32.1.tar.gz", hash = "sha256:db08c3dad022819bb6ae0927cacdd7b7835d277525eecd729a718990e19bd92f", size = 119494, upload-time = "2026-10-05T14:49:59.783Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f3/29/028da5631ba77ff06323c1e7132273566e543bbf0ac97ce30508921a24ed/textual_widgets-0.32.1-py3-none-any.whl", hash = "sha256:ec1e5bec84f15b6111bece3c6f7290dff4e195b6f1ad55e0edc96aeabdd4a0da", size = 106626, upload-time = "2026-10-05T14:49:58.268Z" },
 ]
 
 [[package]]
